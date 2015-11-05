@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF041BEBD90200331482 /* AppDelegate.swift */; };
+		79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF061BEBD90200331482 /* Assets.xcassets */; };
+		79D1DF0A1BEBD90200331482 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF081BEBD90200331482 /* MainMenu.xib */; };
+		79D1DF151BEBD90200331482 /* Labs_Injections_ROSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF141BEBD90200331482 /* Labs_Injections_ROSTests.swift */; };
+		79D1DF201BEBD90200331482 /* Labs_Injections_ROSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF1F1BEBD90200331482 /* Labs_Injections_ROSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79D1DF111BEBD90200331482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D1DEF91BEBD90200331482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D1DF001BEBD90200331482;
+			remoteInfo = "Labs Injections ROS";
+		};
+		79D1DF1C1BEBD90200331482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D1DEF91BEBD90200331482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D1DF001BEBD90200331482;
+			remoteInfo = "Labs Injections ROS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79D1DF011BEBD90200331482 /* Labs Injections ROS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labs Injections ROS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D1DF041BEBD90200331482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79D1DF061BEBD90200331482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79D1DF091BEBD90200331482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		79D1DF0B1BEBD90200331482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79D1DF101BEBD90200331482 /* Labs Injections ROSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Labs Injections ROSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D1DF141BEBD90200331482 /* Labs_Injections_ROSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labs_Injections_ROSTests.swift; sourceTree = "<group>"; };
+		79D1DF161BEBD90200331482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79D1DF1B1BEBD90200331482 /* Labs Injections ROSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Labs Injections ROSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D1DF1F1BEBD90200331482 /* Labs_Injections_ROSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labs_Injections_ROSUITests.swift; sourceTree = "<group>"; };
+		79D1DF211BEBD90200331482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79D1DEFE1BEBD90200331482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1DF0D1BEBD90200331482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1DF181BEBD90200331482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79D1DEF81BEBD90200331482 = {
+			isa = PBXGroup;
+			children = (
+				79D1DF031BEBD90200331482 /* Labs Injections ROS */,
+				79D1DF131BEBD90200331482 /* Labs Injections ROSTests */,
+				79D1DF1E1BEBD90200331482 /* Labs Injections ROSUITests */,
+				79D1DF021BEBD90200331482 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79D1DF021BEBD90200331482 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79D1DF011BEBD90200331482 /* Labs Injections ROS.app */,
+				79D1DF101BEBD90200331482 /* Labs Injections ROSTests.xctest */,
+				79D1DF1B1BEBD90200331482 /* Labs Injections ROSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79D1DF031BEBD90200331482 /* Labs Injections ROS */ = {
+			isa = PBXGroup;
+			children = (
+				79D1DF041BEBD90200331482 /* AppDelegate.swift */,
+				79D1DF061BEBD90200331482 /* Assets.xcassets */,
+				79D1DF081BEBD90200331482 /* MainMenu.xib */,
+				79D1DF0B1BEBD90200331482 /* Info.plist */,
+			);
+			path = "Labs Injections ROS";
+			sourceTree = "<group>";
+		};
+		79D1DF131BEBD90200331482 /* Labs Injections ROSTests */ = {
+			isa = PBXGroup;
+			children = (
+				79D1DF141BEBD90200331482 /* Labs_Injections_ROSTests.swift */,
+				79D1DF161BEBD90200331482 /* Info.plist */,
+			);
+			path = "Labs Injections ROSTests";
+			sourceTree = "<group>";
+		};
+		79D1DF1E1BEBD90200331482 /* Labs Injections ROSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79D1DF1F1BEBD90200331482 /* Labs_Injections_ROSUITests.swift */,
+				79D1DF211BEBD90200331482 /* Info.plist */,
+			);
+			path = "Labs Injections ROSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79D1DF001BEBD90200331482 /* Labs Injections ROS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D1DF241BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROS" */;
+			buildPhases = (
+				79D1DEFD1BEBD90200331482 /* Sources */,
+				79D1DEFE1BEBD90200331482 /* Frameworks */,
+				79D1DEFF1BEBD90200331482 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Labs Injections ROS";
+			productName = "Labs Injections ROS";
+			productReference = 79D1DF011BEBD90200331482 /* Labs Injections ROS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79D1DF0F1BEBD90200331482 /* Labs Injections ROSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D1DF271BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROSTests" */;
+			buildPhases = (
+				79D1DF0C1BEBD90200331482 /* Sources */,
+				79D1DF0D1BEBD90200331482 /* Frameworks */,
+				79D1DF0E1BEBD90200331482 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79D1DF121BEBD90200331482 /* PBXTargetDependency */,
+			);
+			name = "Labs Injections ROSTests";
+			productName = "Labs Injections ROSTests";
+			productReference = 79D1DF101BEBD90200331482 /* Labs Injections ROSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79D1DF1A1BEBD90200331482 /* Labs Injections ROSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D1DF2A1BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROSUITests" */;
+			buildPhases = (
+				79D1DF171BEBD90200331482 /* Sources */,
+				79D1DF181BEBD90200331482 /* Frameworks */,
+				79D1DF191BEBD90200331482 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79D1DF1D1BEBD90200331482 /* PBXTargetDependency */,
+			);
+			name = "Labs Injections ROSUITests";
+			productName = "Labs Injections ROSUITests";
+			productReference = 79D1DF1B1BEBD90200331482 /* Labs Injections ROSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79D1DEF91BEBD90200331482 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Fulgent Wake";
+				TargetAttributes = {
+					79D1DF001BEBD90200331482 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					79D1DF0F1BEBD90200331482 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 79D1DF001BEBD90200331482;
+					};
+					79D1DF1A1BEBD90200331482 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 79D1DF001BEBD90200331482;
+					};
+				};
+			};
+			buildConfigurationList = 79D1DEFC1BEBD90200331482 /* Build configuration list for PBXProject "Labs Injections ROS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79D1DEF81BEBD90200331482;
+			productRefGroup = 79D1DF021BEBD90200331482 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79D1DF001BEBD90200331482 /* Labs Injections ROS */,
+				79D1DF0F1BEBD90200331482 /* Labs Injections ROSTests */,
+				79D1DF1A1BEBD90200331482 /* Labs Injections ROSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79D1DEFF1BEBD90200331482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */,
+				79D1DF0A1BEBD90200331482 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1DF0E1BEBD90200331482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1DF191BEBD90200331482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79D1DEFD1BEBD90200331482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1DF0C1BEBD90200331482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1DF151BEBD90200331482 /* Labs_Injections_ROSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1DF171BEBD90200331482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1DF201BEBD90200331482 /* Labs_Injections_ROSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79D1DF121BEBD90200331482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79D1DF001BEBD90200331482 /* Labs Injections ROS */;
+			targetProxy = 79D1DF111BEBD90200331482 /* PBXContainerItemProxy */;
+		};
+		79D1DF1D1BEBD90200331482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79D1DF001BEBD90200331482 /* Labs Injections ROS */;
+			targetProxy = 79D1DF1C1BEBD90200331482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79D1DF081BEBD90200331482 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79D1DF091BEBD90200331482 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79D1DF221BEBD90200331482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79D1DF231BEBD90200331482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		79D1DF251BEBD90200331482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Labs Injections ROS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		79D1DF261BEBD90200331482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Labs Injections ROS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		79D1DF281BEBD90200331482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Labs Injections ROSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labs Injections ROS.app/Contents/MacOS/Labs Injections ROS";
+			};
+			name = Debug;
+		};
+		79D1DF291BEBD90200331482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Labs Injections ROSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Labs Injections ROS.app/Contents/MacOS/Labs Injections ROS";
+			};
+			name = Release;
+		};
+		79D1DF2B1BEBD90200331482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Labs Injections ROSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Labs Injections ROS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		79D1DF2C1BEBD90200331482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Labs Injections ROSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Labs Injections ROS";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79D1DEFC1BEBD90200331482 /* Build configuration list for PBXProject "Labs Injections ROS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1DF221BEBD90200331482 /* Debug */,
+				79D1DF231BEBD90200331482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D1DF241BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1DF251BEBD90200331482 /* Debug */,
+				79D1DF261BEBD90200331482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		79D1DF271BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1DF281BEBD90200331482 /* Debug */,
+				79D1DF291BEBD90200331482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		79D1DF2A1BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1DF2B1BEBD90200331482 /* Debug */,
+				79D1DF2C1BEBD90200331482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79D1DEF91BEBD90200331482 /* Project object */;
+}
