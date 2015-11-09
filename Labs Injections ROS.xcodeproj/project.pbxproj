@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */; };
+		7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3351BED2B0F00E075C4 /* PI Functions.swift */; };
+		7919F3381BED367700E075C4 /* PI Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3371BED367700E075C4 /* PI Constants.swift */; };
 		79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF041BEBD90200331482 /* AppDelegate.swift */; };
 		79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF061BEBD90200331482 /* Assets.xcassets */; };
 		79D1DF0A1BEBD90200331482 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF081BEBD90200331482 /* MainMenu.xib */; };
 		79D1DF151BEBD90200331482 /* Labs_Injections_ROSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF141BEBD90200331482 /* Labs_Injections_ROSTests.swift */; };
 		79D1DF201BEBD90200331482 /* Labs_Injections_ROSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF1F1BEBD90200331482 /* Labs_Injections_ROSUITests.swift */; };
+		79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF2D1BEBE11100331482 /* SystemsReview.swift */; };
+		79D1DF301BEBF18600331482 /* ROS Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF2F1BEBF18600331482 /* ROS Functions.swift */; };
+		79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresInjections.swift; sourceTree = "<group>"; };
+		7919F3351BED2B0F00E075C4 /* PI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Functions.swift"; sourceTree = "<group>"; };
+		7919F3371BED367700E075C4 /* PI Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Constants.swift"; sourceTree = "<group>"; };
 		79D1DF011BEBD90200331482 /* Labs Injections ROS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labs Injections ROS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1DF041BEBD90200331482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D1DF061BEBD90200331482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +52,9 @@
 		79D1DF1B1BEBD90200331482 /* Labs Injections ROSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Labs Injections ROSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1DF1F1BEBD90200331482 /* Labs_Injections_ROSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labs_Injections_ROSUITests.swift; sourceTree = "<group>"; };
 		79D1DF211BEBD90200331482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79D1DF2D1BEBE11100331482 /* SystemsReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsReview.swift; sourceTree = "<group>"; };
+		79D1DF2F1BEBF18600331482 /* ROS Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ROS Functions.swift"; sourceTree = "<group>"; };
+		79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedGreenCheckbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +105,16 @@
 		79D1DF031BEBD90200331482 /* Labs Injections ROS */ = {
 			isa = PBXGroup;
 			children = (
-				79D1DF041BEBD90200331482 /* AppDelegate.swift */,
-				79D1DF061BEBD90200331482 /* Assets.xcassets */,
 				79D1DF081BEBD90200331482 /* MainMenu.xib */,
+				79D1DF041BEBD90200331482 /* AppDelegate.swift */,
+				7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */,
+				7919F3351BED2B0F00E075C4 /* PI Functions.swift */,
+				7919F3371BED367700E075C4 /* PI Constants.swift */,
+				79D1DF2D1BEBE11100331482 /* SystemsReview.swift */,
+				79D1DF2F1BEBF18600331482 /* ROS Functions.swift */,
+				79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */,
 				79D1DF0B1BEBD90200331482 /* Info.plist */,
+				79D1DF061BEBD90200331482 /* Assets.xcassets */,
 			);
 			path = "Labs Injections ROS";
 			sourceTree = "<group>";
@@ -187,6 +205,7 @@
 				TargetAttributes = {
 					79D1DF001BEBD90200331482 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = VY6BVT84SC;
 					};
 					79D1DF0F1BEBD90200331482 = {
 						CreatedOnToolsVersion = 7.1;
@@ -249,7 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */,
+				7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */,
+				7919F3381BED367700E075C4 /* PI Constants.swift in Sources */,
 				79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */,
+				79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */,
+				7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */,
+				79D1DF301BEBF18600331482 /* ROS Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,9 +405,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Labs Injections ROS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -392,9 +419,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Labs Injections ROS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fulgentwake.Labs-Injections-ROS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -471,6 +500,7 @@
 				79D1DF261BEBD90200331482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D1DF271BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROSTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +509,7 @@
 				79D1DF291BEBD90200331482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D1DF2A1BEBD90200331482 /* Build configuration list for PBXNativeTarget "Labs Injections ROSUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +518,7 @@
 				79D1DF2C1BEBD90200331482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
