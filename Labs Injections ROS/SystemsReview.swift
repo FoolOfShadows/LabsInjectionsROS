@@ -172,31 +172,31 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	@IBOutlet weak var chkbxAbscesses: NSButton!
 	
 	var genVarList: [NSButton] {return [chkbxWeightLoss, chkbxWeightGain, chkbxLossOfAppetite, chkbxFever, chkbxChills, chkbxSweats, chkbxFatigue, chkbxWeakness, chkbxInsomnia]}
-	let genVerbList = ["Weight loss", "Weight gain", "Loss of appetite", "Fever", "Chills", "Sweats", "Fatigue, malaise", "Weakness", "Insomnia"]
+	let genVerbList = ["weight loss", "weight gain", "loss of appetite", "fever", "chills", "sweats", "fatigue, malaise", "weakness", "insomnia"]
 	var giVarList: [NSButton] {return [chkbxAbdominalPain, chkbxGas, chkbxBloating, chkbxConstipation, chkbxDiarrhea, chkbxBloodyStool, chkbxEarlySatiety, chkbxTroubleSwallowing, chkbxHeartburn, chkbxIndigestion, chkbxNausea, chkbxVomiting, chkbxBloodyVomit, chkbxHemorrhoids, chkbxPelvicPain]}
-	let giVerbList = ["Abdominal pain", "Gas", "Bloating", "Constipation", "Diarrhea", "Bloody or black stool", "Early satiety/fullness", "Trouble or pain swallowing", "Heartburn", "Indigestion", "Nausea", "Vomiting", "Bloody vomit", "Hemorrhoids", "Pelvic pain"]
+	let giVerbList = ["abdominal pain", "gas", "bloating", "constipation", "diarrhea", "bloody or black stool", "early satiety/fullness", "trouble or pain swallowing", "heartburn", "indigestion", "nausea", "vomiting", "bloody vomit", "hemorrhoids", "pelvic pain"]
 	var psychVarList: [NSButton] {return [chkbxStress, chkbxDepression, chkbxAnxiety, chkbxMoodSwings, chkbxCrying, chkbxMemoryLoss, chkbxConfusion, chkbxHallucinations, chkbxSuicidalThoughts, chkbxParanoidThoughts, chkbxPoorConcentration, chkbxPanicAttacks]}
-	let psychVerbList = ["Stress", "Depression", "Anxiety-nerves", "Mood swings", "Crying", "Memory loss", "Confusion", "Hallucinations (audio/visual)", "Suicidal-Homicidal thoughts", "Paranoid thoughts", "Poor concentration", "Panic attacks"]
+	let psychVerbList = ["stress", "depression", "anxiety-nerves", "mood swings", "crying", "memory loss", "confusion", "hallucinations (audio/visual)", "suicidal-homicidal thoughts", "paranoid thoughts", "Ppoor concentration", "panic attacks"]
 	var guVarList: [NSButton] {return [chkbxPainfulUrination, chkbxBloodInUrine, chkbxFrequencyInUrination, chkbxUrgencyInUrination, chkbxUrinaryIncontinence, chkbxStoolIncontinence, chkbxNocturia, chkbxHesitency, chkbxErectileDysfunction, chkbxDecreasedLibido, chkbxIrregularPeriods, chkbxVaginalDischarge, chkbxBreastDischarge]}
-	let guVerbList = ["Painful urination", "Blood in urine", "Frequency in urination", "Urgency in urination", "Urinary incontinence", "Stool incontinence", "Nocturia", "Hesitency or dribbling", "Erectile dysfunction", "Decreased libido", "Irregular or heavy periods", "Vaginal discharge", "Breast discharge"]
+	let guVerbList = ["painful urination", "blood in urine", "frequency in urination", "urgency in urination", "urinary incontinence", "stool incontinence", "nocturia", "hesitency or dribbling", "erectile dysfunction", "decreased libido", "irregular or heavy periods", "vaginal discharge", "breast discharge"]
 	var endoVarList: [NSButton] {return [chkbxHeatIntolerance, chkbxColdIntolerance, chkbxHotFlashes, chkbxFlushing, chkbxGoiter, chkbxSwollenGlands, chkbxExcessiveThirst]}
-	let endoVerbList = ["Heat intolerance", "Cold intolerance", "Hot flashes", "Flushing", "Goiter", "Swollen glands", "Excessive thirst"]
+	let endoVerbList = ["heat intolerance", "cold intolerance", "hot flashes", "flushing", "goiter", "swollen glands", "excessive thirst"]
 	var entVarList: [NSButton] {return [chkbxEarAche, chkbxEarDrainage, chkbxHearingLoss, chkbxTinnitus, chkbxLossOfSmell, chkbxLossOfTaste, chkbxSoreThroat, chkbxMouthSores, chkbxHoarseVoice, chkbxLaryngitis, chkbxRunnyNose, chkbxSneezing, chkbxNasalCongestion, chkbxPostNasalDrip, chkbxNoseBleed]}
-	let entVerbList = ["Ear ache", "Ear drainage", "Hearing loss", "Tinnitus", "Loss of smell", "Loss of taste", "Sore throat", "Mouth sores", "Hoarse voice", "Laryngitis", "Runny nose", "Sneezing", "Nasal-Sinus congestion", "Post nasal drip", "Nose bleed"]
+	let entVerbList = ["ear ache", "ear drainage", "hearing loss", "tinnitus", "loss of smell", "loss of taste", "sore throat", "mouth sores", "hoarse voice", "laryngitis", "runny nose", "sneezing", "nasal-sinus congestion", "post nasal drip", "nose bleed"]
 	var eyeVarList: [NSButton] {return [chkbxBlurryVision, chkbxPoorVision, chkbxWateryEyes, chkbxDoubleVision, chkbxEyePain]}
-	let eyeVerbList = ["Blurry vision", "Poor vision", "Watery, itchy or red eyes", "Double vision", "Eye pain"]
+	let eyeVerbList = ["blurry vision", "poor vision", "watery, itchy or red eyes", "double vision", "eye pain"]
 	var mskVarList: [NSButton] {return [chkbxMSWeakness, chkbxStiffness, chkbxSwelling, chkbxJointAche, chkbxMuscleAche, chkbxSpasms, chkbxCramps]}
-	let mskVerbList = ["Weakness", "Stiffness", "Swelling", "Joint ache", "Muscle ache", "Spasms", "Cramps"]
+	let mskVerbList = ["weakness", "stiffness", "swelling", "joint ache", "muscle ache", "spasms", "cramps"]
 	var hemoVarList: [NSButton] {return [chkbxBruising, chkbxBloodTransfusion]}
-	let hemoVerbList = ["Bruising", "Blood transfusion"]
+	let hemoVerbList = ["bruising", "blood transfusion"]
 	var resVarList: [NSButton] {return [chkbxWheezing, chkbxCough, chkbxProductiveCough, chkbxBloodySputum, chkbxShortnessOfBreath, chkbxSnoring, chkbxApnea, chkbxDaytimeSleepiness, chkbxPleurisy, chkbxPainfulBreaths, chkbxDyspnea]}
-	let resVerbList = ["Wheezing", "Dry cough", "Productive cough", "Bloody sputum", "Shortness of breath", "Snoring", "Apnea", "Excess daytime sleepiness", "Pleurisy", "Painful breaths", "Dyspnea on exertion"]
+	let resVerbList = ["wheezing", "dry cough", "productive cough", "bloody sputum", "shortness of breath", "snoring", "apnea", "excess daytime sleepiness", "pleurisy", "painful breaths", "Dyspnea on exertion"]
 	var neuroVarList: [NSButton] {return [chkbxSeizures, chkbxTIA, chkbxHeadaches, chkbxTremors, chkbxTwitches, chkbxJerks, chkbxNumbness, chkbxTingling, chkbxSyncope, chkbxDizziness, chkbxLightHeaded, chkbxVertigo, chkbxPoorBalance, chkbxFalling]}
-	let neuroVerbList = ["Seizures", "TIA or stroke symptoms", "Headaches", "Tremors", "Twitches", "Jerks", "Numbness", "Tingling", "Syncope, fainting", "Dizziness", "Light headed", "Vertigo, spinning", "Poor balance", "Falling"]
+	let neuroVerbList = ["seizures", "TIA or stroke symptoms", "headaches", "tremors", "twitches", "jerks", "numbness", "tingling", "syncope, fainting", "dizziness", "light headed", "vertigo, spinning", "poor balance", "falling"]
 	var cardioVarList: [NSButton] {return [chkbxChestPain, chkbxAngina, chkbxPalpitations, chkbxPalpRacing, chkbxPalpSkipping, chkbxIrregularHeartBeat, chkbxLegCramps, chkbxCVSwelling, chkbxCantBreathLying, chkbxWakeUpGasping]}
-	let cardioVerbList = ["Chest pain", "Angina", "Palpitations", "Palpitations - racing", "Palpitations - skipping", "Irregular heart beat", "Leg cramps", "Swelling", "Can't breath lying down", "Wake up gasping"]
+	let cardioVerbList = ["chest pain", "angina", "palpitations", "palpitations - racing", "palpitations - skipping", "irregular heart beat", "leg cramps", "swelling", "can't breath lying down", "wake up gasping"]
 	var dermVarList: [NSButton] {return [chkbxDermBruising, chkbxItching, chkbxJaundice, chkbxRash, chkbxHives, chkbxLumps, chkbxDermSwollenGlands, chkbxHairLoss, chkbxExcessHair, chkbxDrySkin, chkbxPoorHealing, chkbxDermSores, chkbxUlcers, chkbxChangingMoles, chkbxAbscesses]}
-	let dermVerbList = ["Bruising", "Itching", "Jaundice", "Rash", "Hives", "Lumps", "Swollen glands", "Hair loss", "Excess hair", "Dry skin, eyes or mouth", "Poor healing", "Sores", "Ulcers", "Changing moles", "Abscesses-Boils"]
+	let dermVerbList = ["bruising", "itching", "jaundice", "rash", "hives", "lumps", "swollen glands", "hair loss", "excess hair", "dry skin, eyes or mouth", "poor healing", "sores", "ulcers", "changing moles", "abscesses-boils"]
 	
 	struct ROSVars {
 		static var positiveResults = [String]()
@@ -251,7 +251,7 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 			finalPositives = "(+) " + ROSVars.positiveResults.joinWithSeparator("; ") + "\n"
 		}
 		if !ROSVars.negativeResults.isEmpty {
-			finalNegatives = "(-) " + ROSVars.negativeResults.joinWithSeparator("; ") + "\n"
+			finalNegatives = "(-) " + "\(ROSVars.negativeResults.joinWithSeparator("; ")).  "
 		}
 		
 		if finalPositives != "" || finalNegatives != "" {

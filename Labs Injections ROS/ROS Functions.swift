@@ -48,13 +48,26 @@ func processROS(sectionName: String, controllers: [NSButton], verbiage: [String]
 	}
 	
 	if !positives.isEmpty {
+		positives = makeFirstCharacterInStringArrayUppercase(positives)
 		positiveResults = "\(sectionName): " + positives.joinWithSeparator(", ")
 		SystemsReview.ROSVars.positiveResults.append(positiveResults)
 	}
 	if !negatives.isEmpty {
+		negatives = makeFirstCharacterInStringArrayUppercase(negatives)
 		negativeResults = "\(sectionName): " + negatives.joinWithSeparator(", ")
 		SystemsReview.ROSVars.negativeResults.append(negativeResults)
 	}
 	
 	return (positiveResults, negativeResults)
+}
+
+func makeFirstCharacterInStringArrayUppercase(theArray: [String])->[String] {
+	var changedArray = theArray
+	var firstItem = theArray[0]
+	//Added this check to avoid an error in cases where the first item in a passed array is an empty string
+	if firstItem != "" {
+		firstItem.replaceRange(firstItem.startIndex...firstItem.startIndex, with: String(firstItem[firstItem.startIndex]).capitalizedString)
+	}
+	changedArray[0] = firstItem
+	return changedArray
 }
