@@ -16,11 +16,11 @@ func clearPopupButtons(control:[NSPopUpButton], values:[[String]]) {
 	}
 }
 
-func clearComboBoxes(control:[NSComboBox:[String]]) {
-	for box in control {
-		box.0.removeAllItems()
-		box.0.addItemsWithObjectValues(box.1)
-		box.0.selectItemAtIndex(0)
+func clearComboBoxes(control:[NSComboBox], values:[[String]]) {
+	for var i = 0; i < control.count; i++ {
+		control[i].removeAllItems()
+		control[i].addItemsWithObjectValues(values[i])
+		control[i].selectItemAtIndex(0)
 	}
 }
 

@@ -233,17 +233,17 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		var finalVerbiage = String()
 		
 		processROS("GEN", controllers: genVarList, verbiage: genVerbList)
-		processROS("GI", controllers: giVarList, verbiage: giVerbList)
 		processROS("PSYCH", controllers: psychVarList, verbiage: psychVerbList)
+		processROS("EYE", controllers: eyeVarList, verbiage: eyeVerbList)
+		processROS("ENT", controllers: entVarList, verbiage: entVerbList)
+		processROS("CARDIO", controllers: cardioVarList, verbiage: cardioVerbList)
+		processROS("RESP", controllers: resVarList, verbiage: resVerbList)
+		processROS("GI", controllers: giVarList, verbiage: giVerbList)
 		processROS("GU", controllers: guVarList, verbiage: guVerbList)
 		processROS("ENDO", controllers: endoVarList, verbiage: endoVerbList)
-		processROS("ENT", controllers: entVarList, verbiage: entVerbList)
-		processROS("EYE", controllers: eyeVarList, verbiage: eyeVerbList)
+		processROS("NEURO", controllers: neuroVarList, verbiage: neuroVerbList)
 		processROS("MSK", controllers: mskVarList, verbiage: mskVerbList)
 		processROS("HEMO", controllers: hemoVarList, verbiage: hemoVerbList)
-		processROS("RESP", controllers: resVarList, verbiage: resVerbList)
-		processROS("NEURO", controllers: neuroVarList, verbiage: neuroVerbList)
-		processROS("CARDIO", controllers: cardioVarList, verbiage: cardioVerbList)
 		processROS("DERM", controllers: dermVarList, verbiage: dermVerbList)
 		
 		

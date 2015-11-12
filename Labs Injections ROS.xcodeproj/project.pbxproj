@@ -10,6 +10,9 @@
 		7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */; };
 		7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3351BED2B0F00E075C4 /* PI Functions.swift */; };
 		7919F3381BED367700E075C4 /* PI Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3371BED367700E075C4 /* PI Constants.swift */; };
+		796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D1F211BF3B45200790A0D /* Lab Constants.swift */; };
+		796D1F241BF3B46700790A0D /* Lab Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D1F231BF3B46700790A0D /* Lab Functions.swift */; };
+		796D1F261BF3B49500790A0D /* Labs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D1F251BF3B49500790A0D /* Labs.swift */; };
 		79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF041BEBD90200331482 /* AppDelegate.swift */; };
 		79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF061BEBD90200331482 /* Assets.xcassets */; };
 		79D1DF0A1BEBD90200331482 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF081BEBD90200331482 /* MainMenu.xib */; };
@@ -41,6 +44,9 @@
 		7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresInjections.swift; sourceTree = "<group>"; };
 		7919F3351BED2B0F00E075C4 /* PI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Functions.swift"; sourceTree = "<group>"; };
 		7919F3371BED367700E075C4 /* PI Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Constants.swift"; sourceTree = "<group>"; };
+		796D1F211BF3B45200790A0D /* Lab Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lab Constants.swift"; sourceTree = "<group>"; };
+		796D1F231BF3B46700790A0D /* Lab Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lab Functions.swift"; sourceTree = "<group>"; };
+		796D1F251BF3B49500790A0D /* Labs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labs.swift; sourceTree = "<group>"; };
 		79D1DF011BEBD90200331482 /* Labs Injections ROS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labs Injections ROS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1DF041BEBD90200331482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D1DF061BEBD90200331482 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 			children = (
 				79D1DF081BEBD90200331482 /* MainMenu.xib */,
 				79D1DF041BEBD90200331482 /* AppDelegate.swift */,
+				796D1F251BF3B49500790A0D /* Labs.swift */,
+				796D1F231BF3B46700790A0D /* Lab Functions.swift */,
+				796D1F211BF3B45200790A0D /* Lab Constants.swift */,
 				7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */,
 				7919F3351BED2B0F00E075C4 /* PI Functions.swift */,
 				7919F3371BED367700E075C4 /* PI Constants.swift */,
@@ -268,9 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796D1F241BF3B46700790A0D /* Lab Functions.swift in Sources */,
 				79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */,
 				7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */,
+				796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */,
 				7919F3381BED367700E075C4 /* PI Constants.swift in Sources */,
+				796D1F261BF3B49500790A0D /* Labs.swift in Sources */,
 				79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */,
 				79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */,
 				7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */,
