@@ -237,6 +237,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 		winOrderPrep.orderOut(self)
 		winPrint.makeKeyAndOrderFront(self)
+		//self.textToPrint.textContainerInset = NSSize(width: 0, height: 0)
 		self.textToPrint.string = labOrderOutputText
 		print(labOrderOutputText)
 	}
@@ -248,6 +249,28 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	@IBAction func takeClosePrint(sender: AnyObject) {
 		winPrint.orderOut(self)
 	}
+	
+	@IBAction func takePrintLab(sender: AnyObject) {
+		let myPrintInfo = NSPrintInfo.sharedPrintInfo()
+		//Don't seem to need these lines
+		//myPrintInfo.verticalPagination = NSPrintingPaginationMode.AutoPagination
+		//let horizontalMargin: CGFloat = 0
+		//let verticalMargin: CGFloat = 0
+		
+		//Setting the margins to 0 gives the same output as connecting the button
+		//to the print action in the interface builder
+		myPrintInfo.leftMargin = 0
+		myPrintInfo.rightMargin = 0
+		//myPrintInfo.horizontallyCentered = true
+		myPrintInfo.topMargin = 0
+		myPrintInfo.bottomMargin = 0
+		let myPrintOperation = NSPrintOperation(view: self.textToPrint, printInfo: myPrintInfo)
+		
+		myPrintOperation.runOperation()
+		
+		winPrint.orderOut(self)
+	}
+	
 	
 	//Preset lab selectors
 	@IBAction func take90DayLab(sender: AnyObject) {

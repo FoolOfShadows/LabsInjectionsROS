@@ -176,7 +176,7 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	var giVarList: [NSButton] {return [chkbxAbdominalPain, chkbxGas, chkbxBloating, chkbxConstipation, chkbxDiarrhea, chkbxBloodyStool, chkbxEarlySatiety, chkbxTroubleSwallowing, chkbxHeartburn, chkbxIndigestion, chkbxNausea, chkbxVomiting, chkbxBloodyVomit, chkbxHemorrhoids, chkbxPelvicPain]}
 	let giVerbList = ["abdominal pain", "gas", "bloating", "constipation", "diarrhea", "bloody or black stool", "early satiety/fullness", "trouble or pain swallowing", "heartburn", "indigestion", "nausea", "vomiting", "bloody vomit", "hemorrhoids", "pelvic pain"]
 	var psychVarList: [NSButton] {return [chkbxStress, chkbxDepression, chkbxAnxiety, chkbxMoodSwings, chkbxCrying, chkbxMemoryLoss, chkbxConfusion, chkbxHallucinations, chkbxSuicidalThoughts, chkbxParanoidThoughts, chkbxPoorConcentration, chkbxPanicAttacks]}
-	let psychVerbList = ["stress", "depression", "anxiety-nerves", "mood swings", "crying", "memory loss", "confusion", "hallucinations (audio/visual)", "suicidal-homicidal thoughts", "paranoid thoughts", "Ppoor concentration", "panic attacks"]
+	let psychVerbList = ["stress", "depression", "anxiety-nerves", "mood swings", "crying", "memory loss", "confusion", "hallucinations (audio/visual)", "suicidal-homicidal thoughts", "paranoid thoughts", "Poor concentration", "panic attacks"]
 	var guVarList: [NSButton] {return [chkbxPainfulUrination, chkbxBloodInUrine, chkbxFrequencyInUrination, chkbxUrgencyInUrination, chkbxUrinaryIncontinence, chkbxStoolIncontinence, chkbxNocturia, chkbxHesitency, chkbxErectileDysfunction, chkbxDecreasedLibido, chkbxIrregularPeriods, chkbxVaginalDischarge, chkbxBreastDischarge]}
 	let guVerbList = ["painful urination", "blood in urine", "frequency in urination", "urgency in urination", "urinary incontinence", "stool incontinence", "nocturia", "hesitency or dribbling", "erectile dysfunction", "decreased libido", "irregular or heavy periods", "vaginal discharge", "breast discharge"]
 	var endoVarList: [NSButton] {return [chkbxHeatIntolerance, chkbxColdIntolerance, chkbxHotFlashes, chkbxFlushing, chkbxGoiter, chkbxSwollenGlands, chkbxExcessiveThirst]}
@@ -252,6 +252,8 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		}
 		if !ROSVars.negativeResults.isEmpty {
 			finalNegatives = "(-) " + "\(ROSVars.negativeResults.joinWithSeparator("; ")).  "
+		} else {
+			finalNegatives = "(-) "
 		}
 		
 		if finalPositives != "" || finalNegatives != "" {
