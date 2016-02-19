@@ -303,6 +303,15 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		anaView.selectItemAtIndex(1)
 	}
 	
+	@IBAction func takeYrlyPhysLab(sender: AnyObject) {
+		let yrlyPhysCode = "Z00.00"
+		cmpView.stringValue = yrlyPhysCode
+		cbcView.stringValue = yrlyPhysCode
+		tshView.stringValue = yrlyPhysCode
+		lpdView.stringValue = yrlyPhysCode
+		
+	}
+	
 	@IBAction func takeSTDPanel(sender: AnyObject) {
 		hsvView.selectItemAtIndex(1)
 		rprView.selectItemAtIndex(1)

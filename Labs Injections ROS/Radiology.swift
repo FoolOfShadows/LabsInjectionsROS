@@ -12,22 +12,44 @@ class Radiology: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 	//XRAY Outlets
 	@IBOutlet weak var xrayChestView: NSButton!
-	@IBOutlet weak var xrayRibView: NSButton!
+	@IBOutlet weak var xrayRibBothView: NSButton!
+	@IBOutlet weak var xrayRibRView: NSButton!
+	@IBOutlet weak var xrayRibLView: NSButton!
 	@IBOutlet weak var xrayAbView: NSButton!
 	@IBOutlet weak var xrayCSpineView: NSButton!
 	@IBOutlet weak var xrayTSpineView: NSButton!
 	@IBOutlet weak var xrayLSSpineView: NSButton!
-	@IBOutlet weak var xrayShoulderView: NSButton!
-	@IBOutlet weak var xrayKneeView: NSButton!
-	@IBOutlet weak var xrayHipView: NSButton!
+	@IBOutlet weak var xrayShoulderBothView: NSButton!
+	@IBOutlet weak var xrayShoulderRView: NSButton!
+	@IBOutlet weak var xrayShoulderLView: NSButton!
+	@IBOutlet weak var xrayKneeBothView: NSButton!
+	@IBOutlet weak var xrayKneeRView: NSButton!
+	@IBOutlet weak var xrayKneeLView: NSButton!
+	@IBOutlet weak var xrayHipBothView: NSButton!
+	@IBOutlet weak var xrayHipRView: NSButton!
+	@IBOutlet weak var xrayHipLView: NSButton!
 	@IBOutlet weak var xrayPelvisView: NSButton!
-	@IBOutlet weak var xrayFemurView: NSButton!
-	@IBOutlet weak var xrayTibFibView: NSButton!
-	@IBOutlet weak var xrayAnkleView: NSButton!
-	@IBOutlet weak var xrayFootView: NSButton!
-	@IBOutlet weak var xrayElbowView: NSButton!
-	@IBOutlet weak var xrayWristView: NSButton!
-	@IBOutlet weak var xrayHandView: NSButton!
+	@IBOutlet weak var xrayFemurBothView: NSButton!
+	@IBOutlet weak var xrayFemurRView: NSButton!
+	@IBOutlet weak var xrayFemurLView: NSButton!
+	@IBOutlet weak var xrayTibFibBothView: NSButton!
+	@IBOutlet weak var xrayTibFibRView: NSButton!
+	@IBOutlet weak var xrayTibFibLView: NSButton!
+	@IBOutlet weak var xrayAnkleBothView: NSButton!
+	@IBOutlet weak var xrayAnkleRView: NSButton!
+	@IBOutlet weak var xrayAnkleLView: NSButton!
+	@IBOutlet weak var xrayFootBothView: NSButton!
+	@IBOutlet weak var xrayFootRView: NSButton!
+	@IBOutlet weak var xrayFootLView: NSButton!
+	@IBOutlet weak var xrayElbowBothView: NSButton!
+	@IBOutlet weak var xrayElbowRView: NSButton!
+	@IBOutlet weak var xrayElbowLView: NSButton!
+	@IBOutlet weak var xrayWristBothView: NSButton!
+	@IBOutlet weak var xrayWristRView: NSButton!
+	@IBOutlet weak var xrayWristLView: NSButton!
+	@IBOutlet weak var xrayHandBothView: NSButton!
+	@IBOutlet weak var xrayHandRView: NSButton!
+	@IBOutlet weak var xrayHandLView: NSButton!
 	@IBOutlet weak var xrayMyeloView: NSButton!
 	@IBOutlet weak var xrayMyeloTextView: NSTextField!
 	@IBOutlet weak var xrayGIView: NSButton!
@@ -172,8 +194,8 @@ class Radiology: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	@IBOutlet weak var giCLNView: NSButton!
 	@IBOutlet weak var giEGDView: NSButton!
 	
-	var xrayButtonArray: [NSButton] {return [xrayChestView, xrayRibView, xrayAbView, xrayCSpineView, xrayTSpineView, xrayLSSpineView, xrayShoulderView, xrayKneeView, xrayHipView, xrayPelvisView, xrayFemurView, xrayTibFibView, xrayAnkleView, xrayFootView, xrayElbowView, xrayWristView, xrayHandView, xrayMyeloView, xrayGIView, xrayBariumView, xraySwallowView, xrayGastroView]}
-	var xrayVerbiageArray: [String] {return ["Xray - Chest PA&Lat","Xray - Rib series","Xray - Abdomen Flat & Upright","Xray - C spine series","Xray - T spine series","Xray - LS spine series","Xray - Shoulder series","Xray - Knee series with Standing film","Xray - Hip","Xray - Pelvis","Xray - Femur", "Xray - Tib Fib","Xray - Ankle","Xray - Foot","Xray - Elbow","Xray - Wrist","Xray - Hand", "Xray - Plain Myelogram - \(xrayMyeloTextView.stringValue)","Xray - Upper GI","Xray - Barium Swallow","Xray - Swallow Function Study","Xray - Gastrogaffin Enema"]}
+	var xrayButtonArray: [NSButton] {return [xrayChestView, xrayRibBothView, xrayRibRView, xrayRibLView, xrayAbView, xrayCSpineView, xrayTSpineView, xrayLSSpineView, xrayShoulderBothView, xrayShoulderRView, xrayShoulderLView, xrayKneeBothView, xrayKneeRView, xrayKneeLView, xrayHipBothView, xrayHipRView, xrayHipLView, xrayPelvisView, xrayFemurBothView, xrayFemurRView, xrayFemurLView, xrayTibFibBothView, xrayTibFibRView, xrayTibFibLView, xrayAnkleBothView, xrayAnkleRView, xrayAnkleLView, xrayFootBothView, xrayFootRView, xrayFootLView, xrayElbowBothView, xrayElbowRView, xrayElbowLView, xrayWristBothView, xrayWristRView, xrayWristLView, xrayHandBothView, xrayHandRView, xrayHandLView, xrayMyeloView, xrayGIView, xrayBariumView, xraySwallowView, xrayGastroView]}
+	var xrayVerbiageArray: [String] {return ["Xray - Chest PA&Lat","Xray - Rib series both sides", "Xray - Rib series right side", "Xray - Rib series left side","Xray - Abdomen Flat & Upright","Xray - C spine series","Xray - T spine series","Xray - LS spine series","Xray - Shoulder series both sides", "Xray - Shoulder series right side", "Xray - Shoulder series left side", "Xray - Knee series with Standing film both sides", "Xray - Knee series with Standing film right side", "Xray - Knee series with Standing film left side","Xray - Hip both sides", "Xray - Hip right side", "Xray - Hip left side", "Xray - Pelvis", "Xray - Femur both sides", "Xray - Femur right side", "Xray - Femur left side", "Xray - Tib Fib both sides", "Xray - Tib Fib right side", "Xray - Tib Fib left side", "Xray - Ankle both sides", "Xray - Ankle right side", "Xray - Ankle left side", "Xray - Foot both sides", "Xray - Foot right side", "Xray - Foot left side", "Xray - Elbow both sides", "Xray - Elbow right side", "Xray - Elbow left side", "Xray - Wrist both sides", "Xray - Wrist right side", "Xray - Wrist left side", "Xray - Hand both sides", "Xray - Hand right side", "Xray - Hand left side", "Xray - Plain Myelogram - \(xrayMyeloTextView.stringValue)","Xray - Upper GI","Xray - Barium Swallow","Xray - Swallow Function Study","Xray - Gastrogaffin Enema"]}
 	
 	var mrimraButtonArray: [NSButton] {return [mriBrainWView, mriBrainWOView, mriBrainWWOView, mriCSpineView, mriTSpineView, mriLSpineView, mriCTLSpineView, mriNeckView, mriExtremityView, mriAbView, mriAbPelvisWOView, mriAbPelvisPOIVView, mriAbPelvisPOView, mriChestWView, mriChestWOView, mriChestWWOView, mriSinusView, mraBrainWView, mraBrainWOView, mraBrainWWOView, mraNeckView, mraBUEView, mraBLEView, mraAbPelvisView]}
 	var mrimraVerbiageArray: [String] {return ["MRI - Brain w Contrast","MRI - Brain wo Contrast","MRI - Brain wwo Contrast","MRI - C spine","MRI - T spine","MRI - L spine","MRI - CTL spine","MRI - Neck Soft Tissue","MRI - Extremity - \(mriExtremityTextView.stringValue)","MRI - Abdomen","MRI - Abdomen & Pelvis wo Contrast","MRI - Abdomen & Pelvis w PO&IV Contrast", "MRI - Abdomen & Pelvis w PO Contrast","MRI - Chest w Contrast","MRI - Chest wo Contrast","MRI - Chest wwo Contrast","MRI - Sinuses","MRA - Brain w Contrast","MRA - Brain wo Contrast","MRA - Brain wwo Contrast","MRA - Neck and great vessels","MRA - Bilateral Upper Extremities","MRA - Bilateral Lower Extremities","MRA -Abdomen & Pelvis"]}
@@ -185,7 +207,7 @@ class Radiology: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	var usndVerbiageArray: [String] {return ["Ultrasound - Thyroid","Ultrasound - Gallbladder/RUQ","Ultrasound - Complete abdominal","Ultrasound - Kidneys","Ultrasound - Pelvic","Ultrasound - Pelvic - Transvaginal","Ultrasound - Testicle/Scrotum","Ultrasound - Breasts - Bilateral","Ultrasound - Breast - Right","Ultrasound - Breast - Left", "Ultrasound - Carotid Artery Doppler","Ultrasound - Venous Doppler - Bilateral Lower Extremities","Ultrasound - Venous Doppler - Left Lower Extremities","Ultrasound - Venous Doppler - Right Lower Extremities","Ultrasound - Venous Doppler - Bilateral Upper Extremities","Ultrasound - Venous Doppler - Left Upper Extremities","Ultrasound - Venous Doppler - Right Upper Extremities","Ultrasound - Venous Reflux Doppler - Bilateral Lower Extremities","Ultrasound - Arterial Doppler - Bilateral Lower Extremities","Ultrasound - Arterial Doppler - Left Lower Extremities","Ultrasound - Arterial Doppler - Right Lower Extremites","Ultrasound - Arterial Doppler - Bilateral Upper Extremities","Ultrasound - Arterial Doppler - Left Upper Extremities","Ultrasound - Arterial Doppler - Right Upper Extremities"]}
 	
 	var mamnucButtonArray: [NSButton] {return [mamSBView, mamDBView, mamDRView, mamDLView, bmdView, nucGallbladderView, nucNGESView, nucThyroidView, nucBreastView, nucBoneView]}
-	var mamnucVerbiageArray: [String] {return ["Mammogram - Screening Bilateral","Mammogram - Diagnostic Bilateral","Mammogram - Diagnostic Right","Mammogram - Diagnostic Left", "BMD - Dexa Bone Mineral Density", "Nuclear - Thyroid uptake scan","Nuclear - Gallbladder HIDA scan","Nuclear - NGES Nuclear Gastric Emptying Study","Nuclear - Breast scan","Nuclear - Bone scan 3 phase"]}
+	var mamnucVerbiageArray: [String] {return ["Mammogram - Screening Bilateral","Mammogram - Diagnostic Bilateral","Mammogram - Diagnostic Right","Mammogram - Diagnostic Left", "BMD - Dexa Bone Mineral Density", "Nuclear - Gallbladder HIDA scan", "Nuclear - NGES Nuclear Gastric Emptying Study", "Nuclear - Thyroid uptake scan","Nuclear - Breast scan","Nuclear - Bone scan 3 phase"]}
 	
 	var respcardiogiButtonArray: [NSButton] {return [resSleepHomeView, resPolysomView, resSleepSplitView, resCPAPView, resMSLTView, resMWTView, resPulsOxView, resPFTCompleteView, resPFTBasicView, resSpiroView, resSpiroPostBronchView, resSpiroExerciseView, resABGRoomAirView, resABGO2View, cardioECHOView, cardioTransECHOView, cardioBubbleECHOView, cardioEKGView, cardioStressExerciseView, cardioStressTreadmillView, cardioStressLexiscanView, cardioTreadmillECHOView, cardio24HolterView, cardio48HolterView, cardio30DayEventView, cardioTiltTableView, giCLNView, giEGDView]}
 	var respcardiogiVerbiageArray: [String] {return ["Home Sleep Study", "Sleep Study (Polysomnagram)","Sleep Study - Split Night","Sleep Study - CPAP Titration Study","MSLT (Multiple Sleep Latency Test)","MWT (Maintenance of Wakefulness Test)","Overnight Pulse Ox","PFT Complete","PFT Basic","Spirometry","Spirometry w Pre/Post Bronchodilator","Spirometry Exercise","ABG Room Air","ABG w/O2", "ECHO","Trans Esophageal ECHO","ECHO w bubble study","EKG","Stress Test: EKG Exercise","Stress Test: Treadmill Myoview","Stress Test: Lexiscan Myoview","Stress Test: Treadmill Stress ECHO","24 Hr Holter Monitor","48 Hr Holter Monitor","30 Day Cardiac Event Monitor", "Tilt Table Test", "Colonoscopy", "EGD"]}
