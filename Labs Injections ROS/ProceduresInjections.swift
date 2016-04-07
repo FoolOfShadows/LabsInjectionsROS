@@ -76,10 +76,11 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	@IBOutlet weak var exerciseView: NSButton!
 	@IBOutlet weak var tobaccoView: NSButton!
 	@IBOutlet weak var stressView: NSButton!
+	@IBOutlet weak var tagView: NSButton!
 	
 	var popupButtonList: [NSPopUpButton] {return [earLavageView, nebulizerView, dkSiteView, cSiteView, solSiteView, b12SiteView, phSiteView, torSiteView, torAmountView, tstSiteView, estSiteView, ppdSiteView, fluSiteView, fluTypeView, pnvSiteView, tdapSiteView, nphSiteView, rocSiteView, rocAmountView, depoSiteView, epoSiteView, arthSiteView, synvSiteView, hepSiteView]}
 	var popupItemList = [earLavageList, nebulizerList, deltGlutIMOnlyList, deltGlutIMSCList, deltGlutIMOnlyList, deltGlutIMSCList, deltGlutIMOnlyList, deltGlutIMOnlyList, torAmountList, deltGlutIMOnlyList, deltGlutIMOnlyList, forearmSCList, deltIMOnlyList, fluTypeList, deltIMSCList, deltIMOnlyList, deltGlutIMOnlyList, glutIMOnlyList, rocAmountList, deltGlutIMOnlyList, upperArmSCOnlyList, jointList, kneeList, deltGlutIMSCList]
-	var checkboxButtonList: [NSButton] {return [papView, dreView, stoolCardView, idView, ekgView, hepA1View, hepA2View, hepB1View, hepB2View, hepB3View, hepTRx1View, hepTRx2View, hepTRx3View, weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView, udipView, ucgView, udsView, mudsView, fluSwabView]}
+	var checkboxButtonList: [NSButton] {return [papView, dreView, stoolCardView, idView, ekgView, hepA1View, hepA2View, hepB1View, hepB2View, hepB3View, hepTRx1View, hepTRx2View, hepTRx3View, weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView, tagView, udipView, ucgView, udsView, mudsView, fluSwabView]}
 	var textFieldList: [NSTextField] {return [cryoTextView, skinTagTextView, sutureRemovalTextView, otherTextView, glucometerTextView]}
 	
 
@@ -190,8 +191,8 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	}
 	
 	func processEducation() -> [String] {
-		let educationVarList = [weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView]
-		let educationVerbiageList = ["Weight loss diet with calorie restriction and food diary counseled and admonished, info given.", "Diabetic diet and lifestyle counseling and info given, 45 gm carb per meal.", "Low fat, low cholesterol diet and exercise counseling and info given.", "Low salt and cardiac diet counseling and info given, 2400 mg Sodium per day.", "Hypertension lifestyle management counseling and info given.", "Dietary fiber education and info given.", "Coumadin diet education with Vitamin K food  content info given.", "Exercise counseling, guidance and education given.", "Tobacco cessation admonished: counseling and info given (3-10 min or > 10 min).", "Stress and anxiety management counseling given."]
+		let educationVarList = [weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView, tagView]
+		let educationVerbiageList = ["Weight loss diet with calorie restriction and food diary counseled and admonished, info given.", "Diabetic diet and lifestyle counseling and info given, 45 gm carb per meal.", "Low fat, low cholesterol diet and exercise counseling and info given.", "Low salt and cardiac diet counseling and info given, 2400 mg Sodium per day.", "Hypertension lifestyle management counseling and info given.", "Dietary fiber education and info given.", "Coumadin diet education with Vitamin K food  content info given.", "Exercise counseling, guidance and education given.", "Tobacco cessation admonished: counseling and info given (3-10 min or > 10 min).", "Stress and anxiety management counseling given.", "Treatment agreement discussed and reviewed with patient. Signed copy given to patient"]
 		
 		return processAllControlTypes(educationVarList, stringArray: educationVerbiageList)
 	}

@@ -9,7 +9,7 @@
 import Cocoa
 
 func clearPopupButtons(control:[NSPopUpButton], values:[[String]]) {
-	for var i = 0; i < control.count; i++ {
+	for var i = 0; i < control.count; i += 1 {
 		control[i].removeAllItems()
 		control[i].addItemsWithTitles(values[i])
 		control[i].selectItemAtIndex(0)
@@ -17,7 +17,7 @@ func clearPopupButtons(control:[NSPopUpButton], values:[[String]]) {
 }
 
 func clearComboBoxes(control:[NSComboBox], values:[[String]]) {
-	for var i = 0; i < control.count; i++ {
+	for var i = 0; i < control.count; i += 1 {
 		control[i].removeAllItems()
 		control[i].addItemsWithObjectValues(values[i])
 		control[i].selectItemAtIndex(0)
@@ -34,7 +34,7 @@ func clearTextFields(controls: [NSTextField]) {
 
 func processAllControlTypes(controllerArray: [AnyObject], stringArray: [String])-> [String] {
 	var returnValueList = [String]()
-	for var i = 0; i<controllerArray.count; i++ {
+	for var i = 0; i<controllerArray.count; i += 1 {
 		switch controllerArray[i] {
 		case is NSPopUpButton:
 			if (controllerArray[i].indexOfSelectedItem() != 0) {
@@ -64,7 +64,12 @@ func processAllControlTypes(controllerArray: [AnyObject], stringArray: [String])
 //Set all controls to ON state for testing only
 //Using setCheckboxesOn function from the ROS Functions file to test checkbox controllers
 func turnOnPopupButtons(control:[NSPopUpButton], values:[[String]]) {
-	for var i = 0; i < control.count; i++ {
+//	for var i = 0; i < control.count; i += 1 {
+//		control[i].removeAllItems()
+//		control[i].addItemsWithTitles(values[i])
+//		control[i].selectItemAtIndex(1)
+//	}
+	for (i, _) in control.enumerate() {
 		control[i].removeAllItems()
 		control[i].addItemsWithTitles(values[i])
 		control[i].selectItemAtIndex(1)
