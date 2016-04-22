@@ -223,12 +223,14 @@
         </customObject>
         <customObject id="GC5-ks-bW7" customClass="ProceduresInjections" customModule="Labs_Injections_ROS" customModuleProvider="target">
             <connections>
+                <outlet property="alcoholView" destination="8Za-Yg-t00" id="puB-Cb-cdi"/>
                 <outlet property="arthSiteView" destination="ic0-Sb-SUs" id="TLy-ID-7pg"/>
                 <outlet property="b12SiteView" destination="0QO-fG-FM0" id="hef-uI-K2Y"/>
                 <outlet property="cSiteView" destination="ixF-cE-O4a" id="Wmk-qF-aRG"/>
                 <outlet property="coumadinView" destination="bq9-sB-yJN" id="VK7-pa-uww"/>
                 <outlet property="cryoTextView" destination="5il-a3-ux8" id="2b3-F4-vdU"/>
                 <outlet property="depoSiteView" destination="yR2-sm-XyS" id="tax-gD-Wx4"/>
+                <outlet property="depressionView" destination="YfW-cQ-yrl" id="FNl-G6-Nxh"/>
                 <outlet property="diabeticDietView" destination="bXw-3g-chk" id="sf8-ip-kXp"/>
                 <outlet property="dietaryFiberView" destination="5fU-A7-LYY" id="ynv-L1-tST"/>
                 <outlet property="dkSiteView" destination="p9w-gX-r0N" id="VRx-Em-xE0"/>
@@ -241,6 +243,7 @@
                 <outlet property="fluSiteView" destination="PaA-aL-uc5" id="4BE-7e-vth"/>
                 <outlet property="fluSwabView" destination="bJd-E5-I0h" id="rfK-hg-Swv"/>
                 <outlet property="fluTypeView" destination="lRn-7l-gHZ" id="K11-bN-mbU"/>
+                <outlet property="gerdView" destination="Wso-1d-vjn" id="ZGr-78-FtK"/>
                 <outlet property="glucometerTextView" destination="svh-k5-ZXF" id="o4r-HM-cHT"/>
                 <outlet property="hepA1View" destination="fEK-7M-TUZ" id="rcl-ST-qgo"/>
                 <outlet property="hepA2View" destination="SLm-cK-eQp" id="l3u-Gz-M3u"/>
@@ -270,10 +273,12 @@
                 <outlet property="solSiteView" destination="IRL-cU-uY3" id="URw-zP-sB2"/>
                 <outlet property="stoolCardView" destination="lCE-t6-6PW" id="GKb-NX-kNa"/>
                 <outlet property="stressView" destination="Ty0-W7-LqV" id="4fL-JR-66a"/>
+                <outlet property="strokeView" destination="xf5-dS-ZgO" id="If0-Ha-3Zf"/>
                 <outlet property="sutureRemovalTextView" destination="kln-Bh-iRy" id="WQO-b4-Jt7"/>
                 <outlet property="synvSiteView" destination="anO-tJ-6Th" id="1jC-d6-H8V"/>
                 <outlet property="tagView" destination="zby-ht-CGI" id="DVf-ef-heI"/>
                 <outlet property="tdapSiteView" destination="1NO-rK-cJU" id="oim-Nz-6Fh"/>
+                <outlet property="thyroidSymptomsView" destination="flP-Kl-S70" id="xsE-Ci-E5A"/>
                 <outlet property="tobaccoView" destination="8FU-6D-HAQ" id="xIg-qO-WG7"/>
                 <outlet property="torAmountView" destination="Ug8-yg-Bop" id="91h-YY-ZOg"/>
                 <outlet property="torSiteView" destination="Iy5-yS-0A9" id="A30-rB-Yeg"/>
@@ -1165,7 +1170,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Procedures &amp; Injections" identifier="2" id="6su-Sc-o2d">
-                                <view key="view" id="fNJ-OM-Sb3">
+                                <view key="view" ambiguous="YES" id="fNJ-OM-Sb3">
                                     <rect key="frame" x="10" y="33" width="982" height="681"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -1928,94 +1933,6 @@ Gw
                                                 <action selector="takeTestON:" target="GC5-ks-bW7" id="aEx-30-wcv"/>
                                             </connections>
                                         </button>
-                                        <box autoresizesSubviews="NO" fixedFrame="YES" title="Education" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="zPw-gz-XAy">
-                                            <rect key="frame" x="583" y="236" width="256" height="270"/>
-                                            <view key="contentView" id="iHB-bG-25A">
-                                                <rect key="frame" x="1" y="1" width="254" height="254"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSN-XF-Slt">
-                                                        <rect key="frame" x="18" y="78" width="75" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Exercise" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qwW-af-wH3">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0B-Tq-lYE">
-                                                        <rect key="frame" x="18" y="218" width="98" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Weight Loss" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pEj-W5-CWv">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zby-ht-CGI">
-                                                        <rect key="frame" x="18" y="18" width="154" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Treatment Agreement" bezelStyle="regularSquare" imagePosition="left" inset="2" id="21q-FA-XTV">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aq6-SH-c9F">
-                                                        <rect key="frame" x="18" y="178" width="218" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Low Cholesterol Diet &amp; Lifestyle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kxi-Gx-3QW">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ty0-W7-LqV">
-                                                        <rect key="frame" x="18" y="38" width="123" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Stress &amp; Anxiety" bezelStyle="regularSquare" imagePosition="left" inset="2" id="j31-38-d2t">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fU-A7-LYY">
-                                                        <rect key="frame" x="18" y="118" width="101" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Dietary Fiber" bezelStyle="regularSquare" imagePosition="left" inset="2" id="D3m-Au-G1A">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tz9-8L-U9H">
-                                                        <rect key="frame" x="18" y="138" width="159" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Hypertension Lifestyle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="dUg-Mu-rjh">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq9-sB-yJN">
-                                                        <rect key="frame" x="18" y="98" width="177" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Coumadin/Vitamin K Diet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="gcR-Qn-LBY">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-6D-HAQ">
-                                                        <rect key="frame" x="18" y="58" width="140" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Tobacco Cessation" bezelStyle="regularSquare" imagePosition="left" inset="2" id="sFO-NM-Qbc">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXw-3g-chk">
-                                                        <rect key="frame" x="18" y="198" width="169" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Diabetic Diet &amp; Lifestyle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="HGp-Ax-Tkm">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7w4-Q6-7Qt">
-                                                        <rect key="frame" x="18" y="158" width="169" height="18"/>
-                                                        <buttonCell key="cell" type="check" title="Low Salt &amp; Cardiac Diet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Sg6-Ah-LeU">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                </subviews>
-                                            </view>
-                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
-                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </box>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" title="Samples" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="pEu-vG-LSg">
                                             <rect key="frame" x="6" y="115" width="568" height="167"/>
                                             <view key="contentView" id="4q0-Ua-vtT">
@@ -2055,11 +1972,134 @@ Gw
                                             <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                             <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </box>
+                                        <box autoresizesSubviews="NO" fixedFrame="YES" title="Education" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="eQV-yX-c7y">
+                                            <rect key="frame" x="583" y="136" width="256" height="370"/>
+                                            <view key="contentView" id="6MO-n4-6Px">
+                                                <rect key="frame" x="1" y="1" width="254" height="354"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zby-ht-CGI">
+                                                        <rect key="frame" x="18" y="118" width="154" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Treatment Agreement" bezelStyle="regularSquare" imagePosition="left" inset="2" id="21q-FA-XTV">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aq6-SH-c9F">
+                                                        <rect key="frame" x="18" y="278" width="218" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Low Cholesterol Diet &amp; Lifestyle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kxi-Gx-3QW">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fU-A7-LYY">
+                                                        <rect key="frame" x="18" y="218" width="101" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Dietary Fiber" bezelStyle="regularSquare" imagePosition="left" inset="2" id="D3m-Au-G1A">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wso-1d-vjn">
+                                                        <rect key="frame" x="18" y="38" width="58" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="GERD" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JMS-nn-BQq">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="flP-Kl-S70">
+                                                        <rect key="frame" x="18" y="18" width="136" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Thyroid Symptoms" bezelStyle="regularSquare" imagePosition="left" inset="2" id="DRU-hc-uWh">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Za-Yg-t00">
+                                                        <rect key="frame" x="18" y="58" width="161" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Alcohol Consequences" bezelStyle="regularSquare" imagePosition="left" inset="2" id="YD4-LM-cGP">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8FU-6D-HAQ">
+                                                        <rect key="frame" x="18" y="158" width="140" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Tobacco Cessation" bezelStyle="regularSquare" imagePosition="left" inset="2" id="sFO-NM-Qbc">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YfW-cQ-yrl">
+                                                        <rect key="frame" x="18" y="78" width="173" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Depression Management" bezelStyle="regularSquare" imagePosition="left" inset="2" id="O1j-SF-gpp">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0B-Tq-lYE">
+                                                        <rect key="frame" x="18" y="318" width="98" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Weight Loss" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pEj-W5-CWv">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-dS-ZgO">
+                                                        <rect key="frame" x="18" y="98" width="152" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Stroke Warning Signs" bezelStyle="regularSquare" imagePosition="left" inset="2" id="fPW-lf-SG1">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSN-XF-Slt">
+                                                        <rect key="frame" x="18" y="178" width="75" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Exercise" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qwW-af-wH3">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7w4-Q6-7Qt">
+                                                        <rect key="frame" x="18" y="258" width="169" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Low Salt &amp; Cardiac Diet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Sg6-Ah-LeU">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tz9-8L-U9H">
+                                                        <rect key="frame" x="18" y="238" width="159" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Hypertension Lifestyle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="dUg-Mu-rjh">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bq9-sB-yJN">
+                                                        <rect key="frame" x="18" y="198" width="177" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Coumadin/Vitamin K Diet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="gcR-Qn-LBY">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ty0-W7-LqV">
+                                                        <rect key="frame" x="18" y="138" width="123" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Stress &amp; Anxiety" bezelStyle="regularSquare" imagePosition="left" inset="2" id="j31-38-d2t">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bXw-3g-chk">
+                                                        <rect key="frame" x="18" y="298" width="169" height="18"/>
+                                                        <buttonCell key="cell" type="check" title="Diabetic Diet &amp; Lifestyle" bezelStyle="regularSquare" imagePosition="left" inset="2" id="HGp-Ax-Tkm">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                </subviews>
+                                            </view>
+                                            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </box>
                                     </subviews>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Systems Review" identifier="1" id="2fi-VV-hVh">
-                                <view key="view" ambiguous="YES" id="SRx-qN-C11">
+                                <view key="view" id="SRx-qN-C11">
                                     <rect key="frame" x="10" y="33" width="982" height="681"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -4168,11 +4208,11 @@ Gw
                                             <tabViewItems>
                                                 <tabViewItem label="XRAY - MAM - USND - NUC" identifier="1" id="GNK-Aw-Yg6">
                                                     <view key="view" ambiguous="YES" id="0zx-Cm-naP">
-                                                        <rect key="frame" x="10" y="33" width="984" height="599"/>
+                                                        <rect key="frame" x="10" y="33" width="205" height="0.0"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWK-yk-D2y">
-                                                                <rect key="frame" x="875" y="10" width="98" height="32"/>
+                                                                <rect key="frame" x="875" y="-589" width="98" height="32"/>
                                                                 <buttonCell key="cell" type="push" title="Clear Tab" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BQW-pX-MVK">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="system"/>
@@ -4182,7 +4222,7 @@ Gw
                                                                 </buttonCell>
                                                             </button>
                                                             <box autoresizesSubviews="NO" fixedFrame="YES" title="XRAY" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="kWH-FT-VJ7">
-                                                                <rect key="frame" x="6" y="27" width="275" height="572"/>
+                                                                <rect key="frame" x="6" y="-572" width="275" height="572"/>
                                                                 <view key="contentView" id="u6x-gz-iPD">
                                                                     <rect key="frame" x="1" y="1" width="273" height="556"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4597,7 +4637,7 @@ Gw
                                                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </box>
                                                             <box autoresizesSubviews="NO" fixedFrame="YES" title="Mamogram" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-bx-nMB">
-                                                                <rect key="frame" x="283" y="449" width="358" height="150"/>
+                                                                <rect key="frame" x="283" y="-150" width="358" height="150"/>
                                                                 <view key="contentView" id="8ts-wb-c28">
                                                                     <rect key="frame" x="1" y="1" width="356" height="134"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4643,7 +4683,7 @@ Gw
                                                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </box>
                                                             <box autoresizesSubviews="NO" fixedFrame="YES" title="Nuclear" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="wAC-2h-IWd">
-                                                                <rect key="frame" x="283" y="295" width="358" height="150"/>
+                                                                <rect key="frame" x="283" y="-304" width="358" height="150"/>
                                                                 <view key="contentView" id="fZz-4G-p7G">
                                                                     <rect key="frame" x="1" y="1" width="356" height="134"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4689,7 +4729,7 @@ Gw
                                                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </box>
                                                             <box autoresizesSubviews="NO" fixedFrame="YES" title="Ultrasound" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="fyO-4H-49O">
-                                                                <rect key="frame" x="655" y="69" width="315" height="530"/>
+                                                                <rect key="frame" x="655" y="-530" width="315" height="530"/>
                                                                 <view key="contentView" id="jed-6R-saL">
                                                                     <rect key="frame" x="1" y="1" width="313" height="514"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

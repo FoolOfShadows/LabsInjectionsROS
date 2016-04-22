@@ -77,6 +77,11 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	@IBOutlet weak var tobaccoView: NSButton!
 	@IBOutlet weak var stressView: NSButton!
 	@IBOutlet weak var tagView: NSButton!
+	@IBOutlet weak var strokeView: NSButton!
+	@IBOutlet weak var depressionView: NSButton!
+	@IBOutlet weak var alcoholView: NSButton!
+	@IBOutlet weak var gerdView: NSButton!
+	@IBOutlet weak var thyroidSymptomsView: NSButton!
 	
 	var popupButtonList: [NSPopUpButton] {return [earLavageView, nebulizerView, dkSiteView, cSiteView, solSiteView, b12SiteView, phSiteView, torSiteView, torAmountView, tstSiteView, estSiteView, ppdSiteView, fluSiteView, fluTypeView, pnvSiteView, tdapSiteView, nphSiteView, rocSiteView, rocAmountView, depoSiteView, epoSiteView, arthSiteView, synvSiteView, hepSiteView]}
 	var popupItemList = [earLavageList, nebulizerList, deltGlutIMOnlyList, deltGlutIMSCList, deltGlutIMOnlyList, deltGlutIMSCList, deltGlutIMOnlyList, deltGlutIMOnlyList, torAmountList, deltGlutIMOnlyList, deltGlutIMOnlyList, forearmSCList, deltIMOnlyList, fluTypeList, deltIMSCList, deltIMOnlyList, deltGlutIMOnlyList, glutIMOnlyList, rocAmountList, deltGlutIMOnlyList, upperArmSCOnlyList, jointList, kneeList, deltGlutIMSCList]
@@ -191,8 +196,8 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	}
 	
 	func processEducation() -> [String] {
-		let educationVarList = [weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView, tagView]
-		let educationVerbiageList = ["Weight loss diet with calorie restriction and food diary counseled and admonished, info given.", "Diabetic diet and lifestyle counseling and info given, 45 gm carb per meal.", "Low fat, low cholesterol diet and exercise counseling and info given.", "Low salt and cardiac diet counseling and info given, 2400 mg Sodium per day.", "Hypertension lifestyle management counseling and info given.", "Dietary fiber education and info given.", "Coumadin diet education with Vitamin K food  content info given.", "Exercise counseling, guidance and education given.", "Tobacco cessation admonished: counseling and info given (3-10 min or > 10 min).", "Stress and anxiety management counseling given.", "Treatment agreement discussed and reviewed with patient. Signed copy given to patient"]
+		let educationVarList = [weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView, tagView, strokeView, depressionView, alcoholView, gerdView, thyroidSymptomsView]
+		let educationVerbiageList = ["Weight loss diet with calorie restriction and food diary counseled and admonished, info given.", "Diabetic diet and lifestyle counseling and info given, 45 gm carb per meal.", "Low fat, low cholesterol diet and exercise counseling and info given.", "Low salt and cardiac diet counseling and info given, DASH diet, 2400 mg Sodium per day.", "Hypertension goals, lifestyle management counseling and info given.", "Dietary fiber education and info given.", "Coumadin diet education with Vitamin K food content info given.", "Exercise counseling, guidance and education given.", "Tobacco cessation admonished: counseling and info given (3-10 min).", "Stress and anxiety management counseling given.", "Treatment agreement discussed and reviewed with patient. Signed copy given to patient", "Stroke warning signs discussed and info given.", "Depression management counseling and resources given.", "Adverse health consequences of alcohol discussed and alcohol cessation admonished.", "Gastroesophageal Reflux diet and lifestyle modifications discussed and info given.", "Thyroid symptoms discussed."]
 		
 		return processAllControlTypes(educationVarList, stringArray: educationVerbiageList)
 	}
