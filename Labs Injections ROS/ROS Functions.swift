@@ -39,7 +39,8 @@ func processROS(sectionName: String, controllers: [NSButton], verbiage: [String]
 	var negatives = [String]()
 	var negativeResults = String()
 	
-	for var i = 0; i < controllers.count; i += 1 {
+	for (i, _) in controllers.enumerate() {
+	//for var i = 0; i < controllers.count; i += 1 {
 		if (controllers[i].state == NSMixedState) {
 			positives.append(verbiage[i])
 		} else if (controllers[i].state == NSOnState) {

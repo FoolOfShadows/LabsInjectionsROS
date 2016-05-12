@@ -24,6 +24,7 @@
 		79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF2D1BEBE11100331482 /* SystemsReview.swift */; };
 		79D1DF301BEBF18600331482 /* ROS Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF2F1BEBF18600331482 /* ROS Functions.swift */; };
 		79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */; };
+		79EC3C881CDBD536009D6757 /* BlackLineClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EC3C871CDBD536009D6757 /* BlackLineClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		79D1DF2D1BEBE11100331482 /* SystemsReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsReview.swift; sourceTree = "<group>"; };
 		79D1DF2F1BEBF18600331482 /* ROS Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ROS Functions.swift"; sourceTree = "<group>"; };
 		79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedGreenCheckbox.swift; sourceTree = "<group>"; };
+		79EC3C871CDBD536009D6757 /* BlackLineClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackLineClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */,
 				79D1DF0B1BEBD90200331482 /* Info.plist */,
 				79D1DF061BEBD90200331482 /* Assets.xcassets */,
+				79EC3C871CDBD536009D6757 /* BlackLineClass.swift */,
 			);
 			path = "Labs Injections ROS";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				796D1F241BF3B46700790A0D /* Lab Functions.swift in Sources */,
 				79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */,
+				79EC3C881CDBD536009D6757 /* BlackLineClass.swift in Sources */,
 				7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */,
 				794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */,
 				796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */,

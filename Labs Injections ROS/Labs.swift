@@ -130,7 +130,8 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 		var labList = [String]()
 		
-		for var i = 0; i < comboBoxArrayLab.count; i += 1 {
+		for (i, _) in comboBoxArrayLab.enumerate() {
+		//for var i = 0; i < comboBoxArrayLab.count; i += 1 {
 			if !comboBoxArrayLab[i].stringValue.isEmpty {
 				labList.append(labVerbiageList[i])
 			}
@@ -157,7 +158,8 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 		let adjustedLabList = comboBoxArrayLab.filter() {$0 !== udipView && $0 !== mudsView}
 		
-		for var i = 0; i < adjustedLabList.count; i += 1 {
+		for (i, _) in adjustedLabList.enumerate() {
+		//for var i = 0; i < adjustedLabList.count; i += 1 {
 			if !adjustedLabList[i].stringValue.isEmpty {
 				labList.append(labVerbiageWithDXList[i])
 			}
