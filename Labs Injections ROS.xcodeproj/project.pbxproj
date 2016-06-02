@@ -10,11 +10,13 @@
 		7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */; };
 		7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3351BED2B0F00E075C4 /* PI Functions.swift */; };
 		7919F3381BED367700E075C4 /* PI Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3371BED367700E075C4 /* PI Constants.swift */; };
+		79481E1E1D00671800417647 /* HPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79481E1D1D00671800417647 /* HPI.swift */; };
 		794E837D1C0CA4C10040F847 /* Radiology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837C1C0CA4C10040F847 /* Radiology.swift */; };
 		794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837E1C0CB36C0040F847 /* Radiology Functions.swift */; };
 		796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D1F211BF3B45200790A0D /* Lab Constants.swift */; };
 		796D1F241BF3B46700790A0D /* Lab Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D1F231BF3B46700790A0D /* Lab Functions.swift */; };
 		796D1F261BF3B49500790A0D /* Labs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D1F251BF3B49500790A0D /* Labs.swift */; };
+		79BC4A751D00AD6A00E50500 /* HPI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC4A741D00AD6A00E50500 /* HPI Functions.swift */; };
 		79BD9D2F1C0DD3F20010BF92 /* Referrals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD9D2E1C0DD3F20010BF92 /* Referrals.swift */; };
 		79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF041BEBD90200331482 /* AppDelegate.swift */; };
 		79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF061BEBD90200331482 /* Assets.xcassets */; };
@@ -48,11 +50,13 @@
 		7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresInjections.swift; sourceTree = "<group>"; };
 		7919F3351BED2B0F00E075C4 /* PI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Functions.swift"; sourceTree = "<group>"; };
 		7919F3371BED367700E075C4 /* PI Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Constants.swift"; sourceTree = "<group>"; };
+		79481E1D1D00671800417647 /* HPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPI.swift; sourceTree = "<group>"; };
 		794E837C1C0CA4C10040F847 /* Radiology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radiology.swift; sourceTree = "<group>"; };
 		794E837E1C0CB36C0040F847 /* Radiology Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radiology Functions.swift"; sourceTree = "<group>"; };
 		796D1F211BF3B45200790A0D /* Lab Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lab Constants.swift"; sourceTree = "<group>"; };
 		796D1F231BF3B46700790A0D /* Lab Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lab Functions.swift"; sourceTree = "<group>"; };
 		796D1F251BF3B49500790A0D /* Labs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labs.swift; sourceTree = "<group>"; };
+		79BC4A741D00AD6A00E50500 /* HPI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HPI Functions.swift"; sourceTree = "<group>"; };
 		79BD9D2E1C0DD3F20010BF92 /* Referrals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Referrals.swift; sourceTree = "<group>"; };
 		79D1DF011BEBD90200331482 /* Labs Injections ROS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labs Injections ROS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1DF041BEBD90200331482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				79D1DF0B1BEBD90200331482 /* Info.plist */,
 				79D1DF061BEBD90200331482 /* Assets.xcassets */,
 				79EC3C871CDBD536009D6757 /* BlackLineClass.swift */,
+				79481E1D1D00671800417647 /* HPI.swift */,
+				79BC4A741D00AD6A00E50500 /* HPI Functions.swift */,
 			);
 			path = "Labs Injections ROS";
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 				7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */,
 				794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */,
 				796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */,
+				79481E1E1D00671800417647 /* HPI.swift in Sources */,
 				7919F3381BED367700E075C4 /* PI Constants.swift in Sources */,
+				79BC4A751D00AD6A00E50500 /* HPI Functions.swift in Sources */,
 				796D1F261BF3B49500790A0D /* Labs.swift in Sources */,
 				79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */,
 				79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */,
