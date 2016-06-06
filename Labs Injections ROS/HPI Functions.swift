@@ -8,6 +8,56 @@
 
 import Cocoa
 
+class HPIClass {
+	var locationCheckboxes:[NSButton]
+	var locationVerbiage:[String]
+	var durationCheckboxes:[NSButton]
+	var severityCheckboxes:[NSButton]
+	var qualityCheckboxes:[NSButton]
+	var timingCheckboxes:[NSButton]
+	var contextCheckboxes:[NSButton]
+	var modifyingFactorsBetterCheckboxes:[NSButton]
+	var modifyingFactorsWorseCheckboxes:[NSButton]
+	var associatedSymptomsCheckboxes:[NSButton]
+	var functionWithCheckboxes:[NSButton]
+	var functionDifficultyCheckboxes:[NSButton]
+	var qolCheckboxes:[NSButton]
+	
+	init(locationCheckboxes:[NSButton], locationVerbiage:[String], duration:[NSButton], severity:[NSButton], quality:[NSButton], timing:[NSButton], context:[NSButton], modifyingBetter:[NSButton], modifyingWorse:[NSButton], associatedSymptoms:[NSButton], functionWith:[NSButton], functionDifficulty:[NSButton], qol:[NSButton]) {
+		self.locationCheckboxes = locationCheckboxes
+		self.locationVerbiage = locationVerbiage
+		self.durationCheckboxes = duration
+		self.severityCheckboxes = severity
+		self.qualityCheckboxes = quality
+		self.timingCheckboxes = timing
+		self.contextCheckboxes = context
+		self.modifyingFactorsBetterCheckboxes = modifyingBetter
+		self.modifyingFactorsWorseCheckboxes = modifyingWorse
+		self.associatedSymptomsCheckboxes = associatedSymptoms
+		self.functionWithCheckboxes = functionWith
+		self.functionDifficultyCheckboxes = functionDifficulty
+		self.qolCheckboxes = qol
+	}
+	
+	func clearControllers() {
+		let checkBoxes = [locationCheckboxes, durationCheckboxes, severityCheckboxes, qualityCheckboxes, timingCheckboxes, contextCheckboxes, modifyingFactorsBetterCheckboxes, modifyingFactorsWorseCheckboxes, associatedSymptomsCheckboxes, functionWithCheckboxes, functionDifficultyCheckboxes, qolCheckboxes]
+		for boxes in checkBoxes {
+			for box in boxes {
+				box.state = NSOffState
+			}
+		}
+		
+		
+		
+//		for field in textFields {
+//			field.stringValue = ""
+//		}
+		
+	}
+	
+}
+
+//Clear the HPI controllers
 func clearControllers(checkBoxes:[[NSButton]], textFields:[NSTextField]) {
 	for boxes in checkBoxes {
 		for box in boxes {
@@ -21,9 +71,10 @@ func clearControllers(checkBoxes:[[NSButton]], textFields:[NSTextField]) {
 	
 }
 
+//MARK: - Process the HPI sections
 func processLocation(textField:NSTextField, checkBoxes:[NSButton], verbiage:[String]) -> String {
 	var checkboxResults = [String]()
-	var results = ""
+	var results = String()
 	if textField.stringValue != "" {
 		checkboxResults.append(textField.stringValue)
 	}
@@ -34,18 +85,18 @@ func processLocation(textField:NSTextField, checkBoxes:[NSButton], verbiage:[Str
 	}
 	
 	if !checkboxResults.isEmpty {
-		results = "Patient reports pain located in " + checkboxResults.joinWithSeparator(", ") + "."
+		results = "Location: " + checkboxResults.joinWithSeparator(", ")
 	}
 	
 	return results
 }
 
 func processDuration(amount:NSTextField, checkBoxes:[NSButton]) -> String {
-	var results = ""
+	var results = String()
 	
 	for box in checkBoxes {
 		if box.state == NSOnState {
-		results = "Patient has been experiencing pain for \(amount.stringValue) \(box.title.lowercaseString)"
+		results = "Duration: \(amount.stringValue) \(box.title.lowercaseString)"
 		}
 	}
 	
@@ -53,24 +104,24 @@ func processDuration(amount:NSTextField, checkBoxes:[NSButton]) -> String {
 }
 
 func processSeverity(number:NSTextField, checkBoxes:[NSButton]) -> String {
-	var results = ""
+	var results = String()
 	
 	if number.stringValue != "" {
-		return "Patient reports pain severity as \(number.stringValue) out of 10."
+		return "Severity: \(number.stringValue)/10"
 	}
 	
 	for box in checkBoxes {
 		if box.state == NSOnState {
-			results = "Patient reports pain severity as \(box.title.lowercaseString)."
+			results = "Severity: \(box.title.lowercaseString)"
 		}
 	}
 	
 	return results
 }
 
-func processQuality(checkBoxes:[NSButton]) -> String {
+func processJustCheckboxes(checkBoxes:[NSButton], title:String) -> String {
 	var checkboxResults = [String]()
-	var results = ""
+	var results = String()
 	
 	for box in checkBoxes {
 		if box.state == NSOnState {
@@ -79,25 +130,8 @@ func processQuality(checkBoxes:[NSButton]) -> String {
 	}
 	
 	if !checkboxResults.isEmpty {
-		results = "Patient reports their pain quality as " + checkboxResults.joinWithSeparator(", ") + "."
+		results = "\(title): \(checkboxResults.joinWithSeparator(", "))"
 		return results
-	}
-	
-	return results
-}
-
-func processTiming(checkBoxes: [NSButton]) -> String {
-	var checkboxResults = [String]()
-	var results = ""
-	
-	for box in checkBoxes {
-		if box.state == NSOnState {
-			checkboxResults.append(box.title.lowercaseString)
-		}
-	}
-	
-	if !checkboxResults.isEmpty {
-		results = "Patient reports timing of pain is " + checkboxResults.joinWithSeparator(", ") + "."
 	}
 	
 	return results
@@ -107,7 +141,7 @@ func processModifyingFactors(better:[NSButton], worse:[NSButton]) -> String {
 	var betterResults = [String]()
 	var worseResults = [String]()
 	var finalResults = [String]()
-	var results = ""
+	var results = String()
 	
 	for item in better {
 		if item.state == NSOnState {
@@ -122,32 +156,15 @@ func processModifyingFactors(better:[NSButton], worse:[NSButton]) -> String {
 	}
 	
 	if !betterResults.isEmpty {
-		finalResults.append("Patient reports pain is better with " + betterResults.joinWithSeparator(", ") + ".")
+		finalResults.append("Better with: " + betterResults.joinWithSeparator(", "))
 	}
 	
 	if !worseResults.isEmpty {
-		finalResults.append("Patient reposrts pain is worse with " + worseResults.joinWithSeparator(", ") + ".")
+		finalResults.append("Worse with: " + worseResults.joinWithSeparator(", "))
 	}
 	
 	if !finalResults.isEmpty {
-		results = finalResults.joinWithSeparator("\n")
-	}
-	
-	return results
-}
-
-func processAssociatedSymptoms(checkBoxes:[NSButton]) -> String {
-	var checkboxResults = [String]()
-	var results = ""
-	
-	for box in checkBoxes {
-		if box.state == NSOnState {
-			checkboxResults.append(box.title.lowercaseString)
-		}
-	}
-	
-	if !checkboxResults.isEmpty {
-		results = "Patient reports symptoms associated with their pain are " + checkboxResults.joinWithSeparator(", ") + "."
+		results = "Modifying factors: " + finalResults.joinWithSeparator("; ")
 	}
 	
 	return results
@@ -157,7 +174,7 @@ func processFunction(requirements:[NSButton], difficulties:[NSButton]) -> String
 	var requiresResults = [String]()
 	var difficultiesResults = [String]()
 	var finalResults = [String]()
-	var results = ""
+	var results = String()
 	
 	for box in requirements {
 		if box.state == NSOnState {
@@ -172,37 +189,19 @@ func processFunction(requirements:[NSButton], difficulties:[NSButton]) -> String
 	}
 	
 	if !requiresResults.isEmpty {
-		finalResults.append("Patient requires \(requiresResults.joinWithSeparator(", ")) to function.")
+		finalResults.append("Ambulates with \(requiresResults.joinWithSeparator(", "))")
 	}
 	if !difficultiesResults.isEmpty {
-		finalResults.append("Patient reports difficulties with \(difficultiesResults.joinWithSeparator(", ")).")
+		finalResults.append("\(difficultiesResults.joinWithSeparator(", "))")
 	}
 	
 	if !finalResults.isEmpty {
-		results = finalResults.joinWithSeparator("\n")
+		results = "Function: " + finalResults.joinWithSeparator(", ")
 	}
 	
 	return results
 }
 
-
-func processQOL(checkBoxes: [NSButton]) -> String {
-	var qolResults = [String]()
-	var results = ""
-	
-	for box in checkBoxes {
-		if box.state == NSOnState {
-			qolResults.append(box.title.lowercaseString)
-		}
-	}
-	
-	if !qolResults.isEmpty {
-		results = "Patient reports quality of life as " + qolResults.joinWithSeparator(", ") + "."
-	}
-	
-	
-	return results
-}
 
 
 
