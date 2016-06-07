@@ -12,20 +12,34 @@ class HPI: NSObject, NSWindowDelegate {
 	
 	//Location controllers
 	@IBOutlet weak var locationTextView: NSTextField!
+	@IBOutlet weak var locationChestCheckbox: NSButton!
+	@IBOutlet weak var locationAbdomenCheckbox: NSButton!
+	@IBOutlet weak var locationRibsLCheckbox: NSButton!
+	@IBOutlet weak var locationRibsRCheckbox: NSButton!
 	@IBOutlet weak var locationBackCheckbox: NSButton!
 	@IBOutlet weak var locationNeckCheckbox: NSButton!
 	@IBOutlet weak var locationShoulderRCheckbox: NSButton!
 	@IBOutlet weak var locationShoulderLCheckbox: NSButton!
-	@IBOutlet weak var locationArmRCheckbox: NSButton!
-	@IBOutlet weak var locationArmLCheckbox: NSButton!
+	@IBOutlet weak var locationArmRUCheckbox: NSButton!
+	@IBOutlet weak var locationArmLUCheckbox: NSButton!
+	@IBOutlet weak var locationElbowLCheckbox: NSButton!
+	@IBOutlet weak var locationElbowRCheckbox: NSButton!
+	@IBOutlet weak var locationForearmLCheckbox: NSButton!
+	@IBOutlet weak var locationForearmRCheckbox: NSButton!
+	@IBOutlet weak var locationWristLCheckbox: NSButton!
+	@IBOutlet weak var locationWristRCheckbox: NSButton!
 	@IBOutlet weak var locationHandRCheckbox: NSButton!
 	@IBOutlet weak var locationHandLCheckbox: NSButton!
 	@IBOutlet weak var locationKneeRCheckbox: NSButton!
-	@IBOutlet weak var locationKneeeLCheckbox: NSButton!
+	@IBOutlet weak var locationKneeLCheckbox: NSButton!
 	@IBOutlet weak var locationHipRCheckbox: NSButton!
 	@IBOutlet weak var locationHipLCheckbox: NSButton!
-	@IBOutlet weak var locationLegRCheckbox: NSButton!
-	@IBOutlet weak var locationLegLCheckbox: NSButton!
+	@IBOutlet weak var locationLegRUCheckbox: NSButton!
+	@IBOutlet weak var locationLegLUCheckbox: NSButton!
+	@IBOutlet weak var locationLegLLCheckbox: NSButton!
+	@IBOutlet weak var locationLegRLCheckbox: NSButton!
+	@IBOutlet weak var locationAnkleLCheckbox: NSButton!
+	@IBOutlet weak var locationAnkleRCheckbox: NSButton!	
 	@IBOutlet weak var locationFootRCheckbox: NSButton!
 	@IBOutlet weak var locationFootLCheckbox: NSButton!
 	
@@ -122,8 +136,10 @@ class HPI: NSObject, NSWindowDelegate {
 	@IBOutlet weak var qolPoorCheckbox: NSButton!
 	@IBOutlet weak var qolTextView: NSTextField!
 	
-	var locationCheckboxArray: [NSButton] {return [locationBackCheckbox, locationNeckCheckbox, locationShoulderRCheckbox, locationShoulderLCheckbox, locationArmRCheckbox, locationArmLCheckbox, locationHandRCheckbox, locationHandLCheckbox, locationKneeRCheckbox, locationKneeeLCheckbox, locationHipRCheckbox, locationHipLCheckbox, locationLegRCheckbox, locationLegLCheckbox, locationFootRCheckbox, locationFootLCheckbox]}
-	let locationVerbiage = ["back", "neck", "right shoulder", "left shoulder", "right arm", "left arm", "right hand", "left hand", "right knee", "left knee", "right hip", "left hip", "right leg", "left leg", "right foot", "left foot"]
+	var locationCheckboxArray: [NSButton] {return [locationChestCheckbox, locationAbdomenCheckbox, locationRibsLCheckbox, locationRibsRCheckbox, locationBackCheckbox, locationNeckCheckbox, locationShoulderLCheckbox, locationShoulderRCheckbox, locationArmLUCheckbox, locationArmRUCheckbox, locationElbowLCheckbox, locationElbowRCheckbox, locationForearmLCheckbox, locationForearmRCheckbox, locationWristLCheckbox, locationWristRCheckbox, locationHandLCheckbox, locationHandRCheckbox, locationHipLCheckbox, locationHipRCheckbox, locationLegLUCheckbox, locationLegRUCheckbox, locationKneeLCheckbox, locationKneeRCheckbox, locationLegLLCheckbox, locationLegRLCheckbox, locationAnkleLCheckbox, locationAnkleRCheckbox, locationFootLCheckbox, locationFootRCheckbox]}
+	let locationVerbiage = ["chest", "abdomen", "left side ribs", "right side ribs", "back", "neck", "left shoulder", "right shoulder",
+	                        "left upper arm", "right upper arm", "left elbow", "right elbow", "left forearm", "right forearm", "left wrist", "right wrist", "left hand", "right hand",
+	                        "left hip", "right hip", "left upper leg", "right upper leg", "left knee", "right knee", "left lower leg", "right lower leg", "left ankle", "right ankle", "left foot", "right foot"]
 		
 	var durationCheckboxArray: [NSButton] {return [durationDaysCheckbox, durationWeekCheckbox, durationMonthCheckbox, durationMonthsToYearsCheckbox, durationYearsCheckbox]}
 	
