@@ -47,12 +47,6 @@ class HPIClass {
 			}
 		}
 		
-		
-		
-//		for field in textFields {
-//			field.stringValue = ""
-//		}
-		
 	}
 	
 }
@@ -78,14 +72,14 @@ func processLocation(textField:NSTextField, checkBoxes:[NSButton], verbiage:[Str
 	if textField.stringValue != "" {
 		checkboxResults.append(textField.stringValue)
 	}
-	for (index, box) in checkBoxes.enumerate() {
+	for (index, box) in checkBoxes.enumerated() {
 		if box.state == NSOnState {
 			checkboxResults.append(verbiage[index])
 		}
 	}
 	
 	if !checkboxResults.isEmpty {
-		results = "Location: " + checkboxResults.joinWithSeparator(", ")
+		results = "Location: " + checkboxResults.joined(separator: ", ")
 	}
 	
 	return results
@@ -96,7 +90,7 @@ func processDuration(amount:NSTextField, checkBoxes:[NSButton]) -> String {
 	
 	for box in checkBoxes {
 		if box.state == NSOnState {
-		results = "Duration: \(amount.stringValue) \(box.title.lowercaseString)"
+		results = "Duration: \(amount.stringValue) \(box.title.lowercased())"
 		}
 	}
 	
@@ -112,7 +106,7 @@ func processSeverity(number:NSTextField, checkBoxes:[NSButton]) -> String {
 	
 	for box in checkBoxes {
 		if box.state == NSOnState {
-			results = "Severity: \(box.title.lowercaseString)"
+			results = "Severity: \(box.title.lowercased())"
 		}
 	}
 	
@@ -125,12 +119,12 @@ func processJustCheckboxes(checkBoxes:[NSButton], title:String) -> String {
 	
 	for box in checkBoxes {
 		if box.state == NSOnState {
-			checkboxResults.append(box.title.lowercaseString)
+			checkboxResults.append(box.title.lowercased())
 		}
 	}
 	
 	if !checkboxResults.isEmpty {
-		results = "\(title): \(checkboxResults.joinWithSeparator(", "))"
+		results = "\(title): \(checkboxResults.joined(separator: ", "))"
 		return results
 	}
 	
@@ -145,26 +139,26 @@ func processModifyingFactors(better:[NSButton], worse:[NSButton]) -> String {
 	
 	for item in better {
 		if item.state == NSOnState {
-			betterResults.append(item.title.lowercaseString)
+			betterResults.append(item.title.lowercased())
 		}
 	}
 	
 	for item in worse {
 		if item.state == NSOnState {
-			worseResults.append(item.title.lowercaseString)
+			worseResults.append(item.title.lowercased())
 		}
 	}
 	
 	if !betterResults.isEmpty {
-		finalResults.append("Better with: " + betterResults.joinWithSeparator(", "))
+		finalResults.append("Better with: " + betterResults.joined(separator: ", "))
 	}
 	
 	if !worseResults.isEmpty {
-		finalResults.append("Worse with: " + worseResults.joinWithSeparator(", "))
+		finalResults.append("Worse with: " + worseResults.joined(separator: ", "))
 	}
 	
 	if !finalResults.isEmpty {
-		results = "Modifying factors: " + finalResults.joinWithSeparator("; ")
+		results = "Modifying factors: " + finalResults.joined(separator: "; ")
 	}
 	
 	return results
@@ -178,25 +172,25 @@ func processFunction(requirements:[NSButton], difficulties:[NSButton]) -> String
 	
 	for box in requirements {
 		if box.state == NSOnState {
-			requiresResults.append(box.title.lowercaseString)
+			requiresResults.append(box.title.lowercased())
 		}
 	}
 	
 	for box in difficulties {
 		if box.state == NSOnState {
-			difficultiesResults.append(box.title.lowercaseString)
+			difficultiesResults.append(box.title.lowercased())
 		}
 	}
 	
 	if !requiresResults.isEmpty {
-		finalResults.append("Ambulates with \(requiresResults.joinWithSeparator(", "))")
+		finalResults.append("Ambulates with \(requiresResults.joined(separator: ", "))")
 	}
 	if !difficultiesResults.isEmpty {
-		finalResults.append("\(difficultiesResults.joinWithSeparator(", "))")
+		finalResults.append("\(difficultiesResults.joined(separator: ", "))")
 	}
 	
 	if !finalResults.isEmpty {
-		results = "Function: " + finalResults.joinWithSeparator(", ")
+		results = "Function: " + finalResults.joined(separator: ", ")
 	}
 	
 	return results

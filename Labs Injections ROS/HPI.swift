@@ -66,6 +66,8 @@ class HPI: NSObject, NSWindowDelegate {
 	@IBOutlet weak var qualityBurningCheckbox: NSButton!
 	@IBOutlet weak var qualityStingingCheckbox: NSButton!
 	@IBOutlet weak var qualityThrobbingCheckbox: NSButton!
+	@IBOutlet weak var qualityCrampingCheckbox: NSButton!
+	@IBOutlet weak var qualitySpasmCheckbox: NSButton!
 	
 	//Timing controllers
 	@IBOutlet weak var timingConstantCheckbox: NSButton!
@@ -145,7 +147,7 @@ class HPI: NSObject, NSWindowDelegate {
 	
 	var severityCheckboxArray: [NSButton] {return [severityMildCheckbox, severityModerateCheckbox, severitySevereCheckbox]}
 	
-	var qualityCheckboxArray: [NSButton] {return [qualityAcheCheckbox, qualitySoreCheckbox, qualitySharpCheckbox, qualityStabbingCheckbox, qualityDullCheckbox, qualityBurningCheckbox, qualityStingingCheckbox, qualityThrobbingCheckbox]}
+	var qualityCheckboxArray: [NSButton] {return [qualityAcheCheckbox, qualitySoreCheckbox, qualitySharpCheckbox, qualityStabbingCheckbox, qualityDullCheckbox, qualityBurningCheckbox, qualityStingingCheckbox, qualityThrobbingCheckbox, qualityCrampingCheckbox, qualitySpasmCheckbox]}
 	
 	var timingCheckboxArray: [NSButton] {return [timingConstantCheckbox, timingFrequentCheckbox, timingOccasionalCheckbox, timingInfrequentCheckbox, timingIntermittentCheckbox, timingAtRestCheckbox, timingAfterWorkCheckbox, timingAfterExerciseCheckbox, timingMorningCheckbox, timingNightCheckbox, timingEndOfDay]}
 	
@@ -166,30 +168,30 @@ class HPI: NSObject, NSWindowDelegate {
 	@IBAction func clearHPI(sender: NSButton) {
 		let textFields = [locationTextView!, durationQuantityTextView!, severityResultTextView!, causeTextView!, qolTextView!]
 		let checkboxArrays = [locationCheckboxArray, durationCheckboxArray, severityCheckboxArray, qualityCheckboxArray, timingCheckboxArray, contextCheckboxArray, modifyingFactorsBetterCheckboxArray, modifyingFactorsWorseCheckboxArray, associatedSymptomsCheckboxArray, functionWithCheckboxArray, functionDifficultyCheckboxArray, qolCheckboxArray]
-		clearControllers(checkboxArrays, textFields: textFields)
+		clearControllers(checkBoxes: checkboxArrays, textFields: textFields)
 	}
 	
 	@IBAction func processHPI(sender: NSButton) {
 		var resultsArray = [String]()
-		resultsArray.append(processLocation(locationTextView, checkBoxes: locationCheckboxArray, verbiage: locationVerbiage))
-		resultsArray.append(processSeverity(severityResultTextView, checkBoxes: severityCheckboxArray))
-		resultsArray.append(processJustCheckboxes(qualityCheckboxArray, title:"Quality"))
-		resultsArray.append(processDuration(durationQuantityTextView, checkBoxes: durationCheckboxArray))
-		resultsArray.append(processJustCheckboxes(timingCheckboxArray, title:"Timing"))
-		resultsArray.append(processJustCheckboxes(contextCheckboxArray, title:"Context"))
-		resultsArray.append(processModifyingFactors(modifyingFactorsBetterCheckboxArray, worse: modifyingFactorsWorseCheckboxArray))
-		resultsArray.append(processJustCheckboxes(associatedSymptomsCheckboxArray, title:"Associated symptoms"))
-		resultsArray.append(processFunction(functionWithCheckboxArray, difficulties: functionDifficultyCheckboxArray))
-		resultsArray.append(processJustCheckboxes(qolCheckboxArray, title:"Quality of life"))
+		resultsArray.append(processLocation(textField: locationTextView, checkBoxes: locationCheckboxArray, verbiage: locationVerbiage))
+		resultsArray.append(processSeverity(number: severityResultTextView, checkBoxes: severityCheckboxArray))
+		resultsArray.append(processJustCheckboxes(checkBoxes: qualityCheckboxArray, title:"Quality"))
+		resultsArray.append(processDuration(amount: durationQuantityTextView, checkBoxes: durationCheckboxArray))
+		resultsArray.append(processJustCheckboxes(checkBoxes: timingCheckboxArray, title:"Timing"))
+		resultsArray.append(processJustCheckboxes(checkBoxes: contextCheckboxArray, title:"Context"))
+		resultsArray.append(processModifyingFactors(better: modifyingFactorsBetterCheckboxArray, worse: modifyingFactorsWorseCheckboxArray))
+		resultsArray.append(processJustCheckboxes(checkBoxes: associatedSymptomsCheckboxArray, title:"Associated symptoms"))
+		resultsArray.append(processFunction(requirements: functionWithCheckboxArray, difficulties: functionDifficultyCheckboxArray))
+		resultsArray.append(processJustCheckboxes(checkBoxes: qolCheckboxArray, title:"Quality of life"))
 		print(resultsArray)
 		
 		let cleanArray = resultsArray.filter{$0 != ""}
 		print(cleanArray)
 		
 		if !cleanArray.isEmpty {
-			let results = cleanArray.joinWithSeparator("\n")
+			let results = cleanArray.joined(separator: "\n")
 			//Clear the system clipboard
-			let pasteBoard = NSPasteboard.generalPasteboard()
+			let pasteBoard = NSPasteboard.general()
 			pasteBoard.clearContents()
 			//Set the system clipboard to the final text
 			pasteBoard.setString(results, forType: NSPasteboardTypeString)

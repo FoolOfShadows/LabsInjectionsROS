@@ -13,16 +13,16 @@ import Cocoa
 @IBDesignable
 class RedGreenCheckbox: NSButtonCell {
 	@IBInspectable
-	var onStateColor: NSColor = NSColor.greenColor()
+	var onStateColor: NSColor = NSColor.green()
 	@IBInspectable
-	var offStateColor: NSColor = NSColor.whiteColor()
+	var offStateColor: NSColor = NSColor.white()
 	@IBInspectable
-	var mixedStateColor: NSColor = NSColor.redColor()
+	var mixedStateColor: NSColor = NSColor.red()
 
-	override func drawImage(image: NSImage, withFrame frame: NSRect, inView controlView: NSView) {
-		NSColor.blackColor().setFill()
+	override func drawImage(_ image: NSImage, withFrame frame: NSRect, in controlView: NSView) {
+		NSColor.black().setFill()
 		NSRectFill(frame)
-		NSColor.whiteColor().setFill()
+		NSColor.white().setFill()
 		NSRectFill(NSInsetRect(frame, 1, 1))
 		
 		if self.state == NSOnState {

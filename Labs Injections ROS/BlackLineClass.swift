@@ -12,7 +12,7 @@ import Cocoa
 class MyLine: NSView {
 	
 	@IBInspectable
-	var lineFillColor: NSColor = NSColor.darkGrayColor()
+	var lineFillColor: NSColor = NSColor.darkGray()
 	
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)
@@ -22,7 +22,7 @@ class MyLine: NSView {
 		super.init(coder: coder)
 	}
 	
-	override func drawRect(dirtyRect: NSRect) {
+	override func draw(_ dirtyRect: NSRect) {
 		let bPath:NSBezierPath = NSBezierPath(rect: dirtyRect)
 		bPath.lineWidth = 0.0
 		let fillColor = lineFillColor

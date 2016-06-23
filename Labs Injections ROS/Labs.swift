@@ -13,6 +13,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	@IBOutlet weak var winOrderPrep: NSWindow!
 	@IBOutlet weak var winPrint: NSWindow!
 	
+	
 	//Lab Controllers
 	@IBOutlet weak var bmpView: NSComboBox!
 	@IBOutlet weak var cmpView: NSComboBox!
@@ -84,7 +85,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 	func clearLab() {
 		//print(comboBoxArrayLab.count, comboBoxValuesLab.count)
-		clearComboBoxes(comboBoxArrayLab, values: comboBoxValuesLab)
+		clearComboBoxes(control: comboBoxArrayLab, values: comboBoxValuesLab)
 		other1TextView.stringValue = ""
 		other2TextView.stringValue = ""
 		reviewedView.state = NSOffState
@@ -130,7 +131,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 		var labList = [String]()
 		
-		for (i, _) in comboBoxArrayLab.enumerate() {
+		for (i, _) in comboBoxArrayLab.enumerated() {
 		//for var i = 0; i < comboBoxArrayLab.count; i += 1 {
 			if !comboBoxArrayLab[i].stringValue.isEmpty {
 				labList.append(labVerbiageList[i])
@@ -138,7 +139,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		}
 		
 		if !labList.isEmpty {
-			listToReturn = labReviewed + nextLabDue + "Labs ordered: " + labList.joinWithSeparator(", ") + "\n"
+			listToReturn = labReviewed + nextLabDue + "Labs ordered: " + labList.joined(separator: ", ") + "\n"
 		}
 		
 		return listToReturn
@@ -158,7 +159,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 		let adjustedLabList = comboBoxArrayLab.filter() {$0 !== udipView && $0 !== mudsView}
 		
-		for (i, _) in adjustedLabList.enumerate() {
+		for (i, _) in adjustedLabList.enumerated() {
 		//for var i = 0; i < adjustedLabList.count; i += 1 {
 			if !adjustedLabList[i].stringValue.isEmpty {
 				labList.append(labVerbiageWithDXList[i])
@@ -166,7 +167,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		}
 		
 		if !labList.isEmpty {
-			listToReturn = labList.joinWithSeparator("\n")
+			listToReturn = labList.joined(separator: "\n")
 		}
 		
 		print(listToReturn)
@@ -177,20 +178,20 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		//print(processLabOrdersForNote())
 		
 		let labResults = processLabOrdersForNote()
-		let pasteBoard = NSPasteboard.generalPasteboard()
+		let pasteBoard = NSPasteboard.general()
 		pasteBoard.clearContents()
 		pasteBoard.setString(labResults, forType: NSPasteboardTypeString)
 	}
 	
 	@IBAction func takePrintSave(sender: AnyObject) {
-		let dateFormatter = NSDateFormatter()
+		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "MM/dd/YYYY"
-		let currentDate = dateFormatter.stringFromDate(NSDate())
+		let currentDate = dateFormatter.string(from: Date())
 		winOrderPrep.makeKeyAndOrderFront(self)
 		ptNameView.stringValue = ""
 		ptDOBView.stringValue = ""
 		currentDateView.stringValue = currentDate
-		mcPrimaryView.selectCellAtRow(0, column: 0)
+		mcPrimaryView.selectCell(atRow: 0, column: 0)
 	}
 	
 	@IBAction func takeProcessForPrint(sender: AnyObject) {
@@ -253,7 +254,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	}
 	
 	@IBAction func takePrintLab(sender: AnyObject) {
-		let myPrintInfo = NSPrintInfo.sharedPrintInfo()
+		let myPrintInfo = NSPrintInfo.shared()
 		//Don't seem to need these lines
 		//myPrintInfo.verticalPagination = NSPrintingPaginationMode.AutoPagination
 		//let horizontalMargin: CGFloat = 0
@@ -268,7 +269,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		myPrintInfo.bottomMargin = 0
 		let myPrintOperation = NSPrintOperation(view: self.textToPrint, printInfo: myPrintInfo)
 		
-		myPrintOperation.runOperation()
+		myPrintOperation.run()
 		
 		winPrint.orderOut(self)
 	}
@@ -276,33 +277,33 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 	//Preset lab selectors
 	@IBAction func take90DayLab(sender: AnyObject) {
-		cmpView.selectItemAtIndex(1)
-		cbcView.selectItemAtIndex(1)
-		tshView.selectItemAtIndex(1)
-		lpdView.selectItemAtIndex(1)
+		cmpView.selectItem(at: 1)
+		cbcView.selectItem(at: 1)
+		tshView.selectItem(at: 1)
+		lpdView.selectItem(at: 1)
 	}
 	
 	@IBAction func takeDMLab(sender: AnyObject) {
-		cmpView.selectItemAtIndex(1)
-		cbcView.selectItemAtIndex(1)
-		tshView.selectItemAtIndex(1)
-		hba1cView.selectItemAtIndex(1)
-		umalbView.selectItemAtIndex(1)
+		cmpView.selectItem(at: 1)
+		cbcView.selectItem(at: 1)
+		tshView.selectItem(at: 1)
+		hba1cView.selectItem(at: 1)
+		umalbView.selectItem(at: 1)
 	}
 	
 	@IBAction func takeThyLab(sender: AnyObject) {
-		tshView.selectItemAtIndex(1)
-		ft4view.selectItemAtIndex(1)
-		ft3View.selectItemAtIndex(1)
+		tshView.selectItem(at: 1)
+		ft4view.selectItem(at: 1)
+		ft3View.selectItem(at: 1)
 	}
 	
 	@IBAction func takeRheumLab(sender: AnyObject) {
-		urACView.selectItemAtIndex(1)
-		cpkView.selectItemAtIndex(1)
-		esrView.selectItemAtIndex(1)
-		crpView.selectItemAtIndex(1)
-		rfView.selectItemAtIndex(1)
-		anaView.selectItemAtIndex(1)
+		urACView.selectItem(at: 1)
+		cpkView.selectItem(at: 1)
+		esrView.selectItem(at: 1)
+		crpView.selectItem(at: 1)
+		rfView.selectItem(at: 1)
+		anaView.selectItem(at: 1)
 	}
 	
 	@IBAction func takeYrlyPhysLab(sender: AnyObject) {
@@ -315,10 +316,10 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	}
 	
 	@IBAction func takeSTDPanel(sender: AnyObject) {
-		hsvView.selectItemAtIndex(1)
-		rprView.selectItemAtIndex(1)
-		hivView.selectItemAtIndex(1)
-		cheppnlView.selectItemAtIndex(1)
+		hsvView.selectItem(at: 1)
+		rprView.selectItem(at: 1)
+		hivView.selectItem(at: 1)
+		cheppnlView.selectItem(at: 1)
 	}
 	
 }

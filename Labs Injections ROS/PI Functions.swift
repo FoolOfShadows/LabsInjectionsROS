@@ -9,20 +9,20 @@
 import Cocoa
 
 func clearPopupButtons(control:[NSPopUpButton], values:[[String]]) {
-	for (i, _) in control.enumerate() {
+	for (i, _) in control.enumerated() {
 	//for var i = 0; i < control.count; i += 1 {
 		control[i].removeAllItems()
-		control[i].addItemsWithTitles(values[i])
-		control[i].selectItemAtIndex(0)
+		control[i].addItems(withTitles: values[i])
+		control[i].selectItem(at: 0)
 	}
 }
 
 func clearComboBoxes(control:[NSComboBox], values:[[String]]) {
-	for (i, _) in control.enumerate() {
+	for (i, _) in control.enumerated() {
 	//for var i = 0; i < control.count; i += 1 {
 		control[i].removeAllItems()
-		control[i].addItemsWithObjectValues(values[i])
-		control[i].selectItemAtIndex(0)
+		control[i].addItems(withObjectValues: values[i])
+		control[i].selectItem(at: 0)
 	}
 }
 
@@ -36,7 +36,7 @@ func clearTextFields(controls: [NSTextField]) {
 
 func processAllControlTypes(controllerArray: [AnyObject], stringArray: [String])-> [String] {
 	var returnValueList = [String]()
-	for (i, _) in controllerArray.enumerate() {
+	for (i, _) in controllerArray.enumerated() {
 	//for var i = 0; i<controllerArray.count; i += 1 {
 		switch controllerArray[i] {
 		case is NSPopUpButton:
@@ -72,18 +72,18 @@ func turnOnPopupButtons(control:[NSPopUpButton], values:[[String]]) {
 //		control[i].addItemsWithTitles(values[i])
 //		control[i].selectItemAtIndex(1)
 //	}
-	for (i, _) in control.enumerate() {
+	for (i, _) in control.enumerated() {
 		control[i].removeAllItems()
-		control[i].addItemsWithTitles(values[i])
-		control[i].selectItemAtIndex(1)
+		control[i].addItems(withTitles: values[i])
+		control[i].selectItem(at: 1)
 	}
 }
 
 func turnOnComboBoxes(control:[NSComboBox:[String]]) {
 	for box in control {
 		box.0.removeAllItems()
-		box.0.addItemsWithObjectValues(box.1)
-		box.0.selectItemAtIndex(1)
+		box.0.addItems(withObjectValues: box.1)
+		box.0.selectItem(at: 1)
 	}
 }
 

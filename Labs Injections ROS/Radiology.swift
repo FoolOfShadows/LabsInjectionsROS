@@ -214,48 +214,48 @@ class Radiology: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 
 	@IBAction func takeClearXRAY(sender: AnyObject) {
-		clearCheckboxes(xrayButtonArray)
-		clearCheckboxes(usndButtonArray)
-		clearCheckboxes(mamnucButtonArray)
+		clearCheckboxes(theButtons: xrayButtonArray)
+		clearCheckboxes(theButtons: usndButtonArray)
+		clearCheckboxes(theButtons: mamnucButtonArray)
 		xrayMyeloTextView.stringValue = ""
 		petTextView.stringValue = ""
 	}
 	
 	@IBAction func takeClearMRI(sender: AnyObject) {
-		clearCheckboxes(mrimraButtonArray)
-		clearCheckboxes(ctneuroButtonArray)
+		clearCheckboxes(theButtons: mrimraButtonArray)
+		clearCheckboxes(theButtons: ctneuroButtonArray)
 		mriExtremityTextView.stringValue = ""
 		ctExtremityTextView.stringValue = ""
 	}
 	
 	@IBAction func takeClearCardio(sender: AnyObject) {
-		clearCheckboxes(respcardiogiButtonArray)
+		clearCheckboxes(theButtons: respcardiogiButtonArray)
 	}
 	
 	@IBAction func takeClearAll(sender: AnyObject) {
-		takeClearXRAY(self)
-		takeClearMRI(self)
-		takeClearCardio(self)
+		takeClearXRAY(sender: self)
+		takeClearMRI(sender: self)
+		takeClearCardio(sender: self)
 	}
 	
 	override func awakeFromNib() {
-		takeClearAll(self)
+		takeClearAll(sender: self)
 	}
 	
 	@IBAction func takeProcessRadiology(sender: AnyObject) {
 		var radiologyVerbiageArray = [String]()
 		var radiologyFinalText = ""
-		radiologyVerbiageArray += processAllControlTypes(xrayButtonArray, stringArray: xrayVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(mrimraButtonArray, stringArray: mrimraVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(ctneuroButtonArray, stringArray: ctneuroVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(usndButtonArray, stringArray: usndVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(mamnucButtonArray, stringArray: mamnucVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(respcardiogiButtonArray, stringArray: respcardiogiVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(controllerArray: xrayButtonArray, stringArray: xrayVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(controllerArray: mrimraButtonArray, stringArray: mrimraVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(controllerArray: ctneuroButtonArray, stringArray: ctneuroVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(controllerArray: usndButtonArray, stringArray: usndVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(controllerArray: mamnucButtonArray, stringArray: mamnucVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(controllerArray: respcardiogiButtonArray, stringArray: respcardiogiVerbiageArray)
 		
 		if !radiologyVerbiageArray.isEmpty {
-			radiologyFinalText = "Tests ordered: " + radiologyVerbiageArray.joinWithSeparator(", ")
+			radiologyFinalText = "Tests ordered: " + radiologyVerbiageArray.joined(separator: ", ")
 			//Clear the system clipboard
-			let pasteBoard = NSPasteboard.generalPasteboard()
+			let pasteBoard = NSPasteboard.general()
 			pasteBoard.clearContents()
 			//Set the system clipboard to the final text
 			pasteBoard.setString(radiologyFinalText, forType: NSPasteboardTypeString)

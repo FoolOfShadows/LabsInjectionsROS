@@ -65,21 +65,21 @@ class Referrals: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	let refVerbiage = ["Allergist", "Cardiologist", "Chiropractor", "Dentist", "Dermatologist", "Endocrinologist", "Gastroenterologist", "Immunologist", "Infectious Disease", "Nephrologist", "Neurologist", "Oncologist/Hematologist", "Radiation Oncologist", "Optometrist", "Physical Medicine and Rehab", "Psychiatrist", "Pulmonologist", "Rhuematologist", "Bariatric surgeon", "Cardiac surgeon", "Colorectal surgeon", "ENT/Otolaryngology", "General surgeon", "Gynecologist", "Gynecologic Oncology", "Neurosurgeon", "Obstetrician", "Ophthalmology", "Oral surgeon", "Orthopedic", "Pain Management", "Podiatrist", "Urologist", "Counselor", "Diabetic Education", "Home Health", "Lymphedema clinic", "Nutritionist", "Psychologist", "Social worker", "Occupaitonal therapy", "Physical therapy", "Speech therapy", "Wound clinic"]
 	
 	@IBAction func takeClear(sender: AnyObject) {
-		clearCheckboxes(refCheckboxes)
+		clearCheckboxes(theButtons: refCheckboxes)
 	}
 	
 	override func awakeFromNib() {
-		takeClear(self)
+		takeClear(sender: self)
 	}
 	
 	@IBAction func takeProcessReferrals(sender: AnyObject) {
 		var referralsText = ""
-		let processedReferrals = processAllControlTypes(refCheckboxes, stringArray: refVerbiage)
+		let processedReferrals = processAllControlTypes(controllerArray: refCheckboxes, stringArray: refVerbiage)
 		if !processedReferrals.isEmpty {
-			referralsText = "Referrals made: " + processedReferrals.joinWithSeparator(", ")
+			referralsText = "Referrals made: " + processedReferrals.joined(separator: ", ")
 		}
 		//Clear the system clipboard
-		let pasteBoard = NSPasteboard.generalPasteboard()
+		let pasteBoard = NSPasteboard.general()
 		pasteBoard.clearContents()
 		//Set the system clipboard to the final text
 		pasteBoard.setString(referralsText, forType: NSPasteboardTypeString)
