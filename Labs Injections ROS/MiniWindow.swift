@@ -40,6 +40,13 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 	//Ultrasound
 	@IBOutlet weak var usndAbView: NSButton!
+	@IBOutlet weak var usndVDBLEView: NSButton!
+	@IBOutlet weak var usndVDLLEView: NSButton!
+	@IBOutlet weak var usndVDRLEView: NSButton!
+	@IBOutlet weak var usndVDBUEView: NSButton!
+	@IBOutlet weak var usndVDLUEView: NSButton!
+	@IBOutlet weak var usndVDRUEView: NSButton!
+
 	
 	//Mammogram
 	@IBOutlet weak var mamSBView: NSButton!
@@ -74,7 +81,7 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	}
 	
 	private func clearMiniViewControllers() {
-		let checkBoxes:[NSButton] = [papView, dreView, stoolCardView, ekgView, udipView, udsView, fluSwabView, xrayChestView, xrayCSpineView, xrayLSSpineView, xrayShoulderBothView, xrayShoulderRView, xrayShoulderLView, xrayKneeBothView, xrayKneeRView, xrayKneeLView, usndAbView, mamSBView, bmdView]
+		let checkBoxes:[NSButton] = [papView, dreView, stoolCardView, ekgView, udipView, udsView, fluSwabView, xrayChestView, xrayCSpineView, xrayLSSpineView, xrayShoulderBothView, xrayShoulderRView, xrayShoulderLView, xrayKneeBothView, xrayKneeRView, xrayKneeLView, usndAbView, mamSBView, bmdView, usndVDBLEView, usndVDLLEView, usndVDRLEView, usndVDBUEView, usndVDLUEView, usndVDRUEView]
 		for box in checkBoxes {
 			box.state = NSOffState
 		}
@@ -163,7 +170,13 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		                                 xrayKneeLView,
 		                                 usndAbView,
 		                                 mamSBView,
-		                                 bmdView]
+		                                 bmdView,
+		                                 usndVDBLEView,
+		                                 usndVDLLEView,
+		                                 usndVDRLEView,
+		                                 usndVDBUEView,
+		                                 usndVDLUEView,
+		                                 usndVDRUEView]
 		let radVerbiage:[String] = ["Xray - Chest PA&Lat",
 		                            "Xray - C spine series",
 		                            "Xray - LS spine series",
@@ -175,7 +188,13 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		                            "Xray - Knee series with Standing film left side",
 		                            "Ultrasound - Complete abdominal",
 		                            "Mammogram - Screening Bilateral",
-		                            "BMD - Dexa Bone Mineral Density"]
+		                            "BMD - Dexa Bone Mineral Density",
+		                            "Ultrasound - Venous Doppler - Bilateral Lower Extremities",
+		                            "Ultrasound - Venous Doppler - Left Lower Extremities",
+		                            "Ultrasound - Venous Doppler - Right Lower Extremities",
+		                            "Ultrasound - Venous Doppler - Bilateral Upper Extremities",
+		                            "Ultrasound - Venous Doppler - Left Upper Extremities",
+		                            "Ultrasound - Venous Doppler - Right Upper Extremities"]
 		let radLead = "Tests ordered:"
 		let radResults = processCheckboxControllers(controllers: radControllers, verbiage: radVerbiage, leadingString: radLead)
 		return radResults
