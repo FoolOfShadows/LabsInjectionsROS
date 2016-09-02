@@ -12,7 +12,7 @@ import Cocoa
 class MyLine: NSView {
 	
 	@IBInspectable
-	var lineFillColor: NSColor = NSColor.darkGray()
+	var lineFillColor: NSColor = NSColor.darkGray
 	
 	override init(frame frameRect: NSRect) {
 		super.init(frame: frameRect)

@@ -204,7 +204,7 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	}
 	
 	func processLabs() -> [String] {
-		let labVarList = [udipView, ucgView, udsView, mudsView, fluSwabView, glucometerTextView]
+		let labVarList: [AnyObject] = [udipView, ucgView, udsView, mudsView, fluSwabView, glucometerTextView]
 		let labVerbiageList = ["Urine Dip, consent signed", "UCG, consent signed", "UDS, consent signed", "m UDS, consent signed", "Rapid Flu A&B Swab, consent signed", "Glucometer finger blood sugar done in office today = \(glucometerTextView.stringValue)"]
 		
 		//print(processAllControlTypes(labVarList, stringArray: labVerbiageList))

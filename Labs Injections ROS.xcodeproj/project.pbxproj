@@ -10,6 +10,7 @@
 		7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */; };
 		7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3351BED2B0F00E075C4 /* PI Functions.swift */; };
 		7919F3381BED367700E075C4 /* PI Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3371BED367700E075C4 /* PI Constants.swift */; };
+		792581E71D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 792581E61D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf */; };
 		79481E1E1D00671800417647 /* HPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79481E1D1D00671800417647 /* HPI.swift */; };
 		794E837D1C0CA4C10040F847 /* Radiology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837C1C0CA4C10040F847 /* Radiology.swift */; };
 		794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837E1C0CB36C0040F847 /* Radiology Functions.swift */; };
@@ -25,13 +26,17 @@
 		79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF2D1BEBE11100331482 /* SystemsReview.swift */; };
 		79D1DF301BEBF18600331482 /* ROS Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF2F1BEBF18600331482 /* ROS Functions.swift */; };
 		79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */; };
+		79E15B511D3FED0E00ABCED3 /* WWEModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E15B501D3FED0E00ABCED3 /* WWEModel.swift */; };
 		79EC3C881CDBD536009D6757 /* BlackLineClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EC3C871CDBD536009D6757 /* BlackLineClass.swift */; };
+		79F276751D3E6C54008B44A8 /* WWE Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F276741D3E6C54008B44A8 /* WWE Constants.swift */; };
+		79F276771D3E7860008B44A8 /* WWEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F276761D3E7860008B44A8 /* WWEViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresInjections.swift; sourceTree = "<group>"; };
 		7919F3351BED2B0F00E075C4 /* PI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Functions.swift"; sourceTree = "<group>"; };
 		7919F3371BED367700E075C4 /* PI Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Constants.swift"; sourceTree = "<group>"; };
+		792581E61D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "WPCM Letterhead Blank 100604 copy 2.pdf"; sourceTree = "<group>"; };
 		79481E1D1D00671800417647 /* HPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPI.swift; sourceTree = "<group>"; };
 		794E837C1C0CA4C10040F847 /* Radiology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radiology.swift; sourceTree = "<group>"; };
 		794E837E1C0CB36C0040F847 /* Radiology Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radiology Functions.swift"; sourceTree = "<group>"; };
@@ -49,7 +54,10 @@
 		79D1DF2D1BEBE11100331482 /* SystemsReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemsReview.swift; sourceTree = "<group>"; };
 		79D1DF2F1BEBF18600331482 /* ROS Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ROS Functions.swift"; sourceTree = "<group>"; };
 		79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedGreenCheckbox.swift; sourceTree = "<group>"; };
+		79E15B501D3FED0E00ABCED3 /* WWEModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWEModel.swift; sourceTree = "<group>"; };
 		79EC3C871CDBD536009D6757 /* BlackLineClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlackLineClass.swift; sourceTree = "<group>"; };
+		79F276741D3E6C54008B44A8 /* WWE Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WWE Constants.swift"; sourceTree = "<group>"; };
+		79F276761D3E7860008B44A8 /* WWEViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWEViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +106,14 @@
 				79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */,
 				79D1DF0B1BEBD90200331482 /* Info.plist */,
 				79D1DF061BEBD90200331482 /* Assets.xcassets */,
+				792581E61D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf */,
 				79EC3C871CDBD536009D6757 /* BlackLineClass.swift */,
 				79481E1D1D00671800417647 /* HPI.swift */,
 				79BC4A741D00AD6A00E50500 /* HPI Functions.swift */,
 				79975E4E1D1C647C00AF4DE6 /* MiniWindow.swift */,
+				79F276761D3E7860008B44A8 /* WWEViewController.swift */,
+				79F276741D3E6C54008B44A8 /* WWE Constants.swift */,
+				79E15B501D3FED0E00ABCED3 /* WWEModel.swift */,
 			);
 			path = "Labs Injections ROS";
 			sourceTree = "<group>";
@@ -169,6 +181,7 @@
 			files = (
 				79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */,
 				79D1DF0A1BEBD90200331482 /* MainMenu.xib in Resources */,
+				792581E71D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +194,11 @@
 			files = (
 				796D1F241BF3B46700790A0D /* Lab Functions.swift in Sources */,
 				79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */,
+				79F276771D3E7860008B44A8 /* WWEViewController.swift in Sources */,
 				79EC3C881CDBD536009D6757 /* BlackLineClass.swift in Sources */,
 				79975E4F1D1C647C00AF4DE6 /* MiniWindow.swift in Sources */,
+				79E15B511D3FED0E00ABCED3 /* WWEModel.swift in Sources */,
+				79F276751D3E6C54008B44A8 /* WWE Constants.swift in Sources */,
 				7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */,
 				794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */,
 				796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */,
