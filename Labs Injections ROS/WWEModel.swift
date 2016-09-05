@@ -64,6 +64,7 @@ enum WWEQuestions:String {
 	case LastPAP = "When was your last PAP test?"
 	case LastPAPNormal = "Were the results normal?"
 	case EverHadAbnormalPAP = "Have you ever had an abnormal PAP test?"
+	case DateOfAbnormalPAP = "Abnormal PAP results on:"
 	case FrequencyOfPeriod = "How often do you usually get your period?"
 	case PeriodsRegular = "Are your periods usually regular?"
 	case PeriodLength = "How many days do your periods usually last?"
@@ -102,6 +103,7 @@ enum WWEQuestions:String {
 
 protocol IsWWEData {
 	var questionString:String { get set }
+	func processData () -> String
 }
 
 class WWEStringData: IsWWEData {
@@ -115,13 +117,13 @@ class WWEStringData: IsWWEData {
 		self.needsDays = needsDays
 	}
 	
-	func processWWEStringData() -> String {
+	func processData() -> String {
 		var result = String()
 		if !answerString.isEmpty && answerString != "" {
 			if needsDays == false {
-				result = "\(questionString)\n"
+				result = "\(questionString) \(answerString)"
 			} else if needsDays == true {
-				result = "\(questionString) days\n"
+				result = "\(questionString) \(answerString) days"
 			}
 		}
 		
@@ -144,13 +146,13 @@ class WWECheckboxData: IsWWEData {
 		self.noAnswer = noAnswer
 	}
 	
-	func processWWECheckboxData() -> String {
+	func processData() -> String {
 		var result = String()
 		
 		if yesAnswer == 1 {
-			result = "\(questionString): YES\n"
+			result = "\(questionString): YES"
 		} else if noAnswer == 1 {
-			result = "\(questionString): NO\n"
+			result = "\(questionString): NO"
 		}
 		
 		return result
@@ -280,7 +282,7 @@ class WellWomanExam {
 			"Do you have a history of breast problems? \(YesNo(rawValue:hxBreastProblems)!.stringValue)\n" +
 			"Have you ever been abused? \(YesNo(rawValue:abused)!.stringValue)\n" +
 			"Do you feel safe? \(YesNo(rawValue:safe)!.stringValue)\n" +
-			"\(finalFamilyHistory(historyList: familyHistory)!)" +
+			//"\(finalFamilyHistory(historyList: familyHistory)!)" +
 			"Do you have any allergies? \(YesNo(rawValue:allergies)!.stringValue)  \(allergens)\n" +
 			"On a scale of 0 to 10, with 0 being no symptoms and 10 being severe symptoms, how would you describe the following:\n" +
 			"Pain during your usual period:  \(periodPain)\n" +
@@ -324,7 +326,7 @@ func processMatrix(matrix: NSMatrix, sectionLead: String) -> String {
 	return matrixResults
 }
 
-func finalFamilyHistory(historyList: [(matrix: NSMatrix, lead: String)]) -> String? {
+func finalFamilyHistory(historyList: [(matrix: NSMatrix, lead: String)]) -> String {
 	var resultsArray = [String]()
 	var results = String()
 	for list in historyList {
@@ -340,5 +342,18 @@ func finalFamilyHistory(historyList: [(matrix: NSMatrix, lead: String)]) -> Stri
 	return results
 }
 
+
+func processIsWWEDataGroups(dataGroup:[IsWWEData]) -> [String] {
+	var results = [String]()
+	
+	for data in dataGroup {
+		let dataResult = data.processData()
+		if !dataResult.isEmpty {
+			results.append(dataResult)
+		}
+	}
+	
+	return results
+}
 
 

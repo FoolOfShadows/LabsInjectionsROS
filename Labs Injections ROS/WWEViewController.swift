@@ -83,33 +83,35 @@ class WWEViewController: NSView {
 	var familyHistoryResults = String()
 	
 	//var textFieldArray:[NSTextField] {return [lastMAMView, lastPeriodView, abnormalPAPView, allergiesView, painPeriodView, painSexView, painPMSView, otherConcernsView]}
-	var checkboxArray: [NSButton] {return [lastPAPNormCheckbox, abnormalPAPCheckbox, periodFrequencyRegularCheckbox, bleedingBetweenCheckbox, dischargeCheckbox, sexuallyActiveCheckbox, birthControlCheckbox, stdCheckbox, desCheckbox, fertilityMedsCheckbox, hotFlashesCheckbox, hormoneReplacementCheckbox, smokerCheckbox, hxBreastProblemsCheckbox, abusedCheckbox, safeCheckbox, allergiesCheckbox]}
+	var checkboxArray: [NSButton] {return [lastPAPNormCheckbox, lastPAPAbnormalCheckbox, abnormalPAPCheckbox, abnormalPAPNoCheckbox, periodFrequencyRegularCheckbox, periodFrequencyIrregularCheckbox, bleedingBetweenCheckbox, bleedingBetweenNoCheckbox, dischargeCheckbox, dischargeNoCheckbox, sexuallyActiveCheckbox, sexuallyActiveNoCheckbox, birthControlCheckbox, birthControlNoCheckbox, stdCheckbox, stdNoCheckbox, desCheckbox, desNoCheckbox, fertilityMedsCheckbox, fertilityMedsNoCheckbox, hotFlashesCheckbox, hotFlashesNoCheckbox, hormoneReplacementCheckbox, hormoneReplacementNoCheckbox, smokerCheckbox, smokerNoCheckbox, hxBreastProblemsCheckbox, hxBreastProblemsNoCheckbox, abusedCheckbox, abusedNoCheckbox, safeCheckbox, safeNoCheckbox, allergiesCheckbox, allergiesNoCheckbox]}
 	var comboboxArray:[NSComboBox] {return [periodFrequencyCombo, periodLengthCombo, pregnanciesCombo, abortionsCombo, miscarriagesCombo, livingChildrenCombo, liveBirthsCombo, prematureBirthsCombo]}
 	var popupArray:[NSPopUpButton] {return [lastPAPPopup, bloodFlowPopup, birthControlMethodPopup, selfBreastExamsPopup]}
 	var textFieldArray:[NSTextField] {return [lastMAMView, lastPeriodView, abnormalPAPView, allergiesView, painPeriodView, painSexView, painPMSView, otherConcernsView, otherCancerView]}
 	
+	var familyHxMatrix:[(NSMatrix, String)] {return [(breastCancerMatrix, "Breast cancer"), (colonCancerMatrix, "Colon cancer"), (uterineCancerMatrix, "Uterine cancer"), (ovarianCancerMatrix, "Ovarian cancer"), (otherCancerMatrix, otherCancerView.stringValue), (osteoporosisMatrix, "Osteoporosis"), (heartDiseaseMatrix, "Heart disease")]}
+	
 	var lastMAM:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastMammogram.rawValue, answerString: lastMAMView.stringValue)}
 	var lastPeriod:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastPeriod.rawValue, answerString: lastPeriodView.stringValue)}
-	var lastPAP:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastPAP.rawValue, answerString: lastPAPPopup.stringValue)}
+	var lastPAP:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastPAP.rawValue, answerString: lastPAPPopup.titleOfSelectedItem!)}
 	var lastPAPNormal:WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.LastPAPNormal.rawValue, yesAnswer: lastPAPNormCheckbox.state, noAnswer: lastPAPAbnormalCheckbox.state)}
 	var abnormalPAP:WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.EverHadAbnormalPAP.rawValue, yesAnswer: abnormalPAPCheckbox.state, noAnswer: abnormalPAPNoCheckbox.state)}
-	//abnormalPAP When
+	var abnormalPAPDate:WWEStringData {return WWEStringData(questionString: WWEQuestions.DateOfAbnormalPAP.rawValue, answerString: abnormalPAPView.stringValue)}
 	var periodFrequency:WWEStringData {return WWEStringData(questionString: WWEQuestions.FrequencyOfPeriod.rawValue, answerString: periodFrequencyCombo.stringValue, needsDays: true)}
-	var periodRegularitey:WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.PeriodsRegular.rawValue, yesAnswer: periodFrequencyRegularCheckbox.state, noAnswer: periodFrequencyIrregularCheckbox.state)}
+	var periodRegularity:WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.PeriodsRegular.rawValue, yesAnswer: periodFrequencyRegularCheckbox.state, noAnswer: periodFrequencyIrregularCheckbox.state)}
 	var periodLength: WWEStringData {return WWEStringData(questionString: WWEQuestions.PeriodLength.rawValue, answerString: periodLengthCombo.stringValue, needsDays: true)}
-	var bloodFlow: WWEStringData {return WWEStringData(questionString: WWEQuestions.BloodFlow.rawValue, answerString: bloodFlowPopup.stringValue)}
+	var bloodFlow: WWEStringData {return WWEStringData(questionString: WWEQuestions.BloodFlow.rawValue, answerString: bloodFlowPopup.titleOfSelectedItem!)}
 	var bleedingBetween: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.BleedingBetween.rawValue, yesAnswer: bleedingBetweenCheckbox.state, noAnswer: bleedingBetweenNoCheckbox.state)}
 	var vaginalDischarge: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.VaginalDischarge.rawValue, yesAnswer: dischargeCheckbox.state, noAnswer: dischargeNoCheckbox.state)}
 	var sexuallyActive: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.SexuallyActive.rawValue, yesAnswer: sexuallyActiveCheckbox.state, noAnswer: sexuallyActiveNoCheckbox.state)}
-	var birthControl: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.BirthControlMethod.rawValue, yesAnswer: birthControlCheckbox.state, noAnswer: birthControlNoCheckbox.state)}
-	var birthControlMethod: WWEStringData {return WWEStringData(questionString: WWEQuestions.BirthControlMethod.rawValue, answerString: birthControlMethodPopup.stringValue)}
+	var birthControl: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.UseBirthControl.rawValue, yesAnswer: birthControlCheckbox.state, noAnswer: birthControlNoCheckbox.state)}
+	var birthControlMethod: WWEStringData {return WWEStringData(questionString: WWEQuestions.BirthControlMethod.rawValue, answerString: birthControlMethodPopup.titleOfSelectedItem!)}
 	var stdStatus: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.STD.rawValue, yesAnswer: stdCheckbox.state, noAnswer: stdNoCheckbox.state)}
 	var desStatus: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.DES.rawValue, yesAnswer: desCheckbox.state, noAnswer: desNoCheckbox.state)}
 	var fertilityMeds: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.FertilityMedicines.rawValue, yesAnswer: fertilityMedsCheckbox.state, noAnswer: fertilityMedsNoCheckbox.state)}
 	var hotFlashes: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.HotFlashes.rawValue, yesAnswer: hotFlashesCheckbox.state, noAnswer: hotFlashesNoCheckbox.state)}
 	var hormoneReplacement: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.HormoneReplacement.rawValue, yesAnswer: hormoneReplacementCheckbox.state, noAnswer: hormoneReplacementNoCheckbox.state)}
 	var smokingStatus: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.Smoke.rawValue, yesAnswer: smokerCheckbox.state, noAnswer: smokerNoCheckbox.state)}
-	var selfBreastExams: WWEStringData {return WWEStringData(questionString: WWEQuestions.SelfBreastExams.rawValue, answerString: selfBreastExamsPopup.stringValue)}
+	var selfBreastExams: WWEStringData {return WWEStringData(questionString: WWEQuestions.SelfBreastExams.rawValue, answerString: selfBreastExamsPopup.titleOfSelectedItem!)}
 	var hxBreastProblems: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.HXBreastProblems.rawValue, yesAnswer: hxBreastProblemsCheckbox.state, noAnswer: hxBreastProblemsNoCheckbox.state)}
 	var abused: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.BeenAbused.rawValue, yesAnswer: abusedCheckbox.state, noAnswer: abusedNoCheckbox.state)}
 	var safe: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.FeelSafe.rawValue, yesAnswer: safeCheckbox.state, noAnswer: safeNoCheckbox.state)}
@@ -130,7 +132,10 @@ class WWEViewController: NSView {
 	
 	
 	
-	var WWExamData:[IsWWEData] {return [lastMAM]}
+	var WWExamDataSet1:[IsWWEData] {return [lastMAM, lastPeriod, lastPAP, lastPAPNormal, abnormalPAP, abnormalPAPDate, periodFrequency, periodRegularity, periodLength, bloodFlow, bleedingBetween, vaginalDischarge, sexuallyActive, birthControl, birthControlMethod, stdStatus, desStatus, fertilityMeds, hotFlashes, hormoneReplacement, smokingStatus, selfBreastExams, hxBreastProblems, abused, safe]}
+	var WWExamDataSet2:[IsWWEData] {return [allergies, allergens]}
+	var WWExamDataPain:[IsWWEData] {return [periodPain, sexPain, pmsPain]}
+	var WWExamDataPregnancies:[IsWWEData] {return [pregnancies, abortions, miscarriages, livingChildren, liveBirths, prematureBirths]}
 	
 
 	override func awakeFromNib() {
@@ -142,19 +147,62 @@ class WWEViewController: NSView {
 		clearComboBoxes(control: comboboxArray, values: [periodFrequencyChoices, periodLengthChoices, zeroToSixChoices, zeroToFiveChoices, zeroToFiveChoices, zeroToSixChoices, zeroToSixChoices, zeroToFourChoices])
 		clearTextFields(controls: textFieldArray)
 		clearCheckboxes(theButtons: checkboxArray)
+		clearMatrices(matrices: familyHxMatrix)
 	}
 	@IBAction func takeClearButton(_ sender: NSButton) {
 		setTabToClear()
 	}
 	
 	@IBAction func takeProcessButton(_ sender: NSButton) {
-	
-		let dataResults = ""
+		var sectionResults = [String]()
+		var finalResults = ""
+		let firstSetResults = processIsWWEDataGroups(dataGroup: WWExamDataSet1)
+		if !firstSetResults.isEmpty {
+			sectionResults += firstSetResults
+		}
+		
+		let familyHxResults = finalFamilyHistory(historyList: familyHxMatrix)
+		if !familyHxResults.isEmpty {
+			sectionResults.append(familyHxResults)
+		}
+		
+		let secondSetResults = processIsWWEDataGroups(dataGroup: WWExamDataSet2)
+		if !secondSetResults.isEmpty {
+			if secondSetResults.count > 1 {
+				let allergyResults = "\(secondSetResults[0]) - \(secondSetResults[1])"
+				sectionResults.append(allergyResults)
+			} else {
+				let allergyResults = "\(secondSetResults[0])"
+				sectionResults.append(allergyResults)
+			}
+		}
+		
+		let painResults = processIsWWEDataGroups(dataGroup: WWExamDataPain)
+		if !painResults.isEmpty {
+			let finalPainResults = "On a scale of 0 to 10, with 0 being no symptoms and 10 being severe symptoms, how would you describe the following:\n\(painResults.joined(separator: "\n"))"
+			sectionResults.append(finalPainResults)
+		}
+		
+		let pregnancyResults = processIsWWEDataGroups(dataGroup: WWExamDataPregnancies)
+		if !pregnancyResults.isEmpty {
+			let finalPregnancyResults = "If you have been pregnant, please indicate how many:\n\(pregnancyResults.joined(separator: "\n"))"
+			sectionResults.append(finalPregnancyResults)
+		}
+		
+		if !otherConcernsView.stringValue.isEmpty {
+			sectionResults.append("Please list any other concerns: \(otherConcernsView.stringValue)")
+		}
+		
+		
+		if !sectionResults.isEmpty {
+			finalResults = sectionResults.joined(separator: "\n")
+		}
+		
 		let pasteBoard = NSPasteboard.general()
 		pasteBoard.clearContents()
 		//Set the system clipboard to the final text
-		pasteBoard.setString(dataResults, forType: NSPasteboardTypeString)
-		Swift.print(dataResults)
+		pasteBoard.setString(finalResults, forType: NSPasteboardTypeString)
+		Swift.print(finalResults)
 		
 	}
 	
@@ -177,6 +225,14 @@ class WWEViewController: NSView {
 	func clearCombos(boxes:[NSComboBox]) {
 		for box in boxes {
 			box.selectItem(at: 0)
+		}
+	}
+	
+	func clearMatrices(matrices:[(NSMatrix, String)]) {
+		for matrix in matrices {
+			for cell in matrix.0.cells {
+				cell.state = NSOffState
+			}
 		}
 	}
 }
