@@ -688,6 +688,65 @@
                 <outlet property="uterineCancerMatrix" destination="pgd-p7-btV" id="90S-xI-PD3"/>
             </connections>
         </customObject>
+        <customObject id="4F5-8b-zUQ" userLabel="DM" customClass="DMViewController" customModule="Labs_Injections_ROS" customModuleProvider="target">
+            <connections>
+                <outlet property="assAmyotrophyCheckbox" destination="gEo-Zh-IqI" id="o6n-k8-bma"/>
+                <outlet property="assBunionCheckbox" destination="fAc-Sn-QjR" id="Xf8-fW-xh2"/>
+                <outlet property="assDiabeticFootCheckbox" destination="B1s-oD-OsG" id="9MR-g3-Tap"/>
+                <outlet property="assFootUlcerCheckbox" destination="Dmd-hi-sfi" id="wPt-HL-8EN"/>
+                <outlet property="assHammerToesCheckbox" destination="3aF-md-dAW" id="O7t-rm-FjU"/>
+                <outlet property="assHxFootUlcerCheckbox" destination="cdI-Uy-Eup" id="att-Il-4zU"/>
+                <outlet property="assHypoCheckbox" destination="PXx-h9-uim" id="r8c-HI-pKG"/>
+                <outlet property="assNephropathyCheckbox" destination="CpW-l3-1Xo" id="c7w-7T-4J6"/>
+                <outlet property="assNeuroPainFeetCheckbox" destination="NTF-fI-Blz" id="bE2-Yz-utu"/>
+                <outlet property="assNeuroPainLegsCheckbox" destination="K4F-ga-lkE" id="tcR-Y7-oBZ"/>
+                <outlet property="assNeuropathyCheckbox" destination="3i6-I4-bhh" id="sVc-ZW-fDs"/>
+                <outlet property="assNumbnessCheckbox" destination="WD0-fa-XIt" id="qeG-B1-tuz"/>
+                <outlet property="assOnycomycosisCheckbox" destination="Wzb-1l-g55" id="ZYb-PM-qvh"/>
+                <outlet property="assPoorCirculationCheckbox" destination="lQF-39-MdX" id="nvn-MZ-Fx2"/>
+                <outlet property="assPreUlcerativeCallusCheckbox" destination="ZOf-Kj-Ulj" id="Orp-Ze-Ezm"/>
+                <outlet property="assRetinopathyCheckbox" destination="KAJ-P8-TZw" id="7cE-ih-7wu"/>
+                <outlet property="assWHypoEpisodesCheckbox" destination="FrY-0g-jvq" id="CJb-a3-1Aa"/>
+                <outlet property="assWithFluctuatingBSCheckbox" destination="SVo-aa-HN1" id="N4e-cX-uIr"/>
+                <outlet property="bslogNotProvidedCheckbox" destination="h3H-gr-fVr" id="L4F-ko-0Pi"/>
+                <outlet property="bslogProvidedCheckbox" destination="OHu-Ky-Nys" id="wvs-I9-yWU"/>
+                <outlet property="bunView" destination="WMD-Od-nW5" id="xyC-le-NAW"/>
+                <outlet property="complainsOfNumbnessCheckbox" destination="4DT-yN-Mf8" id="Jrj-wl-7gX"/>
+                <outlet property="crView" destination="WHJ-kO-7U1" id="j1u-Ej-xrc"/>
+                <outlet property="eGFRView" destination="7q4-gP-ghQ" id="0LU-I8-6i0"/>
+                <outlet property="equipmentDifficultyCheckbox" destination="Vsh-d0-5E5" id="ghr-xN-fwW"/>
+                <outlet property="exercisingCheckbox" destination="C3a-Vv-U3b" id="qiM-XA-IrH"/>
+                <outlet property="fbsHighRangeView" destination="pgI-jF-leZ" id="UAN-cx-aqV"/>
+                <outlet property="fbsLowRangeView" destination="OHi-UC-MoT" id="56h-E2-HcP"/>
+                <outlet property="hba1cView" destination="kux-sr-58Q" id="Wt0-F8-dyZ"/>
+                <outlet property="hbsBlurryVisionCheckbox" destination="a7d-QI-CrC" id="Guy-dI-dlA"/>
+                <outlet property="hbsDizzinessCheckbox" destination="oHP-fJ-7Qh" id="hXX-RX-tyJ"/>
+                <outlet property="hbsHungerCheckbox" destination="iYh-xZ-t9P" id="qI2-mi-gwi"/>
+                <outlet property="hbsNoneCheckbox" destination="NxX-Mo-kBy" id="ozn-1f-JzE"/>
+                <outlet property="hbsThirstCheckbox" destination="FuZ-aM-E4f" id="JPP-7a-zmY"/>
+                <outlet property="hbsUrinationCheckbox" destination="WWF-7I-6GQ" id="uxQ-t3-miR"/>
+                <outlet property="labsAtTargetCheckbox" destination="gJg-HJ-aGe" id="AdC-DP-L4p"/>
+                <outlet property="lastEyeExamView" destination="c1p-dC-Cj9" id="wtW-FU-d9u"/>
+                <outlet property="lbsBlurryVisionCheckbox" destination="nBt-QE-kr0" id="FA2-eR-K4X"/>
+                <outlet property="lbsConfusionCheckbox" destination="twe-RY-6gn" id="bw9-b1-Qjn"/>
+                <outlet property="lbsDizzinessCheckbox" destination="QnR-dD-Yex" id="NnL-xB-wLj"/>
+                <outlet property="lbsHeadacheCheckbox" destination="uPh-iz-mny" id="lpV-pr-3Ax"/>
+                <outlet property="lbsLethargyCheckbox" destination="DdS-4G-lMB" id="Uwi-M8-ZBJ"/>
+                <outlet property="lbsNoneCheckbox" destination="fg7-on-UpV" id="YqI-qk-WpF"/>
+                <outlet property="lbsShakesCheckbox" destination="1U3-6d-3Va" id="JSW-lO-LBJ"/>
+                <outlet property="lbsSweatsCheckbox" destination="CbU-RB-7UL" id="zzY-gN-QQO"/>
+                <outlet property="medsWithoutDifficultyCheckbox" destination="2pP-J7-MwE" id="mzm-ZM-WFY"/>
+                <outlet property="monoNormalCheckbox" destination="1VQ-FH-KCF" id="wY0-Fe-unw"/>
+                <outlet property="noFootComplaintsCheckbox" destination="ce5-kn-oYt" id="qOG-8z-KiW"/>
+                <outlet property="physicianView" destination="mm1-Bk-wm6" id="bbX-L7-5wJ"/>
+                <outlet property="threeMonthAveView" destination="T2T-aU-M4c" id="MhL-iu-dqJ"/>
+                <outlet property="uMalbView" destination="NnJ-eb-zUF" id="6PB-em-Bwh"/>
+                <outlet property="vibAbsentCheckbox" destination="VBT-74-5Gy" id="SLR-Jd-R6X"/>
+                <outlet property="vibDecreasedCheckbox" destination="nsT-Fx-iMM" id="dAA-RO-31N"/>
+                <outlet property="vibNormalCheckbox" destination="9uU-s9-CIA" id="iTi-p0-s1z"/>
+                <outlet property="visionChangeCheckbox" destination="6jI-PN-T0n" id="Pf0-Yk-jiL"/>
+            </connections>
+        </customObject>
         <customObject id="n07-7j-7bu" userLabel="MiniWindow" customClass="MiniWindow" customModule="Labs_Injections_ROS" customModuleProvider="target">
             <connections>
                 <outlet property="b12SiteView" destination="bb9-sX-dYq" id="Y94-g0-MiV"/>
@@ -6648,7 +6707,7 @@ Gw
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="DME" identifier="dmeTab" id="Ybf-kh-Txo">
-                                <view key="view" id="mi8-wM-PLs">
+                                <view key="view" ambiguous="YES" id="mi8-wM-PLs">
                                     <rect key="frame" x="10" y="33" width="982" height="681"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -6672,7 +6731,7 @@ Gw
                                             </popUpButtonCell>
                                         </popUpButton>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4DT-yN-Mf8">
-                                            <rect key="frame" x="23" y="462" width="264" height="18"/>
+                                            <rect key="frame" x="23" y="457" width="264" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Complains of numbness/tingling of feet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ZTU-xc-fgY">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -6688,7 +6747,7 @@ Gw
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ce5-kn-oYt">
-                                            <rect key="frame" x="23" y="482" width="140" height="18"/>
+                                            <rect key="frame" x="23" y="477" width="140" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="No foot complaints" bezelStyle="regularSquare" imagePosition="left" inset="2" id="9PP-y6-fm9">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -6696,7 +6755,7 @@ Gw
                                             </buttonCell>
                                         </button>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-AE-lhx">
-                                            <rect key="frame" x="23" y="534" width="107" height="18"/>
+                                            <rect key="frame" x="23" y="529" width="107" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Checking FBS" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zIL-Hi-Mud">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -6754,7 +6813,7 @@ Gw
                                             </buttonCell>
                                         </button>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Symptoms of High Blood Sugar" translatesAutoresizingMaskIntoConstraints="NO" id="Vej-Z2-pLl">
-                                            <rect key="frame" x="6" y="64" width="315" height="96"/>
+                                            <rect key="frame" x="6" y="49" width="315" height="96"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="nfn-c4-I4F">
                                                 <rect key="frame" x="1" y="1" width="313" height="80"/>
@@ -6812,7 +6871,7 @@ Gw
                                             </view>
                                         </box>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Eye Exam" translatesAutoresizingMaskIntoConstraints="NO" id="DcS-n4-XRD">
-                                            <rect key="frame" x="6" y="286" width="315" height="170"/>
+                                            <rect key="frame" x="6" y="271" width="315" height="170"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="svb-Yb-FqB">
                                                 <rect key="frame" x="1" y="1" width="313" height="154"/>
@@ -6890,15 +6949,6 @@ Gw
                                                 </subviews>
                                             </view>
                                         </box>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCE-Iq-NX5">
-                                            <rect key="frame" x="136" y="532" width="38" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="FMT-iv-YeX">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbe-qd-xPN">
                                             <rect key="frame" x="23" y="661" width="82" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -6909,15 +6959,15 @@ Gw
                                             </textFieldCell>
                                         </textField>
                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHu-Ky-Nys">
-                                            <rect key="frame" x="23" y="554" width="205" height="18"/>
+                                            <rect key="frame" x="23" y="554" width="147" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="BSLog Provided (✓ Yes, - No)" bezelStyle="regularSquare" imagePosition="left" allowsMixedState="YES" inset="2" id="1ZI-Ge-pi6">
+                                            <buttonCell key="cell" type="check" title="BSLog Provided  Yes" bezelStyle="regularSquare" imagePosition="right" allowsMixedState="YES" inset="2" id="1ZI-Ge-pi6">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
                                         <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Any Symptoms of Low Blood Sugar" translatesAutoresizingMaskIntoConstraints="NO" id="CV1-vk-vhk">
-                                            <rect key="frame" x="6" y="164" width="315" height="118"/>
+                                            <rect key="frame" x="6" y="149" width="315" height="118"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <view key="contentView" id="mRZ-Sr-TqO">
                                                 <rect key="frame" x="1" y="1" width="313" height="102"/>
@@ -6997,6 +7047,9 @@ Gw
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="takeClearDM:" target="4F5-8b-zUQ" id="9VU-9R-eeJ"/>
+                                            </connections>
                                         </button>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y6r-Yv-vga">
                                             <rect key="frame" x="882" y="10" width="89" height="32"/>
@@ -7005,18 +7058,21 @@ Gw
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="takeProcessDM:" target="4F5-8b-zUQ" id="FWA-5p-aNW"/>
+                                            </connections>
                                         </button>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMc-r0-Q7w">
-                                            <rect key="frame" x="180" y="536" width="64" height="17"/>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAn-QF-xbj">
+                                            <rect key="frame" x="197" y="503" width="17" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="times/day" id="8jE-7x-Jtx">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="to" id="0sq-ox-KIC">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QF4-3w-Eie">
-                                            <rect key="frame" x="45" y="508" width="95" height="17"/>
+                                            <rect key="frame" x="45" y="503" width="95" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="with a range of" id="4ir-rS-yiJ">
                                                 <font key="font" metaFont="system"/>
@@ -7025,9 +7081,18 @@ Gw
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHi-UC-MoT">
-                                            <rect key="frame" x="146" y="506" width="69" height="22"/>
+                                            <rect key="frame" x="146" y="501" width="45" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="9JX-7d-KUV">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgI-jF-leZ">
+                                            <rect key="frame" x="220" y="501" width="45" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2gT-tj-bv8">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -7057,37 +7122,30 @@ Gw
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
                                                     </button>
-                                                    <matrix verticalHuggingPriority="750" fixedFrame="YES" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ytK-ga-BKx">
-                                                        <rect key="frame" x="31" y="48" width="278" height="18"/>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uU-s9-CIA">
+                                                        <rect key="frame" x="16" y="50" width="73" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                        <size key="cellSize" width="88" height="18"/>
-                                                        <size key="intercellSpacing" width="4" height="2"/>
-                                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="O0q-wu-tya">
+                                                        <buttonCell key="cell" type="check" title="Normal" bezelStyle="regularSquare" imagePosition="left" inset="2" id="wr3-9Y-DOY">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
-                                                        <cells>
-                                                            <column>
-                                                                <buttonCell type="radio" title="Normal" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="doP-o5-rp9">
-                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                    <font key="font" metaFont="system"/>
-                                                                </buttonCell>
-                                                            </column>
-                                                            <column>
-                                                                <buttonCell type="radio" title="Decreased" imagePosition="left" alignment="left" inset="2" id="YJH-1s-qgP">
-                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                    <font key="font" metaFont="system"/>
-                                                                </buttonCell>
-                                                            </column>
-                                                            <column>
-                                                                <buttonCell type="radio" title="Absent" imagePosition="left" alignment="left" inset="2" id="Q6O-YV-9nM">
-                                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                    <font key="font" metaFont="system"/>
-                                                                </buttonCell>
-                                                            </column>
-                                                        </cells>
-                                                    </matrix>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsT-Fx-iMM">
+                                                        <rect key="frame" x="93" y="50" width="88" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Decreased" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lb8-PK-2dW">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBT-74-5Gy">
+                                                        <rect key="frame" x="185" y="50" width="73" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Absent" bezelStyle="regularSquare" imagePosition="left" inset="2" id="U6t-1Q-CTU">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
                                                 </subviews>
                                             </view>
                                         </box>
@@ -7258,7 +7316,7 @@ Gw
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdI-Uy-Eup">
                                                         <rect key="frame" x="18" y="98" width="100" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="check" title="Ulcer history" bezelStyle="regularSquare" imagePosition="left" inset="2" id="x0J-OA-O7R">
+                                                        <buttonCell key="cell" type="check" title="Hx foot ulcer" bezelStyle="regularSquare" imagePosition="left" inset="2" id="x0J-OA-O7R">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -7358,9 +7416,9 @@ Gw
                                                         </buttonCell>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmd-hi-sfi">
-                                                        <rect key="frame" x="18" y="118" width="107" height="18"/>
+                                                        <rect key="frame" x="18" y="118" width="134" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="check" title="Diabetic ulcer" bezelStyle="regularSquare" imagePosition="left" inset="2" id="re9-YH-rMB">
+                                                        <buttonCell key="cell" type="check" title="Diabetic foot ulcer" bezelStyle="regularSquare" imagePosition="left" inset="2" id="re9-YH-rMB">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -7403,14 +7461,6 @@ Gw
                                                         <rect key="frame" x="18" y="407" width="192" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="check" title="W/Fluctuating blood sugars" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Qc4-Iq-vjD">
-                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                            <font key="font" metaFont="system"/>
-                                                        </buttonCell>
-                                                    </button>
-                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLG-ak-qWW">
-                                                        <rect key="frame" x="18" y="340" width="110" height="18"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="check" title="Hypoglycemia" bezelStyle="regularSquare" imagePosition="left" inset="2" id="fdL-HA-XcC">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -7463,9 +7513,9 @@ Gw
                                                         </buttonCell>
                                                     </button>
                                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-Kj-Ulj">
-                                                        <rect key="frame" x="18" y="78" width="108" height="18"/>
+                                                        <rect key="frame" x="18" y="78" width="146" height="18"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <buttonCell key="cell" type="check" title="Pre-ulcerative" bezelStyle="regularSquare" imagePosition="left" inset="2" id="7QW-nE-1QE">
+                                                        <buttonCell key="cell" type="check" title="Pre-ulcerative callus" bezelStyle="regularSquare" imagePosition="left" inset="2" id="7QW-nE-1QE">
                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                             <font key="font" metaFont="system"/>
                                                         </buttonCell>
@@ -7488,10 +7538,89 @@ Gw
                                                 <rect key="frame" x="1" y="1" width="313" height="155"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-n2-aAM">
-                                                        <rect key="frame" x="114" y="69" width="85" height="17"/>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mq0-fu-6X6">
+                                                        <rect key="frame" x="92" y="66" width="85" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="PLAN???" id="BIV-hr-IQl">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Referrals" id="6uA-UV-yeY">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WS8-3z-h3A">
+                                                        <rect key="frame" x="18" y="42" width="107" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="DM Education" bezelStyle="regularSquare" imagePosition="left" inset="2" id="NEW-sp-4fO">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QCU-nM-ca1">
+                                                        <rect key="frame" x="18" y="22" width="90" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Nutritionist" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vPt-Uw-MK8">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfM-7I-GZl">
+                                                        <rect key="frame" x="135" y="22" width="115" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Opthalmologist" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v1i-Tt-dtX">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-Nm-bIp">
+                                                        <rect key="frame" x="135" y="42" width="80" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Podiatrist" bezelStyle="regularSquare" imagePosition="left" inset="2" id="AIH-l6-r9g">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMG-hE-uD4">
+                                                        <rect key="frame" x="145" y="89" width="137" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="DM Diet Discussed" bezelStyle="regularSquare" imagePosition="left" inset="2" id="9Id-1P-xDZ">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGQ-CR-t0e">
+                                                        <rect key="frame" x="18" y="113" width="47" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="FBS" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4kc-uI-Yua">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="10S-8Z-EUz">
+                                                        <rect key="frame" x="18" y="89" width="123" height="18"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <buttonCell key="cell" type="check" title="Rx for DM Shoes" bezelStyle="regularSquare" imagePosition="left" inset="2" id="2EW-z9-JQE">
+                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                    </button>
+                                                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaC-DH-omr">
+                                                        <rect key="frame" x="71" y="109" width="99" height="26"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="fjL-te-wSL">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <objectValues>
+                                                                <string>Item 1</string>
+                                                                <string>Item 2</string>
+                                                                <string>Item 3</string>
+                                                            </objectValues>
+                                                        </comboBoxCell>
+                                                    </comboBox>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIn-n2-aAM">
+                                                        <rect key="frame" x="173" y="114" width="85" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="times/day" id="BIV-hr-IQl">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -7500,6 +7629,37 @@ Gw
                                                 </subviews>
                                             </view>
                                         </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wMc-r0-Q7w">
+                                            <rect key="frame" x="238" y="530" width="64" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="times/day" id="8jE-7x-Jtx">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SZJ-Xq-Qh3">
+                                            <rect key="frame" x="136" y="524" width="99" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="n52-Hh-hdQ">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <objectValues>
+                                                    <string>Item 1</string>
+                                                    <string>Item 2</string>
+                                                    <string>Item 3</string>
+                                                </objectValues>
+                                            </comboBoxCell>
+                                        </comboBox>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-gr-fVr">
+                                            <rect key="frame" x="185" y="554" width="40" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="No" bezelStyle="regularSquare" imagePosition="right" inset="2" id="4wx-ro-C6t">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -9511,7 +9671,7 @@ Gw
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="WWExam" identifier="wweTab" id="SKV-Ef-T3o">
-                                <view key="view" ambiguous="YES" id="ZKo-9t-8FG">
+                                <view key="view" id="ZKo-9t-8FG">
                                     <rect key="frame" x="10" y="33" width="982" height="681"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>

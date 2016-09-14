@@ -161,11 +161,13 @@ class WWEViewController: NSView {
 			sectionResults += firstSetResults
 		}
 		
+		
+		//MARK: The Problem Is Here
 		let familyHxResults = finalFamilyHistory(historyList: familyHxMatrix)
 		if !familyHxResults.isEmpty {
 			sectionResults.append(familyHxResults)
 		}
-		
+
 		let secondSetResults = processIsWWEDataGroups(dataGroup: WWExamDataSet2)
 		if !secondSetResults.isEmpty {
 			if secondSetResults.count > 1 {
@@ -200,17 +202,11 @@ class WWEViewController: NSView {
 		
 		let pasteBoard = NSPasteboard.general()
 		pasteBoard.clearContents()
-		//Set the system clipboard to the final text
 		pasteBoard.setString(finalResults, forType: NSPasteboardTypeString)
+		
 		Swift.print(finalResults)
 		
 	}
-	
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
-    }
 	
 	func clearPopups(controls:[NSPopUpButton]) {
 		for control in controls {
