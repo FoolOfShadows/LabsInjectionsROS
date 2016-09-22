@@ -213,44 +213,44 @@ class Radiology: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	var respcardiogiVerbiageArray: [String] {return ["Home Sleep Study", "Sleep Study (Polysomnagram)","Sleep Study - Split Night","Sleep Study - CPAP Titration Study","MSLT (Multiple Sleep Latency Test)","MWT (Maintenance of Wakefulness Test)","Overnight Pulse Ox","PFT Complete","PFT Basic","Spirometry","Spirometry w Pre/Post Bronchodilator","Spirometry Exercise","ABG Room Air","ABG w/O2", "ECHO","Trans Esophageal ECHO","ECHO w bubble study","EKG","Stress Test: EKG Exercise","Stress Test: Treadmill Myoview","Stress Test: Lexiscan Myoview","Stress Test: Treadmill Stress ECHO","24 Hr Holter Monitor","48 Hr Holter Monitor","30 Day Cardiac Event Monitor", "Tilt Table Test", "Colonoscopy", "EGD"]}
 	
 
-	@IBAction func takeClearXRAY(sender: AnyObject) {
-		clearCheckboxes(theButtons: xrayButtonArray)
-		clearCheckboxes(theButtons: usndButtonArray)
-		clearCheckboxes(theButtons: mamnucButtonArray)
+	@IBAction func takeClearXRAY(_ sender: AnyObject) {
+		clearCheckboxes(xrayButtonArray)
+		clearCheckboxes(usndButtonArray)
+		clearCheckboxes(mamnucButtonArray)
 		xrayMyeloTextView.stringValue = ""
 		petTextView.stringValue = ""
 	}
 	
-	@IBAction func takeClearMRI(sender: AnyObject) {
-		clearCheckboxes(theButtons: mrimraButtonArray)
-		clearCheckboxes(theButtons: ctneuroButtonArray)
+	@IBAction func takeClearMRI(_ sender: AnyObject) {
+		clearCheckboxes(mrimraButtonArray)
+		clearCheckboxes(ctneuroButtonArray)
 		mriExtremityTextView.stringValue = ""
 		ctExtremityTextView.stringValue = ""
 	}
 	
-	@IBAction func takeClearCardio(sender: AnyObject) {
-		clearCheckboxes(theButtons: respcardiogiButtonArray)
+	@IBAction func takeClearCardio(_ sender: AnyObject) {
+		clearCheckboxes(respcardiogiButtonArray)
 	}
 	
-	@IBAction func takeClearAll(sender: AnyObject) {
-		takeClearXRAY(sender: self)
-		takeClearMRI(sender: self)
-		takeClearCardio(sender: self)
+	@IBAction func takeClearAll(_ sender: AnyObject) {
+		takeClearXRAY(self)
+		takeClearMRI(self)
+		takeClearCardio(self)
 	}
 	
 	override func awakeFromNib() {
-		takeClearAll(sender: self)
+		takeClearAll(self)
 	}
 	
-	@IBAction func takeProcessRadiology(sender: AnyObject) {
+	@IBAction func takeProcessRadiology(_ sender: AnyObject) {
 		var radiologyVerbiageArray = [String]()
 		var radiologyFinalText = ""
-		radiologyVerbiageArray += processAllControlTypes(controllerArray: xrayButtonArray, stringArray: xrayVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(controllerArray: mrimraButtonArray, stringArray: mrimraVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(controllerArray: ctneuroButtonArray, stringArray: ctneuroVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(controllerArray: usndButtonArray, stringArray: usndVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(controllerArray: mamnucButtonArray, stringArray: mamnucVerbiageArray)
-		radiologyVerbiageArray += processAllControlTypes(controllerArray: respcardiogiButtonArray, stringArray: respcardiogiVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(xrayButtonArray, stringArray: xrayVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(mrimraButtonArray, stringArray: mrimraVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(ctneuroButtonArray, stringArray: ctneuroVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(usndButtonArray, stringArray: usndVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(mamnucButtonArray, stringArray: mamnucVerbiageArray)
+		radiologyVerbiageArray += processAllControlTypes(respcardiogiButtonArray, stringArray: respcardiogiVerbiageArray)
 		
 		if !radiologyVerbiageArray.isEmpty {
 			radiologyFinalText = "Tests ordered: " + radiologyVerbiageArray.joined(separator: ", ")

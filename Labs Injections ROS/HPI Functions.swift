@@ -52,7 +52,7 @@ class HPIClass {
 }
 
 //Clear the HPI controllers
-func clearControllers(checkBoxes:[[NSButton]], textFields:[NSTextField]) {
+func clearControllers(_ checkBoxes:[[NSButton]], textFields:[NSTextField]) {
 	for boxes in checkBoxes {
 		for box in boxes {
 			box.state = NSOffState
@@ -66,7 +66,7 @@ func clearControllers(checkBoxes:[[NSButton]], textFields:[NSTextField]) {
 }
 
 //MARK: - Process the HPI sections
-func processLocation(textField:NSTextField, checkBoxes:[NSButton], verbiage:[String]) -> String {
+func processLocation(_ textField:NSTextField, checkBoxes:[NSButton], verbiage:[String]) -> String {
 	var checkboxResults = [String]()
 	var results = String()
 	if textField.stringValue != "" {
@@ -85,7 +85,7 @@ func processLocation(textField:NSTextField, checkBoxes:[NSButton], verbiage:[Str
 	return results
 }
 
-func processDuration(amount:NSTextField, checkBoxes:[NSButton]) -> String {
+func processDuration(_ amount:NSTextField, checkBoxes:[NSButton]) -> String {
 	var results = String()
 	
 	for box in checkBoxes {
@@ -97,7 +97,7 @@ func processDuration(amount:NSTextField, checkBoxes:[NSButton]) -> String {
 	return results
 }
 
-func processSeverity(number:NSTextField, checkBoxes:[NSButton]) -> String {
+func processSeverity(_ number:NSTextField, checkBoxes:[NSButton]) -> String {
 	var results = String()
 	
 	if number.stringValue != "" {
@@ -113,7 +113,7 @@ func processSeverity(number:NSTextField, checkBoxes:[NSButton]) -> String {
 	return results
 }
 
-func processJustCheckboxes(checkBoxes:[NSButton], title:String) -> String {
+func processJustCheckboxes(_ checkBoxes:[NSButton], title:String) -> String {
 	var checkboxResults = [String]()
 	var results = String()
 	
@@ -131,7 +131,7 @@ func processJustCheckboxes(checkBoxes:[NSButton], title:String) -> String {
 	return results
 }
 
-func processModifyingFactors(better:[NSButton], worse:[NSButton]) -> String {
+func processModifyingFactors(_ better:[NSButton], worse:[NSButton]) -> String {
 	var betterResults = [String]()
 	var worseResults = [String]()
 	var finalResults = [String]()
@@ -164,7 +164,7 @@ func processModifyingFactors(better:[NSButton], worse:[NSButton]) -> String {
 	return results
 }
 
-func processFunction(requirements:[NSButton], difficulties:[NSButton]) -> String {
+func processFunction(_ requirements:[NSButton], difficulties:[NSButton]) -> String {
 	var requiresResults = [String]()
 	var difficultiesResults = [String]()
 	var finalResults = [String]()

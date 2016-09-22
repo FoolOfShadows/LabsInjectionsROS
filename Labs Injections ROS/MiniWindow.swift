@@ -80,7 +80,7 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		clearMiniViewControllers()
 	}
 	
-	private func clearMiniViewControllers() {
+	fileprivate func clearMiniViewControllers() {
 		let checkBoxes:[NSButton] = [papView, dreView, stoolCardView, ekgView, udipView, udsView, fluSwabView, xrayChestView, xrayCSpineView, xrayLSSpineView, xrayShoulderBothView, xrayShoulderRView, xrayShoulderLView, xrayKneeBothView, xrayKneeRView, xrayKneeLView, usndAbView, mamSBView, bmdView, usndVDBLEView, usndVDLLEView, usndVDRLEView, usndVDBUEView, usndVDLUEView, usndVDRUEView]
 		for box in checkBoxes {
 			box.state = NSOffState
@@ -94,7 +94,7 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		}
 	}
 	
-	private func processCheckboxControllers(controllers: [NSButton], verbiage: [String], leadingString: String) -> String {
+	fileprivate func processCheckboxControllers(_ controllers: [NSButton], verbiage: [String], leadingString: String) -> String {
 		var processResults = [String]()
 		var processString = ""
 		for (i, controller) in controllers.enumerated() {
@@ -132,7 +132,7 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		return injectionString
 	}
 	
-	private func processProcedures() -> String {
+	fileprivate func processProcedures() -> String {
 		let procedureControllers:[NSButton] = [papView,
 		                                       dreView,
 		                                       stoolCardView,
@@ -142,11 +142,11 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		                                  "Hemoccult Stool cards x 3 given for colon cancer screening",
 		                                  "EKG, consent signed"]
 		let procedureLead = "Office procedure(s) performed:"
-		let procedureResults = processCheckboxControllers(controllers: procedureControllers, verbiage: procedureVerbiage, leadingString: procedureLead)
+		let procedureResults = processCheckboxControllers(procedureControllers, verbiage: procedureVerbiage, leadingString: procedureLead)
 		return procedureResults
 	}
 	
-	private func processLabs() -> String {
+	fileprivate func processLabs() -> String {
 		let labControllers:[NSButton] = [udipView,
 		                                 udsView,
 		                                 fluSwabView]
@@ -154,11 +154,11 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		                            "UDS, consent signed",
 		                            "Rapid Flu A&B Swab, consent signed"]
 		let labLead = "Lab(s) ordered:"
-		let labResults = processCheckboxControllers(controllers: labControllers, verbiage: labVerbiage, leadingString: labLead)
+		let labResults = processCheckboxControllers(labControllers, verbiage: labVerbiage, leadingString: labLead)
 		return labResults
 	}
 	
-	private func processRadiology() -> String {
+	fileprivate func processRadiology() -> String {
 		let radControllers:[NSButton] = [xrayChestView,
 		                                 xrayCSpineView,
 		                                 xrayLSSpineView,
@@ -196,7 +196,7 @@ class MiniWindow: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		                            "Ultrasound - Venous Doppler - Left Upper Extremities",
 		                            "Ultrasound - Venous Doppler - Right Upper Extremities"]
 		let radLead = "Tests ordered:"
-		let radResults = processCheckboxControllers(controllers: radControllers, verbiage: radVerbiage, leadingString: radLead)
+		let radResults = processCheckboxControllers(radControllers, verbiage: radVerbiage, leadingString: radLead)
 		return radResults
 	}
 

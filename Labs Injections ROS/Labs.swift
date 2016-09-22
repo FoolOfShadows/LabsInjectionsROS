@@ -85,7 +85,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 	func clearLab() {
 		//print(comboBoxArrayLab.count, comboBoxValuesLab.count)
-		clearComboBoxes(control: comboBoxArrayLab, values: comboBoxValuesLab)
+		clearComboBoxes(comboBoxArrayLab, values: comboBoxValuesLab)
 		other1TextView.stringValue = ""
 		other2TextView.stringValue = ""
 		reviewedView.state = NSOffState
@@ -97,7 +97,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		clearLab()
 	}
 	
-	@IBAction func takeClearLabs(sender: AnyObject) {
+	@IBAction func takeClearLabs(_ sender: AnyObject) {
 		clearLab()
 	}
 	
@@ -174,7 +174,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		return listToReturn
 	}
 	
-	@IBAction func takeProcessLabs(sender: AnyObject) {
+	@IBAction func takeProcessLabs(_ sender: AnyObject) {
 		//print(processLabOrdersForNote())
 		
 		let labResults = processLabOrdersForNote()
@@ -183,7 +183,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		pasteBoard.setString(labResults, forType: NSPasteboardTypeString)
 	}
 	
-	@IBAction func takePrintSave(sender: AnyObject) {
+	@IBAction func takePrintSave(_ sender: AnyObject) {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = "MM/dd/YYYY"
 		let currentDate = dateFormatter.string(from: Date())
@@ -194,7 +194,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		mcPrimaryView.selectCell(atRow: 0, column: 0)
 	}
 	
-	@IBAction func takeProcessForPrint(sender: AnyObject) {
+	@IBAction func takeProcessForPrint(_ sender: AnyObject) {
 		var returnedLabList = ""
 		var returnedLabsForNote = ""
 		
@@ -245,15 +245,15 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		print(labOrderOutputText)
 	}
 	
-	@IBAction func takeCancelPrintSave(sender: AnyObject) {
+	@IBAction func takeCancelPrintSave(_ sender: AnyObject) {
 		winOrderPrep.orderOut(self)
 	}
 	
-	@IBAction func takeClosePrint(sender: AnyObject) {
+	@IBAction func takeClosePrint(_ sender: AnyObject) {
 		winPrint.orderOut(self)
 	}
 	
-	@IBAction func takePrintLab(sender: AnyObject) {
+	@IBAction func takePrintLab(_ sender: AnyObject) {
 		let myPrintInfo = NSPrintInfo.shared()
 		//Don't seem to need these lines
 		//myPrintInfo.verticalPagination = NSPrintingPaginationMode.AutoPagination
@@ -276,14 +276,14 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 	
 	//Preset lab selectors
-	@IBAction func take90DayLab(sender: AnyObject) {
+	@IBAction func take90DayLab(_ sender: AnyObject) {
 		cmpView.selectItem(at: 1)
 		cbcView.selectItem(at: 1)
 		tshView.selectItem(at: 1)
 		lpdView.selectItem(at: 1)
 	}
 	
-	@IBAction func takeDMLab(sender: AnyObject) {
+	@IBAction func takeDMLab(_ sender: AnyObject) {
 		cmpView.selectItem(at: 1)
 		cbcView.selectItem(at: 1)
 		tshView.selectItem(at: 1)
@@ -291,13 +291,13 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		umalbView.selectItem(at: 1)
 	}
 	
-	@IBAction func takeThyLab(sender: AnyObject) {
+	@IBAction func takeThyLab(_ sender: AnyObject) {
 		tshView.selectItem(at: 1)
 		ft4view.selectItem(at: 1)
 		ft3View.selectItem(at: 1)
 	}
 	
-	@IBAction func takeRheumLab(sender: AnyObject) {
+	@IBAction func takeRheumLab(_ sender: AnyObject) {
 		urACView.selectItem(at: 1)
 		cpkView.selectItem(at: 1)
 		esrView.selectItem(at: 1)
@@ -306,7 +306,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		anaView.selectItem(at: 1)
 	}
 	
-	@IBAction func takeYrlyPhysLab(sender: AnyObject) {
+	@IBAction func takeYrlyPhysLab(_ sender: AnyObject) {
 		let yrlyPhysCode = "Z00.00"
 		cmpView.stringValue = yrlyPhysCode
 		cbcView.stringValue = yrlyPhysCode
@@ -315,7 +315,7 @@ class Labs: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 	}
 	
-	@IBAction func takeSTDPanel(sender: AnyObject) {
+	@IBAction func takeSTDPanel(_ sender: AnyObject) {
 		hsvView.selectItem(at: 1)
 		rprView.selectItem(at: 1)
 		hivView.selectItem(at: 1)

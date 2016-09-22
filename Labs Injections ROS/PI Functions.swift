@@ -8,7 +8,7 @@
 
 import Cocoa
 
-func clearPopupButtons(control:[NSPopUpButton], values:[[String]]) {
+func clearPopupButtons(_ control:[NSPopUpButton], values:[[String]]) {
 	for (i, _) in control.enumerated() {
 	//for var i = 0; i < control.count; i += 1 {
 		control[i].removeAllItems()
@@ -17,7 +17,7 @@ func clearPopupButtons(control:[NSPopUpButton], values:[[String]]) {
 	}
 }
 
-func clearComboBoxes(control:[NSComboBox], values:[[String]]) {
+func clearComboBoxes(_ control:[NSComboBox], values:[[String]]) {
 	for (i, _) in control.enumerated() {
 	//for var i = 0; i < control.count; i += 1 {
 		control[i].removeAllItems()
@@ -26,7 +26,7 @@ func clearComboBoxes(control:[NSComboBox], values:[[String]]) {
 	}
 }
 
-func clearTextFields(controls: [NSTextField]) {
+func clearTextFields(_ controls: [NSTextField]) {
 	for field in controls {
 		field.stringValue = ""
 	}
@@ -34,7 +34,7 @@ func clearTextFields(controls: [NSTextField]) {
 
 //Clear checkboxes is being accessed from the ROS Functions file
 
-func processAllControlTypes(controllerArray: [AnyObject], stringArray: [String])-> [String] {
+func processAllControlTypes(_ controllerArray: [AnyObject], stringArray: [String])-> [String] {
 	var returnValueList = [String]()
 	for (i, _) in controllerArray.enumerated() {
 	//for var i = 0; i<controllerArray.count; i += 1 {
@@ -66,7 +66,7 @@ func processAllControlTypes(controllerArray: [AnyObject], stringArray: [String])
 
 //Set all controls to ON state for testing only
 //Using setCheckboxesOn function from the ROS Functions file to test checkbox controllers
-func turnOnPopupButtons(control:[NSPopUpButton], values:[[String]]) {
+func turnOnPopupButtons(_ control:[NSPopUpButton], values:[[String]]) {
 //	for var i = 0; i < control.count; i += 1 {
 //		control[i].removeAllItems()
 //		control[i].addItemsWithTitles(values[i])
@@ -79,7 +79,7 @@ func turnOnPopupButtons(control:[NSPopUpButton], values:[[String]]) {
 	}
 }
 
-func turnOnComboBoxes(control:[NSComboBox:[String]]) {
+func turnOnComboBoxes(_ control:[NSComboBox:[String]]) {
 	for box in control {
 		box.0.removeAllItems()
 		box.0.addItems(withObjectValues: box.1)
@@ -87,7 +87,7 @@ func turnOnComboBoxes(control:[NSComboBox:[String]]) {
 	}
 }
 
-func turnOnTextFields(controls: [NSTextField]) {
+func turnOnTextFields(_ controls: [NSTextField]) {
 	for field in controls {
 		field.stringValue = "words for testing"
 	}

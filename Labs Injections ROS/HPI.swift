@@ -165,24 +165,24 @@ class HPI: NSObject, NSWindowDelegate {
 	
 	var myHPI:HPIClass {return HPIClass(locationCheckboxes: locationCheckboxArray, locationVerbiage: locationVerbiage, duration: durationCheckboxArray, severity: severityCheckboxArray, quality: qualityCheckboxArray, timing: timingCheckboxArray, context: contextCheckboxArray, modifyingBetter: modifyingFactorsBetterCheckboxArray, modifyingWorse: modifyingFactorsWorseCheckboxArray, associatedSymptoms: associatedSymptomsCheckboxArray, functionWith: functionWithCheckboxArray, functionDifficulty: functionDifficultyCheckboxArray, qol: qolCheckboxArray)}
 	
-	@IBAction func clearHPI(sender: NSButton) {
+	@IBAction func clearHPI(_ sender: NSButton) {
 		let textFields = [locationTextView!, durationQuantityTextView!, severityResultTextView!, causeTextView!, qolTextView!]
 		let checkboxArrays = [locationCheckboxArray, durationCheckboxArray, severityCheckboxArray, qualityCheckboxArray, timingCheckboxArray, contextCheckboxArray, modifyingFactorsBetterCheckboxArray, modifyingFactorsWorseCheckboxArray, associatedSymptomsCheckboxArray, functionWithCheckboxArray, functionDifficultyCheckboxArray, qolCheckboxArray]
-		clearControllers(checkBoxes: checkboxArrays, textFields: textFields)
+		clearControllers(checkboxArrays, textFields: textFields)
 	}
 	
-	@IBAction func processHPI(sender: NSButton) {
+	@IBAction func processHPI(_ sender: NSButton) {
 		var resultsArray = [String]()
-		resultsArray.append(processLocation(textField: locationTextView, checkBoxes: locationCheckboxArray, verbiage: locationVerbiage))
-		resultsArray.append(processSeverity(number: severityResultTextView, checkBoxes: severityCheckboxArray))
-		resultsArray.append(processJustCheckboxes(checkBoxes: qualityCheckboxArray, title:"Quality"))
-		resultsArray.append(processDuration(amount: durationQuantityTextView, checkBoxes: durationCheckboxArray))
-		resultsArray.append(processJustCheckboxes(checkBoxes: timingCheckboxArray, title:"Timing"))
-		resultsArray.append(processJustCheckboxes(checkBoxes: contextCheckboxArray, title:"Context"))
-		resultsArray.append(processModifyingFactors(better: modifyingFactorsBetterCheckboxArray, worse: modifyingFactorsWorseCheckboxArray))
-		resultsArray.append(processJustCheckboxes(checkBoxes: associatedSymptomsCheckboxArray, title:"Associated symptoms"))
-		resultsArray.append(processFunction(requirements: functionWithCheckboxArray, difficulties: functionDifficultyCheckboxArray))
-		resultsArray.append(processJustCheckboxes(checkBoxes: qolCheckboxArray, title:"Quality of life"))
+		resultsArray.append(processLocation(locationTextView, checkBoxes: locationCheckboxArray, verbiage: locationVerbiage))
+		resultsArray.append(processSeverity(severityResultTextView, checkBoxes: severityCheckboxArray))
+		resultsArray.append(processJustCheckboxes(qualityCheckboxArray, title:"Quality"))
+		resultsArray.append(processDuration(durationQuantityTextView, checkBoxes: durationCheckboxArray))
+		resultsArray.append(processJustCheckboxes(timingCheckboxArray, title:"Timing"))
+		resultsArray.append(processJustCheckboxes(contextCheckboxArray, title:"Context"))
+		resultsArray.append(processModifyingFactors(modifyingFactorsBetterCheckboxArray, worse: modifyingFactorsWorseCheckboxArray))
+		resultsArray.append(processJustCheckboxes(associatedSymptomsCheckboxArray, title:"Associated symptoms"))
+		resultsArray.append(processFunction(functionWithCheckboxArray, difficulties: functionDifficultyCheckboxArray))
+		resultsArray.append(processJustCheckboxes(qolCheckboxArray, title:"Quality of life"))
 		print(resultsArray)
 		
 		let cleanArray = resultsArray.filter{$0 != ""}

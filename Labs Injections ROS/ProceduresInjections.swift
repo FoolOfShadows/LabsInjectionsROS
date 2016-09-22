@@ -92,13 +92,13 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 
 	func clearPI() {
-		clearPopupButtons(control: popupButtonList, values: popupItemList)
-		clearCheckboxes(theButtons: checkboxButtonList)
-		clearTextFields(controls: textFieldList)
+		clearPopupButtons(popupButtonList, values: popupItemList)
+		clearCheckboxes(checkboxButtonList)
+		clearTextFields(textFieldList)
 		self.samplesTextView.string = ""
 	}
 	
-	@IBAction func takeClearPI(sender: AnyObject) {
+	@IBAction func takeClearPI(_ sender: AnyObject) {
 		clearPI()
 	}
 	
@@ -109,7 +109,7 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	func processProcedures() -> [String] {
 		let procedureVarListSimple:[NSButton] = [papView, dreView, stoolCardView, idView, ekgView]
 		let procedureVerbiageListSimple = ["Pap smear", "Digital rectal exam", "Hemoccult Stool cards x 3 given for colon cancer screening", "Incision and drainage of abscess, consent signed", "EKG, consent signed"]
-		var procedureList = processAllControlTypes(controllerArray: procedureVarListSimple, stringArray: procedureVerbiageListSimple)
+		var procedureList = processAllControlTypes(procedureVarListSimple, stringArray: procedureVerbiageListSimple)
 		//Process ear lavage into variable procedureList
 		if (earLavageView.titleOfSelectedItem != nil) && (earLavageView.titleOfSelectedItem != "") {
 			procedureList.append("Ear lavage of \(earLavageView.titleOfSelectedItem!), consent signed")
@@ -130,7 +130,7 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		}
 		let procedureVarListComplex: [NSTextField] = [cryoTextView, skinTagTextView, sutureRemovalTextView]
 		let procedureVarVerbiageComplex = ["Cryo treatment x \(cryoTextView.stringValue), consent signed", "Skin tag removal x \(skinTagTextView.stringValue), consent signed", "Suture/staple removal x \(sutureRemovalTextView.stringValue), consent signed"]
-		procedureList += (processAllControlTypes(controllerArray: procedureVarListComplex, stringArray: procedureVarVerbiageComplex))
+		procedureList += (processAllControlTypes(procedureVarListComplex, stringArray: procedureVarVerbiageComplex))
 		
 		return procedureList
 	}
@@ -153,7 +153,7 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		//Process simple injections into variable injList
 		let injVarList:[NSPopUpButton] = [dkSiteView, ppdSiteView, cSiteView, fluSiteView, solSiteView, pnvSiteView, b12SiteView, tdapSiteView, phSiteView, nphSiteView, torSiteView, rocSiteView, tstSiteView, depoSiteView, estSiteView, epoSiteView]
 		let injVerbiageList = ["Decadron 4 mg/1 ml + Kenalog 40 mg/1 ml \(dkSiteView.titleOfSelectedItem!), consent signed", "PPD (Purified Protein Derivative) Mantoux TB Skin Test 0.1 ml/5 TU \(ppdSiteView.titleOfSelectedItem!), consent signed", "Celestone 6 mg/1 ml \(cSiteView.titleOfSelectedItem!), consent signed", "Flu shot: \(vaccineType) 0.5 ml \(fluSiteView.titleOfSelectedItem!), consent signed, education: VIS given", "Solumedrol 125 mg \(solSiteView.titleOfSelectedItem!), consent signed", "Pneumovax 23: 0.5 ml \(pnvSiteView.titleOfSelectedItem!), consent signed education: VIS given", "B12 1000 mcg/1 ml \(b12SiteView.titleOfSelectedItem!), consent signed", "Tdap 0.5 ml \(tdapSiteView.titleOfSelectedItem!), consent signed", "Phenergan 25 mg \(phSiteView.titleOfSelectedItem!), consent signed", "Nubain 10 mg + Phenergan 25 mg \(nphSiteView.titleOfSelectedItem!), consent signed", "Toradol (Ketoralac) \(torDose) mg \(torSiteView.titleOfSelectedItem!), consent signed", "Rocephin \(rocDose) Lidocaine \(rocSiteView.titleOfSelectedItem!), consent signed", "Testosterone Cypionate 200 mg/1 ml \(tstSiteView.titleOfSelectedItem!), consent signed", "DepoProvera 150 mg/1 ml \(depoSiteView.titleOfSelectedItem!), consent signed", "Estradiol Cypionate 5 mg/1ml \(estSiteView.titleOfSelectedItem!), consent signed", "Procrit/Epogen 10,000 u \(epoSiteView.titleOfSelectedItem!), consent signed"]
-		var injList = processAllControlTypes(controllerArray: injVarList, stringArray: injVerbiageList)
+		var injList = processAllControlTypes(injVarList, stringArray: injVerbiageList)
 		
 		//Process arthorcentesis into variable injList
 		if (arthSiteView.titleOfSelectedItem != nil) && (arthSiteView.titleOfSelectedItem != "") {
@@ -185,7 +185,7 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		}
 		let hepVarList:[NSButton] = [hepA1View, hepA2View, hepB1View, hepB2View, hepB3View, hepTRx1View, hepTRx2View, hepTRx3View]
 		let hepVarVerbiage = ["Hepatitis A Vaccine #1: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis A Vaccine #2: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis B Vaccine #1: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis B Vaccine #2: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis B Vaccine #3: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis Trx Vaccine #1: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis Trx Vaccine #2: 0.5 ml \(hepSite), consent signed, education: VIS given", "Hepatitis Trx Vaccine #3: 0.5 ml \(hepSite), consent signed, education: VIS given"]
-		injList += processAllControlTypes(controllerArray: hepVarList, stringArray: hepVarVerbiage)
+		injList += processAllControlTypes(hepVarList, stringArray: hepVarVerbiage)
 		
 		//Process "Other" text box into variable injList
 		if otherTextView.stringValue != "" {
@@ -200,7 +200,7 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		let educationVarList: [NSButton] = [weightLossView, diabeticDietView, lowCholesterolView, lowSaltView, hypertensionView, dietaryFiberView, coumadinView, exerciseView, tobaccoView, stressView, tagView, strokeView, depressionView, alcoholView, gerdView, thyroidSymptomsView]
 		let educationVerbiageList: [String] = ["Weight loss diet with calorie restriction and food diary counseled and admonished, info given.", "Diabetic diet and lifestyle counseling and info given, 45 gm carb per meal.", "Low fat, low cholesterol diet and exercise counseling and info given.", "Low salt and cardiac diet counseling and info given, DASH diet, 2400 mg Sodium per day.", "Hypertension goals, lifestyle management counseling and info given.", "Dietary fiber education and info given.", "Coumadin diet education with Vitamin K food content info given.", "Exercise counseling, guidance and education given.", "Tobacco cessation admonished: counseling and info given (3-10 min).", "Stress and anxiety management counseling given.", "Treatment agreement discussed and reviewed with patient. Signed copy given to patient", "Stroke warning signs discussed and info given.", "Depression management counseling and resources given.", "Adverse health consequences of alcohol discussed and alcohol cessation admonished.", "Gastroesophageal Reflux diet and lifestyle modifications discussed and info given.", "Thyroid symptoms discussed."]
 		
-		return processAllControlTypes(controllerArray: educationVarList, stringArray: educationVerbiageList)
+		return processAllControlTypes(educationVarList, stringArray: educationVerbiageList)
 	}
 	
 	func processLabs() -> [String] {
@@ -209,10 +209,10 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 		//print(processAllControlTypes(labVarList, stringArray: labVerbiageList))
 		
-		return processAllControlTypes(controllerArray: labVarList, stringArray: labVerbiageList)
+		return processAllControlTypes(labVarList, stringArray: labVerbiageList)
 	}
 	
-	@IBAction func takeProcessPI(sender: AnyObject) {
+	@IBAction func takeProcessPI(_ sender: AnyObject) {
 		let procedureList = processProcedures()
 		let injectionList = processInjections()
 		let labList = processLabs()
@@ -254,10 +254,10 @@ class ProceduresInjections: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		print(finalOutput)
 	}
 
-	@IBAction func takeTestON(sender: AnyObject) {
-		turnOnPopupButtons(control: popupButtonList, values: popupItemList)
-		turnOnTextFields(controls: textFieldList)
-		setCheckboxesOn(theButtons: checkboxButtonList)
+	@IBAction func takeTestON(_ sender: AnyObject) {
+		turnOnPopupButtons(popupButtonList, values: popupItemList)
+		turnOnTextFields(textFieldList)
+		setCheckboxesOn(checkboxButtonList)
 	}
 	
 	@IBAction func openMiniWindow(_ sender: NSButton) {

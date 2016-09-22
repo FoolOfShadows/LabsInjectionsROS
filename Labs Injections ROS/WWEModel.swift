@@ -9,39 +9,41 @@
 import Cocoa
 
 enum FamilyRelationship:Int {
-	case Mother = 0
-	case Father
-	case Brother
-	case Sister
-	case MaternalGrandmother
-	case MaternalGrandfather
-	case PaternalGrandmother
-	case PaternalGrandfather
-	case MaternalAunt
-	case MaternalUncle
-	case PaternalAunt
-	case PaternalUncle
-	case Cousin
-	case Son
-	case Daughter
+	case mother = 0
+	case father
+	case brother
+	case sister
+	case maternalGrandmother
+	case maternalGrandfather
+	case paternalGrandmother
+	case paternalGrandfather
+	case maternalAunt
+	case maternalUncle
+	case paternalAunt
+	case paternalUncle
+	case cousin
+	case son
+	case daughter
+	case none
 	
 	var fullValue: String {
 		switch self {
-		case .Mother: return "mother"
-		case .Father: return "father"
-		case .Brother: return "brother"
-		case .Sister: return "sister"
-		case .MaternalGrandmother: return "maternal grandmother"
-		case .MaternalGrandfather: return "maternal grandfather"
-		case .PaternalGrandmother: return "paternal grandmother"
-		case .PaternalGrandfather: return "paternal grandfather"
-		case .MaternalAunt: return "maternal aunt"
-		case .MaternalUncle: return "maternal uncle"
-		case .PaternalAunt: return "paternal aunt"
-		case .PaternalUncle: return "paternal uncle"
-		case .Cousin: return "cousin"
-		case .Son: return "son"
-		case .Daughter: return "daughter"
+		case .mother: return "mother"
+		case .father: return "father"
+		case .brother: return "brother"
+		case .sister: return "sister"
+		case .maternalGrandmother: return "maternal grandmother"
+		case .maternalGrandfather: return "maternal grandfather"
+		case .paternalGrandmother: return "paternal grandmother"
+		case .paternalGrandfather: return "paternal grandfather"
+		case .maternalAunt: return "maternal aunt"
+		case .maternalUncle: return "maternal uncle"
+		case .paternalAunt: return "paternal aunt"
+		case .paternalUncle: return "paternal uncle"
+		case .cousin: return "cousin"
+		case .son: return "son"
+		case .daughter: return "daughter"
+		case .none: return "no history"
 		}
 	}
 }
@@ -162,7 +164,7 @@ class WWEMatrixData: IsWWEData {
 	}
 	
 	func processData() -> String {
-		var result = String()
+		let result = String()
 		
 		return result
 	}
@@ -170,7 +172,7 @@ class WWEMatrixData: IsWWEData {
 }
 
 
-func processFamilyHistory(selection: [Int]) -> String {
+func processFamilyHistory(_ selection: [Int]) -> String {
 	var results = [String]()
 	var finalString = String()
 	for selected in selection {
@@ -184,7 +186,7 @@ func processFamilyHistory(selection: [Int]) -> String {
 	return finalString
 }
 
-func processMatrix(matrix: NSMatrix, sectionLead: String) -> String {
+func processMatrix(_ matrix: NSMatrix, sectionLead: String) -> String {
 	var activeCells = [Int]()
 	var matrixResults = String()
 	for cell in matrix.cells {
@@ -194,17 +196,17 @@ func processMatrix(matrix: NSMatrix, sectionLead: String) -> String {
 	}
 	
 	if !activeCells.isEmpty {
-		matrixResults = sectionLead + ": " + processFamilyHistory(selection: activeCells)
+		matrixResults = sectionLead + ": " + processFamilyHistory(activeCells)
 	}
 	
 	return matrixResults
 }
 
-func finalFamilyHistory(historyList: [(NSMatrix, String)]) -> String {
+func finalFamilyHistory(_ historyList: [(NSMatrix, String)]) -> String {
 	var resultsArray = [String]()
 	var results = String()
 	for list in historyList {
-		let processedMatrix = processMatrix(matrix: list.0, sectionLead: list.1)
+		let processedMatrix = processMatrix(list.0, sectionLead: list.1)
 		if !processedMatrix.isEmpty {
 		resultsArray.append(processedMatrix)
 		}
@@ -217,7 +219,7 @@ func finalFamilyHistory(historyList: [(NSMatrix, String)]) -> String {
 }
 
 
-func processIsWWEDataGroups(dataGroup:[IsWWEData]) -> [String] {
+func processIsWWEDataGroups(_ dataGroup:[IsWWEData]) -> [String] {
 	var results = [String]()
 	
 	for data in dataGroup {

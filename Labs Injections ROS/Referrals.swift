@@ -64,17 +64,17 @@ class Referrals: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	var refCheckboxes: [NSButton] {return [refAllergistView, refCardioView, refChiropractorView, refDentistView, refDermView, refEndoView, refGastroView, refImmunologyView, refInfectiousDisView, refNephroView, refNeuroView, refHemoView, refOncRadiationView, refOptometryView, refRehabView, refPsychiatristView, refPulmView, refRheumView, refBariatricView, refCardioSurgView, refColorectalSurgView, refENTView, refSurgeryView, refGynoView, refOncGynocologyView, refNeuroSurgeryView, refObstetricianView, refOphthoView, refOralSurgeonView, refOrthoView, refPainManagementView, refPodView, refUrologyView, refCounselorView, refDMEdCounselor, refHomeHealthView, refLymphedemaView, refNutritionistView, refPsychologistView, refSocialWorkerView, refOTView, refPTView, refSpeechView, refWoundClinicView]}
 	let refVerbiage = ["Allergist", "Cardiologist", "Chiropractor", "Dentist", "Dermatologist", "Endocrinologist", "Gastroenterologist", "Immunologist", "Infectious Disease", "Nephrologist", "Neurologist", "Oncologist/Hematologist", "Radiation Oncologist", "Optometrist", "Physical Medicine and Rehab", "Psychiatrist", "Pulmonologist", "Rhuematologist", "Bariatric surgeon", "Cardiac surgeon", "Colorectal surgeon", "ENT/Otolaryngology", "General surgeon", "Gynecologist", "Gynecologic Oncology", "Neurosurgeon", "Obstetrician", "Ophthalmology", "Oral surgeon", "Orthopedic", "Pain Management", "Podiatrist", "Urologist", "Counselor", "Diabetic Education", "Home Health", "Lymphedema clinic", "Nutritionist", "Psychologist", "Social worker", "Occupaitonal therapy", "Physical therapy", "Speech therapy", "Wound clinic"]
 	
-	@IBAction func takeClear(sender: AnyObject) {
-		clearCheckboxes(theButtons: refCheckboxes)
+	@IBAction func takeClear(_ sender: AnyObject) {
+		clearCheckboxes(refCheckboxes)
 	}
 	
 	override func awakeFromNib() {
-		takeClear(sender: self)
+		takeClear(self)
 	}
 	
-	@IBAction func takeProcessReferrals(sender: AnyObject) {
+	@IBAction func takeProcessReferrals(_ sender: AnyObject) {
 		var referralsText = ""
-		let processedReferrals = processAllControlTypes(controllerArray: refCheckboxes, stringArray: refVerbiage)
+		let processedReferrals = processAllControlTypes(refCheckboxes, stringArray: refVerbiage)
 		if !processedReferrals.isEmpty {
 			referralsText = "Referrals made: " + processedReferrals.joined(separator: ", ")
 		}

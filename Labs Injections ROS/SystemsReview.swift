@@ -205,47 +205,47 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 	
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		takeClearROS(sender: self)
+		takeClearROS(self)
 	}
 	
 
-	@IBAction func takeClearROS(sender: AnyObject) {
-		clearCheckboxes(theButtons: genVarList)
-		clearCheckboxes(theButtons: giVarList)
-		clearCheckboxes(theButtons: psychVarList)
-		clearCheckboxes(theButtons: guVarList)
-		clearCheckboxes(theButtons: endoVarList)
-		clearCheckboxes(theButtons: entVarList)
-		clearCheckboxes(theButtons: eyeVarList)
-		clearCheckboxes(theButtons: mskVarList)
-		clearCheckboxes(theButtons: hemoVarList)
-		clearCheckboxes(theButtons: resVarList)
-		clearCheckboxes(theButtons: neuroVarList)
-		clearCheckboxes(theButtons: cardioVarList)
-		clearCheckboxes(theButtons: dermVarList)
+	@IBAction func takeClearROS(_ sender: AnyObject) {
+		clearCheckboxes(genVarList)
+		clearCheckboxes(giVarList)
+		clearCheckboxes(psychVarList)
+		clearCheckboxes(guVarList)
+		clearCheckboxes(endoVarList)
+		clearCheckboxes(entVarList)
+		clearCheckboxes(eyeVarList)
+		clearCheckboxes(mskVarList)
+		clearCheckboxes(hemoVarList)
+		clearCheckboxes(resVarList)
+		clearCheckboxes(neuroVarList)
+		clearCheckboxes(cardioVarList)
+		clearCheckboxes(dermVarList)
 	}
 
 	
-	@IBAction func takeProcessROS(sender: AnyObject) {
+	@IBAction func takeProcessROS(_ sender: AnyObject) {
 		ROSVars.positiveResults = [String]()
 		ROSVars.negativeResults = [String]()
 		var finalPositives = String()
 		var finalNegatives = String()
 		var finalVerbiage = String()
 		
-		processROS(sectionName: "GEN", controllers: genVarList, verbiage: genVerbList)
-		processROS(sectionName: "PSYCH", controllers: psychVarList, verbiage: psychVerbList)
-		processROS(sectionName: "EYE", controllers: eyeVarList, verbiage: eyeVerbList)
-		processROS(sectionName: "ENT", controllers: entVarList, verbiage: entVerbList)
-		processROS(sectionName: "CARDIO", controllers: cardioVarList, verbiage: cardioVerbList)
-		processROS(sectionName: "RESP", controllers: resVarList, verbiage: resVerbList)
-		processROS(sectionName: "GI", controllers: giVarList, verbiage: giVerbList)
-		processROS(sectionName: "GU", controllers: guVarList, verbiage: guVerbList)
-		processROS(sectionName: "ENDO", controllers: endoVarList, verbiage: endoVerbList)
-		processROS(sectionName: "NEURO", controllers: neuroVarList, verbiage: neuroVerbList)
-		processROS(sectionName: "MSK", controllers: mskVarList, verbiage: mskVerbList)
-		processROS(sectionName: "HEMO", controllers: hemoVarList, verbiage: hemoVerbList)
-		processROS(sectionName: "DERM", controllers: dermVarList, verbiage: dermVerbList)
+		processROS("GEN", controllers: genVarList, verbiage: genVerbList)
+		processROS("PSYCH", controllers: psychVarList, verbiage: psychVerbList)
+		processROS("EYE", controllers: eyeVarList, verbiage: eyeVerbList)
+		processROS("ENT", controllers: entVarList, verbiage: entVerbList)
+		processROS("CARDIO", controllers: cardioVarList, verbiage: cardioVerbList)
+		processROS("RESP", controllers: resVarList, verbiage: resVerbList)
+		processROS("GI", controllers: giVarList, verbiage: giVerbList)
+		processROS("GU", controllers: guVarList, verbiage: guVerbList)
+		processROS("ENDO", controllers: endoVarList, verbiage: endoVerbList)
+		processROS("NEURO", controllers: neuroVarList, verbiage: neuroVerbList)
+		processROS("MSK", controllers: mskVarList, verbiage: mskVerbList)
+		processROS("HEMO", controllers: hemoVarList, verbiage: hemoVerbList)
+		processROS("DERM", controllers: dermVarList, verbiage: dermVerbList)
 		
 		
 		if !ROSVars.positiveResults.isEmpty {
@@ -270,36 +270,36 @@ class SystemsReview: NSObject, NSApplicationDelegate, NSWindowDelegate {
 		
 	}
 	
-	@IBAction func takeSetControlsOn(sender: AnyObject) {
-		setCheckboxesOn(theButtons: genVarList)
-		setCheckboxesOn(theButtons: giVarList)
-		setCheckboxesOn(theButtons: psychVarList)
-		setCheckboxesOn(theButtons: guVarList)
-		setCheckboxesOn(theButtons: endoVarList)
-		setCheckboxesOn(theButtons: entVarList)
-		setCheckboxesOn(theButtons: eyeVarList)
-		setCheckboxesOn(theButtons: mskVarList)
-		setCheckboxesOn(theButtons: hemoVarList)
-		setCheckboxesOn(theButtons: resVarList)
-		setCheckboxesOn(theButtons: neuroVarList)
-		setCheckboxesOn(theButtons: cardioVarList)
-		setCheckboxesOn(theButtons: dermVarList)
+	@IBAction func takeSetControlsOn(_ sender: AnyObject) {
+		setCheckboxesOn(genVarList)
+		setCheckboxesOn(giVarList)
+		setCheckboxesOn(psychVarList)
+		setCheckboxesOn(guVarList)
+		setCheckboxesOn(endoVarList)
+		setCheckboxesOn(entVarList)
+		setCheckboxesOn(eyeVarList)
+		setCheckboxesOn(mskVarList)
+		setCheckboxesOn(hemoVarList)
+		setCheckboxesOn(resVarList)
+		setCheckboxesOn(neuroVarList)
+		setCheckboxesOn(cardioVarList)
+		setCheckboxesOn(dermVarList)
 	}
 
-	@IBAction func takeSetControlsMixed(sender: AnyObject) {
-		setCheckboxesMixed(theButtons: genVarList)
-		setCheckboxesMixed(theButtons: giVarList)
-		setCheckboxesMixed(theButtons: psychVarList)
-		setCheckboxesMixed(theButtons: guVarList)
-		setCheckboxesMixed(theButtons: endoVarList)
-		setCheckboxesMixed(theButtons: entVarList)
-		setCheckboxesMixed(theButtons: eyeVarList)
-		setCheckboxesMixed(theButtons: mskVarList)
-		setCheckboxesMixed(theButtons: hemoVarList)
-		setCheckboxesMixed(theButtons: resVarList)
-		setCheckboxesMixed(theButtons: neuroVarList)
-		setCheckboxesMixed(theButtons: cardioVarList)
-		setCheckboxesMixed(theButtons: dermVarList)
+	@IBAction func takeSetControlsMixed(_ sender: AnyObject) {
+		setCheckboxesMixed(genVarList)
+		setCheckboxesMixed(giVarList)
+		setCheckboxesMixed(psychVarList)
+		setCheckboxesMixed(guVarList)
+		setCheckboxesMixed(endoVarList)
+		setCheckboxesMixed(entVarList)
+		setCheckboxesMixed(eyeVarList)
+		setCheckboxesMixed(mskVarList)
+		setCheckboxesMixed(hemoVarList)
+		setCheckboxesMixed(resVarList)
+		setCheckboxesMixed(neuroVarList)
+		setCheckboxesMixed(cardioVarList)
+		setCheckboxesMixed(dermVarList)
 	}
     
 }

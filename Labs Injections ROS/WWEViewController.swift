@@ -143,11 +143,11 @@ class WWEViewController: NSView {
 	}
 
 	func setTabToClear() {
-		clearPopupButtons(control: popupArray, values: [lastPapChoices, bloodFlowChoices, birthControlMethods, selfExamFrequencyChoices])
-		clearComboBoxes(control: comboboxArray, values: [periodFrequencyChoices, periodLengthChoices, zeroToSixChoices, zeroToFiveChoices, zeroToFiveChoices, zeroToSixChoices, zeroToSixChoices, zeroToFourChoices])
-		clearTextFields(controls: textFieldArray)
-		clearCheckboxes(theButtons: checkboxArray)
-		clearMatrices(matrices: familyHxMatrix)
+		clearPopupButtons(popupArray, values: [lastPapChoices, bloodFlowChoices, birthControlMethods, selfExamFrequencyChoices])
+		clearComboBoxes(comboboxArray, values: [periodFrequencyChoices, periodLengthChoices, zeroToSixChoices, zeroToFiveChoices, zeroToFiveChoices, zeroToSixChoices, zeroToSixChoices, zeroToFourChoices])
+		clearTextFields(textFieldArray)
+		clearCheckboxes(checkboxArray)
+		clearMatrices(familyHxMatrix)
 	}
 	@IBAction func takeClearButton(_ sender: NSButton) {
 		setTabToClear()
@@ -156,19 +156,19 @@ class WWEViewController: NSView {
 	@IBAction func takeProcessButton(_ sender: NSButton) {
 		var sectionResults = [String]()
 		var finalResults = ""
-		let firstSetResults = processIsWWEDataGroups(dataGroup: WWExamDataSet1)
+		let firstSetResults = processIsWWEDataGroups(WWExamDataSet1)
 		if !firstSetResults.isEmpty {
 			sectionResults += firstSetResults
 		}
 		
 		
 		//MARK: The Problem Is Here
-		let familyHxResults = finalFamilyHistory(historyList: familyHxMatrix)
+		let familyHxResults = finalFamilyHistory(familyHxMatrix)
 		if !familyHxResults.isEmpty {
 			sectionResults.append(familyHxResults)
 		}
 
-		let secondSetResults = processIsWWEDataGroups(dataGroup: WWExamDataSet2)
+		let secondSetResults = processIsWWEDataGroups(WWExamDataSet2)
 		if !secondSetResults.isEmpty {
 			if secondSetResults.count > 1 {
 				let allergyResults = "\(secondSetResults[0]) - \(secondSetResults[1])"
@@ -179,13 +179,13 @@ class WWEViewController: NSView {
 			}
 		}
 		
-		let painResults = processIsWWEDataGroups(dataGroup: WWExamDataPain)
+		let painResults = processIsWWEDataGroups(WWExamDataPain)
 		if !painResults.isEmpty {
 			let finalPainResults = "On a scale of 0 to 10, with 0 being no symptoms and 10 being severe symptoms, how would you describe the following:\n\(painResults.joined(separator: "\n"))"
 			sectionResults.append(finalPainResults)
 		}
 		
-		let pregnancyResults = processIsWWEDataGroups(dataGroup: WWExamDataPregnancies)
+		let pregnancyResults = processIsWWEDataGroups(WWExamDataPregnancies)
 		if !pregnancyResults.isEmpty {
 			let finalPregnancyResults = "If you have been pregnant, please indicate how many:\n\(pregnancyResults.joined(separator: "\n"))"
 			sectionResults.append(finalPregnancyResults)
@@ -208,23 +208,23 @@ class WWEViewController: NSView {
 		
 	}
 	
-	func clearPopups(controls:[NSPopUpButton]) {
+	func clearPopups(_ controls:[NSPopUpButton]) {
 		for control in controls {
 			control.selectItem(at: 0)
 		}
 	}
-	func clearText(fields:[NSTextField]) {
+	func clearText(_ fields:[NSTextField]) {
 		for field in fields {
 			field.stringValue = String()
 		}
 	}
-	func clearCombos(boxes:[NSComboBox]) {
+	func clearCombos(_ boxes:[NSComboBox]) {
 		for box in boxes {
 			box.selectItem(at: 0)
 		}
 	}
 	
-	func clearMatrices(matrices:[(NSMatrix, String)]) {
+	func clearMatrices(_ matrices:[(NSMatrix, String)]) {
 		for matrix in matrices {
 			for cell in matrix.0.cells {
 				cell.state = NSOffState

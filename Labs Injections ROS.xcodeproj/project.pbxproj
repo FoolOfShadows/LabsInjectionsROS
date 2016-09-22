@@ -10,7 +10,6 @@
 		7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */; };
 		7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3351BED2B0F00E075C4 /* PI Functions.swift */; };
 		7919F3381BED367700E075C4 /* PI Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3371BED367700E075C4 /* PI Constants.swift */; };
-		792581E71D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 792581E61D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf */; };
 		79481E1E1D00671800417647 /* HPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79481E1D1D00671800417647 /* HPI.swift */; };
 		794E837D1C0CA4C10040F847 /* Radiology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837C1C0CA4C10040F847 /* Radiology.swift */; };
 		794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837E1C0CB36C0040F847 /* Radiology Functions.swift */; };
@@ -38,7 +37,6 @@
 		7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresInjections.swift; sourceTree = "<group>"; };
 		7919F3351BED2B0F00E075C4 /* PI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Functions.swift"; sourceTree = "<group>"; };
 		7919F3371BED367700E075C4 /* PI Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Constants.swift"; sourceTree = "<group>"; };
-		792581E61D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "WPCM Letterhead Blank 100604 copy 2.pdf"; sourceTree = "<group>"; };
 		79481E1D1D00671800417647 /* HPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPI.swift; sourceTree = "<group>"; };
 		794E837C1C0CA4C10040F847 /* Radiology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radiology.swift; sourceTree = "<group>"; };
 		794E837E1C0CB36C0040F847 /* Radiology Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radiology Functions.swift"; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				79D1DF311BEBF64700331482 /* RedGreenCheckbox.swift */,
 				79D1DF0B1BEBD90200331482 /* Info.plist */,
 				79D1DF061BEBD90200331482 /* Assets.xcassets */,
-				792581E61D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf */,
 				79EC3C871CDBD536009D6757 /* BlackLineClass.swift */,
 				79481E1D1D00671800417647 /* HPI.swift */,
 				79BC4A741D00AD6A00E50500 /* HPI Functions.swift */,
@@ -151,13 +148,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Fulgent Wake";
 				TargetAttributes = {
 					79D1DF001BEBD90200331482 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = VY6BVT84SC;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -187,7 +184,6 @@
 			files = (
 				79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */,
 				79D1DF0A1BEBD90200331482 /* MainMenu.xib in Resources */,
-				792581E71D6F393200A0EC19 /* WPCM Letterhead Blank 100604 copy 2.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +246,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -294,8 +292,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";

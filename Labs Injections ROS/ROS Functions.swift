@@ -9,7 +9,7 @@
 import Cocoa
 
 //Set all checkboxes to off
-func clearCheckboxes(theButtons: [NSButton]) {	
+func clearCheckboxes(_ theButtons: [NSButton]) {	
 	for theButton in theButtons {
 		theButton.state = NSOffState
 	}
@@ -17,7 +17,7 @@ func clearCheckboxes(theButtons: [NSButton]) {
 }
 
 //Set all checkboxes to OnState for testing only
-func setCheckboxesOn(theButtons: [NSButton]) {
+func setCheckboxesOn(_ theButtons: [NSButton]) {
 	for theButton in theButtons {
 		theButton.state = NSOnState
 	}
@@ -25,7 +25,7 @@ func setCheckboxesOn(theButtons: [NSButton]) {
 }
 
 //Set all checkboxes to MixedState for testing only
-func setCheckboxesMixed(theButtons: [NSButton]) {
+func setCheckboxesMixed(_ theButtons: [NSButton]) {
 	for theButton in theButtons {
 		theButton.state = NSMixedState
 	}
@@ -33,7 +33,7 @@ func setCheckboxesMixed(theButtons: [NSButton]) {
 }
 
 //Process the checkboxes and generate the text for each section
-func processROS(sectionName: String, controllers: [NSButton], verbiage: [String]) -> (positives:String, negatives:String) {
+func processROS(_ sectionName: String, controllers: [NSButton], verbiage: [String]) -> (positives:String, negatives:String) {
 	var positives = [String]()
 	var positiveResults = String()
 	var negatives = [String]()
@@ -49,12 +49,12 @@ func processROS(sectionName: String, controllers: [NSButton], verbiage: [String]
 	}
 	
 	if !positives.isEmpty {
-		positives = makeFirstCharacterInStringArrayUppercase(theArray: positives)
+		positives = makeFirstCharacterInStringArrayUppercase(positives)
 		positiveResults = "\(sectionName): " + positives.joined(separator: ", ")
 		SystemsReview.ROSVars.positiveResults.append(positiveResults)
 	}
 	if !negatives.isEmpty {
-		negatives = makeFirstCharacterInStringArrayUppercase(theArray: negatives)
+		negatives = makeFirstCharacterInStringArrayUppercase(negatives)
 		negativeResults = "\(sectionName): " + negatives.joined(separator: ", ")
 		SystemsReview.ROSVars.negativeResults.append(negativeResults)
 	}
@@ -62,7 +62,7 @@ func processROS(sectionName: String, controllers: [NSButton], verbiage: [String]
 	return (positiveResults, negativeResults)
 }
 
-func makeFirstCharacterInStringArrayUppercase(theArray: [String])->[String] {
+func makeFirstCharacterInStringArrayUppercase(_ theArray: [String])->[String] {
 	var changedArray = theArray
 	var firstItem = theArray[0]
 	//Added this check to avoid an error in cases where the first item in a passed array is an empty string
