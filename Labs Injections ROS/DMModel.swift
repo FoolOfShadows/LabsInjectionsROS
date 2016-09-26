@@ -83,6 +83,7 @@ struct DMCompliance: IsDMData {
 	func processData() -> String {
 		var returnArray = [String]()
 		var returnString = String()
+		var footComplaintsArray = [String]()
 		
 		if !compliance.isEmpty {
 			returnArray.append("Patient is \(compliance.lowercased())")
@@ -93,7 +94,7 @@ struct DMCompliance: IsDMData {
 		if exercising == "Yes" {
 			returnArray.append("Patient is exercising regularly")
 		} else if exercising == "No" {
-			returnArray.append("Is not exercising regularly")
+			returnArray.append("Patient is not exercising regularly")
 		}
 		if logProvided == "Yes" {
 			returnArray.append("Blood sugar log provided and reviewed.")
@@ -107,13 +108,17 @@ struct DMCompliance: IsDMData {
 			returnArray.append("Patient denies any foot complaints")
 		}
 		if numbFeet == 1 {
-			returnArray.append("Patient complains of numbness in feet")
+			footComplaintsArray.append("numbness")
 		}
 		if tinglingFeet == 1 {
-			returnArray.append("Patient complains of tingling in feet")
+			footComplaintsArray.append("tingling")
 		}
 		if burningFeet == 1 {
-			returnArray.append("Patient complains of burning pain in feet")
+			footComplaintsArray.append("burning pain")
+		}
+		
+		if !footComplaintsArray.isEmpty {
+			returnArray.append("Patient complains of \(footComplaintsArray.joined(separator: ", ")) in feet.")
 		}
 		
 		if !returnArray.isEmpty {
