@@ -9,7 +9,7 @@
 import Foundation
 
 protocol IsDMData {
-	func processData () -> String
+	func processData() -> String
 }
 
 //MARK: Data Enums

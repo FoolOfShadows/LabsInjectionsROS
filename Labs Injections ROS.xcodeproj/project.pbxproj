@@ -10,6 +10,7 @@
 		7919F3341BED2AB800E075C4 /* ProceduresInjections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */; };
 		7919F3361BED2B0F00E075C4 /* PI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3351BED2B0F00E075C4 /* PI Functions.swift */; };
 		7919F3381BED367700E075C4 /* PI Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919F3371BED367700E075C4 /* PI Constants.swift */; };
+		791CCD5C1DA5278000916EF1 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791CCD5B1DA5278000916EF1 /* GeneralExtensions.swift */; };
 		79481E1E1D00671800417647 /* HPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79481E1D1D00671800417647 /* HPI.swift */; };
 		794E837D1C0CA4C10040F847 /* Radiology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837C1C0CA4C10040F847 /* Radiology.swift */; };
 		794E837F1C0CB36C0040F847 /* Radiology Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794E837E1C0CB36C0040F847 /* Radiology Functions.swift */; };
@@ -19,7 +20,7 @@
 		799260B31D81BC7500D91C9E /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799260B21D81BC7500D91C9E /* DMViewController.swift */; };
 		799260B51D81BC8500D91C9E /* DMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799260B41D81BC8500D91C9E /* DMModel.swift */; };
 		79975E4F1D1C647C00AF4DE6 /* MiniWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79975E4E1D1C647C00AF4DE6 /* MiniWindow.swift */; };
-		79BC4A751D00AD6A00E50500 /* HPI Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC4A741D00AD6A00E50500 /* HPI Functions.swift */; };
+		79BC4A751D00AD6A00E50500 /* HPI Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC4A741D00AD6A00E50500 /* HPI Model.swift */; };
 		79BD9D2F1C0DD3F20010BF92 /* Referrals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD9D2E1C0DD3F20010BF92 /* Referrals.swift */; };
 		79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1DF041BEBD90200331482 /* AppDelegate.swift */; };
 		79D1DF071BEBD90200331482 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1DF061BEBD90200331482 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		7919F3331BED2AB800E075C4 /* ProceduresInjections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresInjections.swift; sourceTree = "<group>"; };
 		7919F3351BED2B0F00E075C4 /* PI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Functions.swift"; sourceTree = "<group>"; };
 		7919F3371BED367700E075C4 /* PI Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PI Constants.swift"; sourceTree = "<group>"; };
+		791CCD5B1DA5278000916EF1 /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
 		79481E1D1D00671800417647 /* HPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPI.swift; sourceTree = "<group>"; };
 		794E837C1C0CA4C10040F847 /* Radiology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Radiology.swift; sourceTree = "<group>"; };
 		794E837E1C0CB36C0040F847 /* Radiology Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Radiology Functions.swift"; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		799260B21D81BC7500D91C9E /* DMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		799260B41D81BC8500D91C9E /* DMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMModel.swift; sourceTree = "<group>"; };
 		79975E4E1D1C647C00AF4DE6 /* MiniWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniWindow.swift; sourceTree = "<group>"; };
-		79BC4A741D00AD6A00E50500 /* HPI Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HPI Functions.swift"; sourceTree = "<group>"; };
+		79BC4A741D00AD6A00E50500 /* HPI Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HPI Model.swift"; sourceTree = "<group>"; };
 		79BD9D2E1C0DD3F20010BF92 /* Referrals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Referrals.swift; sourceTree = "<group>"; };
 		79D1DF011BEBD90200331482 /* Labs Injections ROS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Labs Injections ROS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1DF041BEBD90200331482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		79D1DF031BEBD90200331482 /* Labs Injections ROS */ = {
 			isa = PBXGroup;
 			children = (
+				791CCD5B1DA5278000916EF1 /* GeneralExtensions.swift */,
 				79D1DF081BEBD90200331482 /* MainMenu.xib */,
 				79D1DF041BEBD90200331482 /* AppDelegate.swift */,
 				796D1F251BF3B49500790A0D /* Labs.swift */,
@@ -110,7 +113,7 @@
 				79D1DF061BEBD90200331482 /* Assets.xcassets */,
 				79EC3C871CDBD536009D6757 /* BlackLineClass.swift */,
 				79481E1D1D00671800417647 /* HPI.swift */,
-				79BC4A741D00AD6A00E50500 /* HPI Functions.swift */,
+				79BC4A741D00AD6A00E50500 /* HPI Model.swift */,
 				79975E4E1D1C647C00AF4DE6 /* MiniWindow.swift */,
 				79F276761D3E7860008B44A8 /* WWEViewController.swift */,
 				79F276741D3E6C54008B44A8 /* WWE Constants.swift */,
@@ -198,6 +201,7 @@
 				79D1DF2E1BEBE11100331482 /* SystemsReview.swift in Sources */,
 				799260B31D81BC7500D91C9E /* DMViewController.swift in Sources */,
 				79F276771D3E7860008B44A8 /* WWEViewController.swift in Sources */,
+				791CCD5C1DA5278000916EF1 /* GeneralExtensions.swift in Sources */,
 				79EC3C881CDBD536009D6757 /* BlackLineClass.swift in Sources */,
 				79975E4F1D1C647C00AF4DE6 /* MiniWindow.swift in Sources */,
 				79E15B511D3FED0E00ABCED3 /* WWEModel.swift in Sources */,
@@ -208,7 +212,7 @@
 				796D1F221BF3B45200790A0D /* Lab Constants.swift in Sources */,
 				79481E1E1D00671800417647 /* HPI.swift in Sources */,
 				7919F3381BED367700E075C4 /* PI Constants.swift in Sources */,
-				79BC4A751D00AD6A00E50500 /* HPI Functions.swift in Sources */,
+				79BC4A751D00AD6A00E50500 /* HPI Model.swift in Sources */,
 				796D1F261BF3B49500790A0D /* Labs.swift in Sources */,
 				79D1DF051BEBD90200331482 /* AppDelegate.swift in Sources */,
 				79D1DF321BEBF64700331482 /* RedGreenCheckbox.swift in Sources */,

@@ -10,6 +10,8 @@ import Cocoa
 
 class HPI: NSObject, NSWindowDelegate {
 	
+	@IBOutlet weak var hpiView: NSView!
+	
 	//Location controllers
 	@IBOutlet weak var locationTextView: NSTextField!
 	@IBOutlet weak var locationChestCheckbox: NSButton!
@@ -45,17 +47,11 @@ class HPI: NSObject, NSWindowDelegate {
 	
 	//Duration controllers
 	@IBOutlet weak var durationQuantityTextView: NSTextField!
-	@IBOutlet weak var durationDaysCheckbox: NSButton!
-	@IBOutlet weak var durationWeekCheckbox: NSButton!
-	@IBOutlet weak var durationMonthCheckbox: NSButton!
-	@IBOutlet weak var durationMonthsToYearsCheckbox: NSButton!
-	@IBOutlet weak var durationYearsCheckbox: NSButton!
+	@IBOutlet weak var durationPopup: NSPopUpButton!
 	
 	//Severity controllers
 	@IBOutlet weak var severityResultTextView: NSTextField!
-	@IBOutlet weak var severityMildCheckbox: NSButton!
-	@IBOutlet weak var severityModerateCheckbox: NSButton!
-	@IBOutlet weak var severitySevereCheckbox: NSButton!
+	@IBOutlet weak var severityPopup: NSPopUpButton!
 	
 	//Quality controllers
 	@IBOutlet weak var qualityAcheCheckbox: NSButton!
@@ -83,13 +79,7 @@ class HPI: NSObject, NSWindowDelegate {
 	@IBOutlet weak var timingEndOfDay: NSButton!
 	
 	//Context controllers
-	@IBOutlet weak var contextBetterCheckbox: NSButton!
-	@IBOutlet weak var contextWorseCheckbox: NSButton!
-	@IBOutlet weak var contextSameCheckbox: NSButton!
-	@IBOutlet weak var contextGradualCheckbox: NSButton!
-	@IBOutlet weak var contextSuddenCheckbox: NSButton!
-	
-	//Cause controllers
+	@IBOutlet weak var contextPopup: NSPopUpButton!
 	@IBOutlet weak var causeTextView: NSTextField!
 	
 	//Modifying Factors controllers
@@ -120,9 +110,7 @@ class HPI: NSObject, NSWindowDelegate {
 	@IBOutlet weak var associatedFootDropcheckbox: NSButton!
 	
 	//Function controllers
-	@IBOutlet weak var functionWCBoundCheckbox: NSButton!
-	@IBOutlet weak var functionWalkerCheckbox: NSButton!
-	@IBOutlet weak var functionCaneCheckbox: NSButton!
+	@IBOutlet weak var functionPopup: NSPopUpButton!
 	@IBOutlet weak var functionJobCheckbox: NSButton!
 	@IBOutlet weak var functionGroomingCheckbox: NSButton!
 	@IBOutlet weak var functionBathingCheckbox: NSButton!
@@ -131,80 +119,126 @@ class HPI: NSObject, NSWindowDelegate {
 	@IBOutlet weak var functionChoresCheckbox: NSButton!
 	
 	//Quality Of Life controllers
-	@IBOutlet weak var qolBetterCheckbox: NSButton!
-	@IBOutlet weak var qolWorseCheckbox: NSButton!
-	@IBOutlet weak var qolGoodCheckbox: NSButton!
-	@IBOutlet weak var qolFairCheckbox: NSButton!
-	@IBOutlet weak var qolPoorCheckbox: NSButton!
+	@IBOutlet weak var qolPopup: NSPopUpButton!
 	@IBOutlet weak var qolTextView: NSTextField!
 	
-	var locationCheckboxArray: [NSButton] {return [locationChestCheckbox, locationAbdomenCheckbox, locationRibsLCheckbox, locationRibsRCheckbox, locationBackCheckbox, locationNeckCheckbox, locationShoulderLCheckbox, locationShoulderRCheckbox, locationArmLUCheckbox, locationArmRUCheckbox, locationElbowLCheckbox, locationElbowRCheckbox, locationForearmLCheckbox, locationForearmRCheckbox, locationWristLCheckbox, locationWristRCheckbox, locationHandLCheckbox, locationHandRCheckbox, locationHipLCheckbox, locationHipRCheckbox, locationLegLUCheckbox, locationLegRUCheckbox, locationKneeLCheckbox, locationKneeRCheckbox, locationLegLLCheckbox, locationLegRLCheckbox, locationAnkleLCheckbox, locationAnkleRCheckbox, locationFootLCheckbox, locationFootRCheckbox]}
-	let locationVerbiage = ["chest", "abdomen", "left side ribs", "right side ribs", "back", "neck", "left shoulder", "right shoulder",
-	                        "left upper arm", "right upper arm", "left elbow", "right elbow", "left forearm", "right forearm", "left wrist", "right wrist", "left hand", "right hand",
-	                        "left hip", "right hip", "left upper leg", "right upper leg", "left knee", "right knee", "left lower leg", "right lower leg", "left ankle", "right ankle", "left foot", "right foot"]
-		
-	var durationCheckboxArray: [NSButton] {return [durationDaysCheckbox, durationWeekCheckbox, durationMonthCheckbox, durationMonthsToYearsCheckbox, durationYearsCheckbox]}
+	var checkboxArray:[NSButton] {return [locationChestCheckbox, locationAbdomenCheckbox, locationRibsLCheckbox, locationRibsRCheckbox, locationBackCheckbox, locationNeckCheckbox, locationShoulderRCheckbox, locationShoulderLCheckbox, locationArmRUCheckbox, locationArmLUCheckbox, locationElbowLCheckbox, locationElbowRCheckbox, locationForearmLCheckbox, locationForearmRCheckbox, locationWristLCheckbox, locationWristRCheckbox, locationHandRCheckbox, locationHandLCheckbox, locationKneeRCheckbox, locationKneeLCheckbox, locationHipRCheckbox, locationHipLCheckbox, locationLegRUCheckbox, locationLegLUCheckbox, locationLegLLCheckbox, locationLegRLCheckbox, locationAnkleLCheckbox, locationAnkleRCheckbox, locationFootRCheckbox, locationFootLCheckbox, qualityAcheCheckbox, qualitySoreCheckbox, qualitySharpCheckbox, qualityStabbingCheckbox, qualityDullCheckbox, qualityBurningCheckbox, qualityStingingCheckbox, qualityThrobbingCheckbox, qualityCrampingCheckbox, qualitySpasmCheckbox, timingConstantCheckbox, timingFrequentCheckbox, timingOccasionalCheckbox, timingInfrequentCheckbox, timingIntermittentCheckbox, timingAtRestCheckbox, timingAfterWorkCheckbox, timingAfterExerciseCheckbox, timingMorningCheckbox, timingNightCheckbox, timingEndOfDay, modifyingBetterHeatCheckbox, modifyingBetterIceCheckbox, modifyingBetterRestCheckbox, modifyingBetterElevationCheckbox, modifyingBetterMedicationCheckbox, modifyingWorseLiftingCheckbox, modifyingWorseBendingCheckbox, modifyingWorseStairsCheckbox, modifyingWorseStandingCheckbox, modifyingWorseWalkingCheckbox, modifyingWorseSittingCheckbox, modifyingWorseReachingCheckbox, modifyingWorseLayingCheckbox, modifyingWorseChoresCheckbox, associatedNumbnessCheckbox, associatedTinglingCheckbox, associatedWeaknessCheckbox, associatedStiffnessCheckbox, associatedLimpCheckbox, associatedLimitedMovementCheckbox, associatedBladderCheckbox, associatedBowelCheckbox, associatedFootDropcheckbox, functionJobCheckbox, functionGroomingCheckbox, functionBathingCheckbox, functionCookingCheckbox, functionEatingCheckbox, functionChoresCheckbox]}
+	var popupButtonArray:[NSPopUpButton] {return [durationPopup, severityPopup, contextPopup, functionPopup, qolPopup]}
+	var textfieldArray:[NSTextField] {return [locationTextView, durationQuantityTextView, severityResultTextView, causeTextView, qolTextView]}
 	
-	var severityCheckboxArray: [NSButton] {return [severityMildCheckbox, severityModerateCheckbox, severitySevereCheckbox]}
+	var locationSection:HPILocation {return HPILocation(chest: locationChestCheckbox.state, abdomen: locationAbdomenCheckbox.state, lRibs: locationRibsLCheckbox.state, rRibs: locationRibsRCheckbox.state, lShoulder: locationShoulderLCheckbox.state, rShoulder: locationShoulderRCheckbox.state, luArm: locationArmLUCheckbox.state, ruArm: locationArmRUCheckbox.state, lElbow: locationElbowLCheckbox.state, rElbow: locationElbowRCheckbox.state, lForearm: locationForearmLCheckbox.state, rForearm: locationForearmRCheckbox.state, lWrist: locationWristLCheckbox.state, rWrist: locationWristRCheckbox.state, lHand: locationHandLCheckbox.state, rHand: locationHandRCheckbox.state, back: locationBackCheckbox.state, neck: locationNeckCheckbox.state, lHip: locationHipLCheckbox.state, rHip: locationHipRCheckbox.state, luLeg: locationLegLUCheckbox.state, ruLeg: locationLegRUCheckbox.state, lKnee: locationKneeLCheckbox.state, rKnee: locationKneeRCheckbox.state, llLeg: locationLegLLCheckbox.state, rlLeg: locationLegRLCheckbox.state, lAnkle: locationAnkleLCheckbox.state, rAnkle: locationAnkleRCheckbox.state, lFoot: locationFootLCheckbox.state, rFoot: locationFootRCheckbox.state, other: locationTextView.stringValue)}
+	var durationSection:HPIDuration {return HPIDuration(quantity: durationQuantityTextView.stringValue, timeFrame: durationPopup.titleOfSelectedItem!)}
+	var qualitySection:HPIQuality {return HPIQuality(aching: (qualityAcheCheckbox.state, qualityAcheCheckbox.title), sore: (qualitySoreCheckbox.state, qualitySoreCheckbox.title), sharp: (qualitySharpCheckbox.state, qualitySharpCheckbox.title), stabbing: (qualityStabbingCheckbox.state, qualityStabbingCheckbox.title), dull: (qualityDullCheckbox.state, qualityDullCheckbox.title), burning: (qualityBurningCheckbox.state, qualityBurningCheckbox.title), stinging: (qualityStingingCheckbox.state, qualityStingingCheckbox.title), throbbing: (qualityThrobbingCheckbox.state, qualityThrobbingCheckbox.title), cramping: (qualityCrampingCheckbox.state, qualityCrampingCheckbox.title), spasm: (qualitySpasmCheckbox.state, qualitySpasmCheckbox.title))}
+	var severitySection:HPISeverity {return HPISeverity(outOfTen: severityResultTextView.stringValue, description: severityPopup.titleOfSelectedItem!)}
+	var timingSection:HPITiming {return HPITiming(constant: timingConstantCheckbox.state, frequent: timingFrequentCheckbox.state, occasional: timingOccasionalCheckbox.state, infrequent: timingInfrequentCheckbox.state, atRest: timingAtRestCheckbox.state, afterWork: timingAfterWorkCheckbox.state, afterExercise: timingAfterExerciseCheckbox.state, morning: timingMorningCheckbox.state, night: timingNightCheckbox.state, endOfDay: timingEndOfDay.state)}
+	var contextSection:HPIContext {return HPIContext(context: contextPopup.titleOfSelectedItem!, cause: causeTextView.stringValue)}
+	var modifyingFactorsSection:HPIModifyingFactors {return HPIModifyingFactors(heat: (modifyingBetterHeatCheckbox.state, modifyingBetterHeatCheckbox.title), ice: (modifyingBetterIceCheckbox.state, modifyingBetterIceCheckbox.title), rest: (modifyingBetterRestCheckbox.state, modifyingBetterRestCheckbox.title), elevation: (modifyingBetterElevationCheckbox.state, modifyingBetterElevationCheckbox.title), medication: (modifyingBetterMedicationCheckbox.state, modifyingBetterMedicationCheckbox.title), lifting: (modifyingWorseLiftingCheckbox.state, modifyingWorseLiftingCheckbox.title), bending: (modifyingWorseBendingCheckbox.state, modifyingWorseBendingCheckbox.title), stairs: (modifyingWorseStairsCheckbox.state, modifyingWorseStairsCheckbox.title), standing: (modifyingWorseStandingCheckbox.state, modifyingWorseStandingCheckbox.title), walking: (modifyingWorseWalkingCheckbox.state, modifyingWorseWalkingCheckbox.title), sitting: (modifyingWorseSittingCheckbox.state, modifyingWorseSittingCheckbox.title), reaching: (modifyingWorseReachingCheckbox.state, modifyingWorseReachingCheckbox.title), laying: (modifyingWorseLayingCheckbox.state, modifyingWorseLayingCheckbox.title), chores: (modifyingWorseChoresCheckbox.state, modifyingWorseChoresCheckbox.title))}
+	var associatedSymptomsSection:HPIAssociatedSymptoms {return HPIAssociatedSymptoms(numbness: (associatedNumbnessCheckbox.state, associatedNumbnessCheckbox.title), tingling: (associatedTinglingCheckbox.state, associatedTinglingCheckbox.title), weakness: (associatedWeaknessCheckbox.state, associatedWeaknessCheckbox.title), stiffness: (associatedStiffnessCheckbox.state, associatedStiffnessCheckbox.title), limp: (associatedLimpCheckbox.state, associatedLimpCheckbox.title), limitedMovement: (associatedLimitedMovementCheckbox.state, associatedLimitedMovementCheckbox.title), footDrop: (associatedFootDropcheckbox.state, associatedFootDropcheckbox.title), bladder: (associatedBladderCheckbox.state, associatedBladderCheckbox.title), bowel: (associatedBowelCheckbox.state, associatedBowelCheckbox.title))}
+	var functionSection:HPIFunction {return HPIFunction(mobileWith: functionPopup.indexOfSelectedItem, job: functionJobCheckbox.state, grooming: functionGroomingCheckbox.state, bathing: functionBathingCheckbox.state, cooking: functionCookingCheckbox.state, eating: functionEatingCheckbox.state, chores: functionChoresCheckbox.state)}
+	var qolSection:HPIQOL {return HPIQOL(quality: qolPopup.titleOfSelectedItem!, comments: qolTextView.stringValue)}
 	
-	var qualityCheckboxArray: [NSButton] {return [qualityAcheCheckbox, qualitySoreCheckbox, qualitySharpCheckbox, qualityStabbingCheckbox, qualityDullCheckbox, qualityBurningCheckbox, qualityStingingCheckbox, qualityThrobbingCheckbox, qualityCrampingCheckbox, qualitySpasmCheckbox]}
-	
-	var timingCheckboxArray: [NSButton] {return [timingConstantCheckbox, timingFrequentCheckbox, timingOccasionalCheckbox, timingInfrequentCheckbox, timingIntermittentCheckbox, timingAtRestCheckbox, timingAfterWorkCheckbox, timingAfterExerciseCheckbox, timingMorningCheckbox, timingNightCheckbox, timingEndOfDay]}
-	
-	var contextCheckboxArray: [NSButton] {return [contextBetterCheckbox, contextWorseCheckbox, contextSameCheckbox, contextGradualCheckbox, contextSuddenCheckbox]}
-	
-	var modifyingFactorsBetterCheckboxArray: [NSButton] {return [modifyingBetterHeatCheckbox, modifyingBetterIceCheckbox, modifyingBetterRestCheckbox, modifyingBetterElevationCheckbox, modifyingBetterMedicationCheckbox]}
-	var modifyingFactorsWorseCheckboxArray: [NSButton] {return [modifyingWorseLiftingCheckbox, modifyingWorseBendingCheckbox, modifyingWorseStairsCheckbox, modifyingWorseStandingCheckbox, modifyingWorseWalkingCheckbox, modifyingWorseSittingCheckbox, modifyingWorseReachingCheckbox, modifyingWorseLayingCheckbox, modifyingWorseChoresCheckbox]}
-	
-	var associatedSymptomsCheckboxArray: [NSButton] {return [associatedNumbnessCheckbox, associatedTinglingCheckbox, associatedWeaknessCheckbox, associatedStiffnessCheckbox, associatedLimpCheckbox, associatedLimitedMovementCheckbox, associatedFootDropcheckbox, associatedBladderCheckbox, associatedBowelCheckbox]}
-	
-	var functionWithCheckboxArray: [NSButton] {return [functionWCBoundCheckbox, functionWalkerCheckbox, functionCaneCheckbox]}
-	var functionDifficultyCheckboxArray: [NSButton] {return [functionJobCheckbox, functionGroomingCheckbox, functionBathingCheckbox, functionCookingCheckbox, functionEatingCheckbox, functionChoresCheckbox]}
-	
-	var qolCheckboxArray: [NSButton] {return [qolBetterCheckbox, qolWorseCheckbox, qolGoodCheckbox, qolFairCheckbox, qolPoorCheckbox]}
-	
-	var myHPI:HPIClass {return HPIClass(locationCheckboxes: locationCheckboxArray, locationVerbiage: locationVerbiage, duration: durationCheckboxArray, severity: severityCheckboxArray, quality: qualityCheckboxArray, timing: timingCheckboxArray, context: contextCheckboxArray, modifyingBetter: modifyingFactorsBetterCheckboxArray, modifyingWorse: modifyingFactorsWorseCheckboxArray, associatedSymptoms: associatedSymptomsCheckboxArray, functionWith: functionWithCheckboxArray, functionDifficulty: functionDifficultyCheckboxArray, qol: qolCheckboxArray)}
+	override func awakeFromNib() {
+		clearHPI()
+	}
 	
 	@IBAction func clearHPI(_ sender: NSButton) {
-		let textFields = [locationTextView!, durationQuantityTextView!, severityResultTextView!, causeTextView!, qolTextView!]
-		let checkboxArrays = [locationCheckboxArray, durationCheckboxArray, severityCheckboxArray, qualityCheckboxArray, timingCheckboxArray, contextCheckboxArray, modifyingFactorsBetterCheckboxArray, modifyingFactorsWorseCheckboxArray, associatedSymptomsCheckboxArray, functionWithCheckboxArray, functionDifficultyCheckboxArray, qolCheckboxArray]
-		clearControllers(checkboxArrays, textFields: textFields)
+		clearHPI()
 	}
 	
 	@IBAction func processHPI(_ sender: NSButton) {
-		var resultsArray = [String]()
-		resultsArray.append(processLocation(locationTextView, checkBoxes: locationCheckboxArray, verbiage: locationVerbiage))
-		resultsArray.append(processSeverity(severityResultTextView, checkBoxes: severityCheckboxArray))
-		resultsArray.append(processJustCheckboxes(qualityCheckboxArray, title:"Quality"))
-		resultsArray.append(processDuration(durationQuantityTextView, checkBoxes: durationCheckboxArray))
-		resultsArray.append(processJustCheckboxes(timingCheckboxArray, title:"Timing"))
-		resultsArray.append(processJustCheckboxes(contextCheckboxArray, title:"Context"))
-		resultsArray.append(processModifyingFactors(modifyingFactorsBetterCheckboxArray, worse: modifyingFactorsWorseCheckboxArray))
-		resultsArray.append(processJustCheckboxes(associatedSymptomsCheckboxArray, title:"Associated symptoms"))
-		resultsArray.append(processFunction(functionWithCheckboxArray, difficulties: functionDifficultyCheckboxArray))
-		resultsArray.append(processJustCheckboxes(qolCheckboxArray, title:"Quality of life"))
-		print(resultsArray)
+		var resultArray = [String]()
+		var resultString = String()
 		
-		let cleanArray = resultsArray.filter{$0 != ""}
-		print(cleanArray)
+		let hpiList:[IsHPIData] = [locationSection, durationSection, severitySection, qualitySection, timingSection, contextSection, modifyingFactorsSection, associatedSymptomsSection, functionSection, qolSection]
+		
+		for section in hpiList {
+		resultArray.append(section.processData())
+		}
+		
+		let cleanArray = resultArray.filter{$0 != ""}
 		
 		if !cleanArray.isEmpty {
-			let results = cleanArray.joined(separator: "\n")
-			//Clear the system clipboard
-			let pasteBoard = NSPasteboard.general()
-			pasteBoard.clearContents()
-			//Set the system clipboard to the final text
-			pasteBoard.setString(results, forType: NSPasteboardTypeString)
-			print(results)
+			resultString = cleanArray.joined(separator: "\n")
+		}
+		
+		let pasteBoard = NSPasteboard.general()
+		pasteBoard.clearContents()
+		pasteBoard.setString(resultString, forType: NSPasteboardTypeString)
+		
+		Swift.print(resultString)
+	}
+	
+	func clearHPI() {
+		hpiView.clearControllers()
+		//clearChecks(theView: hpiView)
+//		for view in hpiView.subviews {
+//			if view is NSButton {
+//			let checkbox = view as? NSButton
+//			checkbox?.state = NSOffState
+//			}
+//		}
+		//clearCheckboxes(checkboxArray)
+		//clearTextFields(textfieldArray)
+		
+		clearPopupButtons(popupButtonArray, values:
+			[[HPIDurationList.Empty.rawValue, HPIDurationList.Days.rawValue, HPIDurationList.Weeks.rawValue, HPIDurationList.Months.rawValue, HPIDurationList.MonthsToYears.rawValue, HPIDurationList.Years.rawValue],
+			[HPISeverityList.Empty.rawValue, HPISeverityList.Mild.rawValue, HPISeverityList.Moderate.rawValue, HPISeverityList.Severe.rawValue],
+			[HPIContextList.Empty.rawValue, HPIContextList.Better.rawValue, HPIContextList.Worse.rawValue, HPIContextList.Same.rawValue, HPIContextList.Gradual.rawValue, HPIContextList.Sudden.rawValue],
+			[HPIFunctionList.Empty.rawValue, HPIFunctionList.NoAssistance.rawValue, HPIFunctionList.WheelChair.rawValue, HPIFunctionList.Walker.rawValue, HPIFunctionList.Cane.rawValue, HPIFunctionList.WalkerOrCane.rawValue],
+			[HPIContextList.Empty.rawValue, HPIContextList.Better.rawValue, HPIContextList.Worse.rawValue, HPIContextList.Good.rawValue, HPIContextList.Fair.rawValue, HPIContextList.Poor.rawValue]])
+		
+		
+	}
+
+	func clearChecks(theView: NSView) {
+		for item in theView.subviews {
+			if item is NSButton {
+				let checkbox = item as? NSButton
+				checkbox?.state = NSOffState
+			} else if item is NSTextField {
+				let textfield = item as? NSTextField
+				textfield?.stringValue = ""
+			} else if item is NSView {
+				clearChecks(theView: item)
+			}
 		}
 	}
 	
 	
+	enum HPIDurationList:String {
+		case Empty = ""
+		case Days = "days"
+		case Weeks = "weeks"
+		case Months = "months"
+		case MonthsToYears = "months to years"
+		case Years = "years"
+	}
 	
+	enum HPISeverityList:String {
+		case Empty = ""
+		case Mild = "mild"
+		case Moderate = "moderate"
+		case Severe = "severe"
+	}
 	
+	enum HPIContextList:String {
+		case Empty = ""
+		case Better = "better"
+		case Worse = "worse"
+		case Same = "same"
+		case Gradual = "gradual"
+		case Sudden = "sudden"
+		case Good = "good"
+		case Fair = "fair"
+		case Poor = "poor"
+	}
 	
-	
-	
-	
-
+	enum HPIFunctionList:String {
+		case Empty = ""
+		case NoAssistance = "without assistance"
+		case WheelChair = "wheel chair"
+		case Walker = "walker"
+		case Cane = "cane"
+		case WalkerOrCane = "walker or cane"
+	}
 }
