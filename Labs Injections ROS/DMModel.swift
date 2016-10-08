@@ -38,22 +38,43 @@ enum VibrationSense:String {
 enum Assessment:String {
 	case FluctuatingBS = "with fluctuating blood sugars"
 	case HypoEpisodes = "with hypoglycemia episodes"
-	case Hypoglycemia
-	case PeripheralNeuropathy = "periperal neuropathy"
-	case Numbness = "with numbness"
-	case NeuropathicFeet = "neuropathic pain in feet"
-	case NeuropathicLegs = "neuropathic pain in legs"
-	case Retinopathy
-	case Nephropathy
-	case Amyotrophy
+	case Hypoglycemia = "hypoglycemia in diabetes"
+	case PeripheralNeuropathy
+	//case Numbness = "with numbness"
+	case NeuropathicFeet = "diabetic neuropathic pain in feet"
+	case NeuropathicLegs = "diabetic neuropathic pain in legs"
+	case Retinopathy = "diabetic retinopathy"
+	case Nephropathy = "diabetic nephropathy"
+	case Amyotrophy = "diabetic amyotrophy"
 	case PoorCirculation = "poor circulation"
-	case DiabeticFoo = "diabetic foot"
+	case DiabeticFoot = "diabetic foot"
 	case FootUlcer = "diabetic foot ulcer"
 	case HxFootUlcer = "history of foot ulcers"
 	case PreUlcerativeCallus = "pre-ulcerative callus"
 	case Bunion
 	case HammerToes = "hammer toes"
 	case Onycomycosis
+	
+	func adaptedPeripheralNeuropathy(numbness:Int) -> String {
+		switch self {
+		case .PeripheralNeuropathy:
+			if numbness == 1 {
+				return "diabetic peripheral neuropathy with numbness"
+			}
+			return "diabetic peripheral neuropathy"
+		default: return ""
+		}
+	}
+	func adaptedRetinopathy(with:String) -> String {
+		switch self {
+		case .Retinopathy:
+			if !with.isEmpty {
+				return "diabetic retinopathy with \(with)"
+			}
+			return "diabetic retinopathy"
+		default: return ""
+		}
+	}
 }
 
 enum DMReferrals:String {
@@ -380,30 +401,62 @@ struct DMPlan: IsDMData {
 struct DMAssessment: IsDMData {
 	var dmType:String
 	var dmModifier:String
-	var fluctuatingBS:Int
-	var hypoEpisodes:Int
+	var fluctuatingBS:(Int, String)
+	var hypoEpisodes:(Int, String)
 	var prognosis:String
-	var hypoglycemia:Int
-	var peripheralNeuro:Int
-	var pnNumbness:Int
-	var painInFeet:Int
-	var painInLegs:Int
-	var retinopathy:Int
-	var retinopathyModifier:String
-	var nephropathy:Int
-	var amyotrophy:Int
-	var poorCirculation:Int
-	var diabeticFoot:Int
-	var footUlcer:Int
-	var hxFootUlcer:Int
-	var callus:Int
-	var bunion:Int
-	var hammerToes:Int
-	var onycomycosis:Int
+	var hypoglycemia:(Int, String)
+	var peripheralNeuro:(Int, String)
+	//var pnNumbness:(Int, String)
+	var painInFeet:(Int, String)
+	var painInLegs:(Int, String)
+	var retinopathy:(Int, String)
+	//var retinopathyModifier:String
+	var nephropathy:(Int, String)
+	var amyotrophy:(Int, String)
+	var poorCirculation:(Int, String)
+	var diabeticFoot:(Int, String)
+	var footUlcer:(Int, String)
+	var hxFootUlcer:(Int, String)
+	var callus:(Int, String)
+	var bunion:(Int, String)
+	var hammerToes:(Int, String)
+	var onycomycosis:(Int, String)
 	
 	func processData() -> String {
+		var dmAssessmentControllers = [hypoglycemia, peripheralNeuro, painInFeet, painInLegs, retinopathy, nephropathy, amyotrophy, poorCirculation, diabeticFoot, footUlcer, hxFootUlcer, callus, bunion, hammerToes, onycomycosis]
 		var resultsArray = [String]()
 		var resultsString = String()
+		var dmDescriptionArray = [String]()
+		var dmSymptomsArray = [String]()
+		
+		if !dmType.isEmpty {
+			dmDescriptionArray.append("Diabetes Mellitus \(dmType)")
+		}
+		if !dmModifier.isEmpty {
+			dmDescriptionArray.append(dmModifier)
+		}
+		if fluctuatingBS.0 == 1 {
+			dmDescriptionArray.append(fluctuatingBS.1)
+		}
+		if hypoEpisodes.0 == 1 {
+			dmDescriptionArray.append(hypoEpisodes.1)
+		}
+		if !prognosis.isEmpty {
+			dmDescriptionArray.append("prognosis: \(prognosis)")
+		}
+		if !dmDescriptionArray.isEmpty {
+			resultsArray.append(dmDescriptionArray.joined(separator: ", "))
+		}
+		
+		for controller in dmAssessmentControllers {
+			if controller.0 == 1 {
+				resultsArray.append(controller.1)
+			}
+		}
+		
+		if !resultsArray.isEmpty {
+			resultsString = "- \(resultsArray.joined(separator: "\n- "))"
+		}
 		
 		
 		

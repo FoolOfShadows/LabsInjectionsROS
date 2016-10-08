@@ -8,9 +8,7 @@
 
 import Cocoa
 
-class HPI: NSObject, NSWindowDelegate {
-	
-	@IBOutlet weak var hpiView: NSView!
+class HPI: NSView, NSWindowDelegate {
 	
 	//Location controllers
 	@IBOutlet weak var locationTextView: NSTextField!
@@ -169,7 +167,7 @@ class HPI: NSObject, NSWindowDelegate {
 	}
 	
 	func clearHPI() {
-		hpiView.clearControllers()
+		self.clearControllers()
 		//clearChecks(theView: hpiView)
 //		for view in hpiView.subviews {
 //			if view is NSButton {

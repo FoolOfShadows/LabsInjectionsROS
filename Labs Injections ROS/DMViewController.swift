@@ -9,8 +9,6 @@
 import Cocoa
 
 class DMViewController: NSView {
-
-	@IBOutlet weak var dmeView: NSView!
 	
 	@IBOutlet weak var compliancePopup: NSPopUpButton!
 	@IBOutlet weak var medsWithoutDifficultyCheckbox: NSButton!
@@ -112,14 +110,14 @@ class DMViewController: NSView {
 	var vibrationResults:VibrationTesting {return VibrationTesting(vibrationSense: vibrationSensePopup.titleOfSelectedItem!, monofilament: monoNormalCheckbox.state)}
 	var labResults:LabResults {return LabResults(atTarget: labsAtTargetCheckbox.state, hgba1c: hba1cView.stringValue, threeMonthAve: threeMonthAveView.stringValue, eGFR: eGFRView.stringValue, bun: bunView.stringValue, creatinine: crView.stringValue, uMalb: uMalbView.stringValue, uMalbModifier: umalbStatusPopup.titleOfSelectedItem!)}
 	var planResults:DMPlan {return DMPlan(fbs: planFBSCombo.stringValue, rxDMShoes: rxShoesCheckbox.state, diet: dietDiscussedCheckbox.state, refEd: refEducationCheckbox.state, refPodiatrist: refPodiatristCheckbox.state, refNutritionist: refNutritionCheckbox.state, refOptho: refOpthoCheckbox.state)}
-	var assessmentResults:DMAssessment {return DMAssessment(dmType: assDMTypePopup.titleOfSelectedItem!, dmModifier: assDMTypeModifierPopup.titleOfSelectedItem!, fluctuatingBS: assWithFluctuatingBSCheckbox.state, hypoEpisodes: assWHypoEpisodesCheckbox.state, prognosis: assPrognosisPopup.titleOfSelectedItem!, hypoglycemia: assHypoCheckbox.state, peripheralNeuro: assNeuropathyCheckbox.state, pnNumbness: assNumbnessCheckbox.state, painInFeet: assNeuroPainFeetCheckbox.state, painInLegs: assNeuroPainLegsCheckbox.state, retinopathy: assRetinopathyCheckbox.state, retinopathyModifier: assRetinopathyDescriptorPopup.titleOfSelectedItem!, nephropathy: assNephropathyCheckbox.state, amyotrophy: assAmyotrophyCheckbox.state, poorCirculation: assPoorCirculationCheckbox.state, diabeticFoot: assDiabeticFootCheckbox.state, footUlcer: assFootUlcerCheckbox.state, hxFootUlcer: assHxFootUlcerCheckbox.state, callus: assPreUlcerativeCallusCheckbox.state, bunion: assBunionCheckbox.state, hammerToes: assHammerToesCheckbox.state, onycomycosis: assOnycomycosisCheckbox.state)}
+	var assessmentResults:DMAssessment {return DMAssessment(dmType: assDMTypePopup.titleOfSelectedItem!, dmModifier: assDMTypeModifierPopup.titleOfSelectedItem!, fluctuatingBS: (assWithFluctuatingBSCheckbox.state, Assessment.FluctuatingBS.rawValue), hypoEpisodes: (assWHypoEpisodesCheckbox.state, Assessment.HypoEpisodes.rawValue), prognosis: assPrognosisPopup.titleOfSelectedItem!.lowercased(), hypoglycemia: (assHypoCheckbox.state, Assessment.Hypoglycemia.rawValue), peripheralNeuro: (assNeuropathyCheckbox.state, Assessment.PeripheralNeuropathy.adaptedPeripheralNeuropathy(numbness: assNumbnessCheckbox.state)), painInFeet: (assNeuroPainFeetCheckbox.state, Assessment.NeuropathicFeet.rawValue), painInLegs: (assNeuroPainLegsCheckbox.state, Assessment.NeuropathicLegs.rawValue), retinopathy: (assRetinopathyCheckbox.state, Assessment.Retinopathy.adaptedRetinopathy(with: assRetinopathyDescriptorPopup.titleOfSelectedItem!.lowercased())), nephropathy: (assNephropathyCheckbox.state, Assessment.Nephropathy.rawValue), amyotrophy: (assAmyotrophyCheckbox.state, Assessment.Amyotrophy.rawValue), poorCirculation: (assPoorCirculationCheckbox.state, Assessment.PoorCirculation.rawValue), diabeticFoot: (assDiabeticFootCheckbox.state, Assessment.DiabeticFoot.rawValue), footUlcer: (assFootUlcerCheckbox.state, Assessment.FootUlcer.rawValue), hxFootUlcer: (assHxFootUlcerCheckbox.state, Assessment.HxFootUlcer.rawValue), callus: (assPreUlcerativeCallusCheckbox.state, Assessment.PreUlcerativeCallus.rawValue), bunion: (assBunionCheckbox.state, Assessment.Bunion.rawValue), hammerToes: (assHammerToesCheckbox.state, Assessment.HammerToes.rawValue), onycomycosis: (assOnycomycosisCheckbox.state, Assessment.Onycomycosis.rawValue))}
 	
 	override func awakeFromNib() {
 		takeClearDM(self)
 	}
 	
 	@IBAction func takeClearDM(_ sender: AnyObject) {
-		dmeView.clearControllers()
+		self.clearControllers()
 		//clearCheckboxes(checkboxArray)
 		//clearTextFields(textFieldArray)
 		clearPopups(popupArray)
