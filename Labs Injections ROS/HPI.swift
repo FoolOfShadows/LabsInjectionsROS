@@ -10,6 +10,8 @@ import Cocoa
 
 class HPI: NSView, NSWindowDelegate {
 	
+	@IBOutlet weak var hpiView: NSView!
+	
 	//Location controllers
 	@IBOutlet weak var locationTextView: NSTextField!
 	@IBOutlet weak var locationChestCheckbox: NSButton!
@@ -167,7 +169,7 @@ class HPI: NSView, NSWindowDelegate {
 	}
 	
 	func clearHPI() {
-		self.clearControllers()
+		hpiView.clearControllers()
 		//clearChecks(theView: hpiView)
 //		for view in hpiView.subviews {
 //			if view is NSButton {

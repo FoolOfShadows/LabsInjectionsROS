@@ -17,7 +17,9 @@ extension NSView {
 					checkbox?.state = NSOffState
 				} else if item is NSTextField {
 					let textfield = item as? NSTextField
+					if (textfield?.isEditable)!{
 					textfield?.stringValue = ""
+					}
 				} else if item is NSView {
 					clearChecksTextfields(theView: item)
 				}

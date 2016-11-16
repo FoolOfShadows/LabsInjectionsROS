@@ -105,6 +105,7 @@
                 <outlet property="functionGroomingCheckbox" destination="T37-7l-JTI" id="ROw-nm-rHk"/>
                 <outlet property="functionJobCheckbox" destination="Mih-HD-tC2" id="s67-7b-PFO"/>
                 <outlet property="functionPopup" destination="ZTP-rY-lgY" id="Csg-X2-khI"/>
+                <outlet property="hpiView" destination="L3N-g1-k8u" id="5Ji-ei-mmc"/>
                 <outlet property="locationAbdomenCheckbox" destination="gVa-RJ-Yna" id="hJn-iM-UvE"/>
                 <outlet property="locationAnkleLCheckbox" destination="QbY-0h-hEW" id="8Ec-18-mDj"/>
                 <outlet property="locationAnkleRCheckbox" destination="Jff-R2-WPo" id="TNc-9z-hjc"/>
@@ -697,6 +698,7 @@
                 <outlet property="compliancePopup" destination="Nh6-Pu-3Rr" id="d4i-ZT-lEO"/>
                 <outlet property="crView" destination="WHJ-kO-7U1" id="j1u-Ej-xrc"/>
                 <outlet property="dietDiscussedCheckbox" destination="SMG-hE-uD4" id="QD4-NY-Hpm"/>
+                <outlet property="dmView" destination="mi8-wM-PLs" id="ZXO-fr-hIy"/>
                 <outlet property="eGFRView" destination="7q4-gP-ghQ" id="0LU-I8-6i0"/>
                 <outlet property="equipmentDifficultyCheckbox" destination="Vsh-d0-5E5" id="ghr-xN-fwW"/>
                 <outlet property="exercisingPopup" destination="ukT-sx-wAf" id="s3f-Va-9g3"/>

@@ -10,6 +10,8 @@ import Cocoa
 
 class DMViewController: NSView {
 	
+	@IBOutlet weak var dmView: NSView!
+	
 	@IBOutlet weak var compliancePopup: NSPopUpButton!
 	@IBOutlet weak var medsWithoutDifficultyCheckbox: NSButton!
 	@IBOutlet weak var exercisingPopup: NSPopUpButton!
@@ -117,7 +119,7 @@ class DMViewController: NSView {
 	}
 	
 	@IBAction func takeClearDM(_ sender: AnyObject) {
-		self.clearControllers()
+		dmView.clearControllers()
 		//clearCheckboxes(checkboxArray)
 		//clearTextFields(textFieldArray)
 		clearPopups(popupArray)
