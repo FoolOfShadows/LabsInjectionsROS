@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11535.1" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11535.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -612,6 +612,7 @@
                 <outlet property="allergiesNoCheckbox" destination="Mvd-c1-JlR" id="rUY-hm-lci"/>
                 <outlet property="allergiesView" destination="g9F-wR-hYU" id="6mB-eZ-zD6"/>
                 <outlet property="birthControlCheckbox" destination="1oi-t2-tfA" id="ghL-Ku-Yqj"/>
+                <outlet property="birthControlMedNameView" destination="lgE-tn-re1" id="j4c-Ly-wCf"/>
                 <outlet property="birthControlMethodPopup" destination="cPn-Oz-tnt" id="nfT-nB-lx4"/>
                 <outlet property="birthControlNoCheckbox" destination="qwj-Wn-WkR" id="1Y6-0Q-9nj"/>
                 <outlet property="bleedingBetweenCheckbox" destination="d49-05-QtO" id="WWt-gF-e7V"/>
@@ -634,8 +635,8 @@
                 <outlet property="hxBreastProblemsNoCheckbox" destination="gwx-nx-Jz4" id="Flx-xH-M25"/>
                 <outlet property="lastMAMView" destination="QMb-Gg-Pgh" id="4RO-Sa-CFc"/>
                 <outlet property="lastPAPAbnormalCheckbox" destination="NdP-sB-9Cm" id="IGB-si-SOs"/>
+                <outlet property="lastPAPCombo" destination="Etw-DY-5JM" id="Ziv-eg-f7G"/>
                 <outlet property="lastPAPNormCheckbox" destination="Y3q-lj-2h2" id="FYY-8W-2Gh"/>
-                <outlet property="lastPAPPopup" destination="wiK-B0-rcf" id="ZHb-7t-CEV"/>
                 <outlet property="lastPeriodView" destination="Dot-5p-d1j" id="VCC-9a-CB0"/>
                 <outlet property="liveBirthsCombo" destination="RyY-pV-yvk" id="gEh-x8-KKH"/>
                 <outlet property="livingChildrenCombo" destination="9z9-tV-muT" id="vfk-qm-Gul"/>
@@ -6541,7 +6542,7 @@ Gw
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="DME" identifier="dmeTab" id="Ybf-kh-Txo">
-                                <view key="view" ambiguous="YES" id="mi8-wM-PLs">
+                                <view key="view" id="mi8-wM-PLs">
                                     <rect key="frame" x="10" y="33" width="982" height="681"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -9539,7 +9540,7 @@ Gw
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="WWExam" identifier="wweTab" id="SKV-Ef-T3o">
-                                <view key="view" id="ZKo-9t-8FG">
+                                <view key="view" ambiguous="YES" id="ZKo-9t-8FG">
                                     <rect key="frame" x="10" y="33" width="982" height="681"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -11154,21 +11155,6 @@ Gw
                                                 <real value="3.4028234663852886e+38"/>
                                             </customSpacing>
                                         </stackView>
-                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wiK-B0-rcf">
-                                            <rect key="frame" x="81" y="588" width="126" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <popUpButtonCell key="cell" type="push" title="3 or more years" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="KUR-kX-6mh" id="3Ec-s5-Fjs">
-                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
-                                                <menu key="menu" id="cf8-en-aOT">
-                                                    <items>
-                                                        <menuItem title="1 year" id="l6O-Af-3DN"/>
-                                                        <menuItem title="2 years" id="Ufl-lM-dBe"/>
-                                                        <menuItem title="3 or more years" state="on" id="KUR-kX-6mh"/>
-                                                    </items>
-                                                </menu>
-                                            </popUpButtonCell>
-                                        </popUpButton>
                                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B3G-0v-gG8">
                                             <rect key="frame" x="104" y="417" width="76" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -11776,6 +11762,29 @@ Gw
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-tn-re1">
+                                            <rect key="frame" x="204" y="289" width="141" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Name of med" drawsBackground="YES" id="Cq8-ah-e1k">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Etw-DY-5JM">
+                                            <rect key="frame" x="85" y="588" width="126" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="lXv-8b-Ewj">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <objectValues>
+                                                    <string>Item 1</string>
+                                                    <string>Item 2</string>
+                                                    <string>Item 3</string>
+                                                </objectValues>
+                                            </comboBoxCell>
+                                        </comboBox>
                                     </subviews>
                                 </view>
                             </tabViewItem>

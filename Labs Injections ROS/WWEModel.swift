@@ -125,6 +125,36 @@ class WWEStringData: IsWWEData {
 	}
 }
 
+class WWEBirthControl: WWEStringData {
+	var medication: String
+	
+	init(questionString: String, answerString: String, medication: String, needsDays: Bool = false) {
+		self.medication = medication
+		super.init(questionString: questionString, answerString: answerString, needsDays: needsDays)
+	}
+	
+	override func processData() -> String {
+		var result = String()
+		var finalAnswer = String()
+		if medication.isEmpty {
+			finalAnswer = answerString
+		} else {
+			finalAnswer = "\(answerString) (\(medication))"
+		}
+		
+		if !answerString.isEmpty && answerString != "" {
+			if needsDays == false {
+				result = "\(questionString) \(finalAnswer)"
+			} else if needsDays == true {
+				result = "\(questionString) \(finalAnswer) days"
+			}
+		}
+		
+		return result
+	}
+	
+}
+
 class WWECheckboxData: IsWWEData {
 	var questionString:String
 	var yesAnswer:Int

@@ -11,7 +11,7 @@ import Cocoa
 class WWEViewController: NSView {
 	@IBOutlet weak var lastMAMView: NSTextField!
 	@IBOutlet weak var lastPeriodView: NSTextField!
-	@IBOutlet weak var lastPAPPopup: NSPopUpButton!
+	@IBOutlet weak var lastPAPCombo: NSComboBox!
 	@IBOutlet weak var lastPAPNormCheckbox: NSButton!
 	@IBOutlet weak var lastPAPAbnormalCheckbox: NSButton!
 	@IBOutlet weak var abnormalPAPCheckbox: NSButton!
@@ -31,6 +31,7 @@ class WWEViewController: NSView {
 	@IBOutlet weak var birthControlCheckbox: NSButton!
 	@IBOutlet weak var birthControlNoCheckbox: NSButton!
 	@IBOutlet weak var birthControlMethodPopup: NSPopUpButton!
+	@IBOutlet weak var birthControlMedNameView: NSTextField!
 	@IBOutlet weak var stdCheckbox: NSButton!
 	@IBOutlet weak var stdNoCheckbox: NSButton!
 	@IBOutlet weak var desCheckbox: NSButton!
@@ -84,15 +85,15 @@ class WWEViewController: NSView {
 	
 	//var textFieldArray:[NSTextField] {return [lastMAMView, lastPeriodView, abnormalPAPView, allergiesView, painPeriodView, painSexView, painPMSView, otherConcernsView]}
 	var checkboxArray: [NSButton] {return [lastPAPNormCheckbox, lastPAPAbnormalCheckbox, abnormalPAPCheckbox, abnormalPAPNoCheckbox, periodFrequencyRegularCheckbox, periodFrequencyIrregularCheckbox, bleedingBetweenCheckbox, bleedingBetweenNoCheckbox, dischargeCheckbox, dischargeNoCheckbox, sexuallyActiveCheckbox, sexuallyActiveNoCheckbox, birthControlCheckbox, birthControlNoCheckbox, stdCheckbox, stdNoCheckbox, desCheckbox, desNoCheckbox, fertilityMedsCheckbox, fertilityMedsNoCheckbox, hotFlashesCheckbox, hotFlashesNoCheckbox, hormoneReplacementCheckbox, hormoneReplacementNoCheckbox, smokerCheckbox, smokerNoCheckbox, hxBreastProblemsCheckbox, hxBreastProblemsNoCheckbox, abusedCheckbox, abusedNoCheckbox, safeCheckbox, safeNoCheckbox, allergiesCheckbox, allergiesNoCheckbox]}
-	var comboboxArray:[NSComboBox] {return [periodFrequencyCombo, periodLengthCombo, pregnanciesCombo, abortionsCombo, miscarriagesCombo, livingChildrenCombo, liveBirthsCombo, prematureBirthsCombo]}
-	var popupArray:[NSPopUpButton] {return [lastPAPPopup, bloodFlowPopup, birthControlMethodPopup, selfBreastExamsPopup]}
-	var textFieldArray:[NSTextField] {return [lastMAMView, lastPeriodView, abnormalPAPView, allergiesView, painPeriodView, painSexView, painPMSView, otherConcernsView, otherCancerView]}
+	var comboboxArray:[NSComboBox] {return [lastPAPCombo, periodFrequencyCombo, periodLengthCombo, pregnanciesCombo, abortionsCombo, miscarriagesCombo, livingChildrenCombo, liveBirthsCombo, prematureBirthsCombo]}
+	var popupArray:[NSPopUpButton] {return [bloodFlowPopup, birthControlMethodPopup, selfBreastExamsPopup]}
+	var textFieldArray:[NSTextField] {return [lastMAMView, lastPeriodView, abnormalPAPView, birthControlMedNameView, allergiesView, painPeriodView, painSexView, painPMSView, otherConcernsView, otherCancerView]}
 	
 	var familyHxMatrix:[(NSMatrix, String)] {return [(breastCancerMatrix, "Breast cancer"), (colonCancerMatrix, "Colon cancer"), (uterineCancerMatrix, "Uterine cancer"), (ovarianCancerMatrix, "Ovarian cancer"), (otherCancerMatrix, otherCancerView.stringValue), (osteoporosisMatrix, "Osteoporosis"), (heartDiseaseMatrix, "Heart disease")]}
 	
 	var lastMAM:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastMammogram.rawValue, answerString: lastMAMView.stringValue)}
 	var lastPeriod:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastPeriod.rawValue, answerString: lastPeriodView.stringValue)}
-	var lastPAP:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastPAP.rawValue, answerString: lastPAPPopup.titleOfSelectedItem!)}
+	var lastPAP:WWEStringData {return WWEStringData(questionString: WWEQuestions.LastPAP.rawValue, answerString: lastPAPCombo.stringValue)}
 	var lastPAPNormal:WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.LastPAPNormal.rawValue, yesAnswer: lastPAPNormCheckbox.state, noAnswer: lastPAPAbnormalCheckbox.state)}
 	var abnormalPAP:WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.EverHadAbnormalPAP.rawValue, yesAnswer: abnormalPAPCheckbox.state, noAnswer: abnormalPAPNoCheckbox.state)}
 	var abnormalPAPDate:WWEStringData {return WWEStringData(questionString: WWEQuestions.DateOfAbnormalPAP.rawValue, answerString: abnormalPAPView.stringValue)}
@@ -104,7 +105,7 @@ class WWEViewController: NSView {
 	var vaginalDischarge: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.VaginalDischarge.rawValue, yesAnswer: dischargeCheckbox.state, noAnswer: dischargeNoCheckbox.state)}
 	var sexuallyActive: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.SexuallyActive.rawValue, yesAnswer: sexuallyActiveCheckbox.state, noAnswer: sexuallyActiveNoCheckbox.state)}
 	var birthControl: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.UseBirthControl.rawValue, yesAnswer: birthControlCheckbox.state, noAnswer: birthControlNoCheckbox.state)}
-	var birthControlMethod: WWEStringData {return WWEStringData(questionString: WWEQuestions.BirthControlMethod.rawValue, answerString: birthControlMethodPopup.titleOfSelectedItem!)}
+	var birthControlMethod: WWEBirthControl {return WWEBirthControl(questionString: WWEQuestions.BirthControlMethod.rawValue, answerString: birthControlMethodPopup.titleOfSelectedItem!, medication: birthControlMedNameView.stringValue)}
 	var stdStatus: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.STD.rawValue, yesAnswer: stdCheckbox.state, noAnswer: stdNoCheckbox.state)}
 	var desStatus: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.DES.rawValue, yesAnswer: desCheckbox.state, noAnswer: desNoCheckbox.state)}
 	var fertilityMeds: WWECheckboxData {return WWECheckboxData(questionString: WWEQuestions.FertilityMedicines.rawValue, yesAnswer: fertilityMedsCheckbox.state, noAnswer: fertilityMedsNoCheckbox.state)}
@@ -143,8 +144,8 @@ class WWEViewController: NSView {
 	}
 
 	func setTabToClear() {
-		clearPopupButtons(popupArray, values: [lastPapChoices, bloodFlowChoices, birthControlMethods, selfExamFrequencyChoices])
-		clearComboBoxes(comboboxArray, values: [periodFrequencyChoices, periodLengthChoices, zeroToSixChoices, zeroToFiveChoices, zeroToFiveChoices, zeroToSixChoices, zeroToSixChoices, zeroToFourChoices])
+		clearPopupButtons(popupArray, values: [bloodFlowChoices, birthControlMethods, selfExamFrequencyChoices])
+		clearComboBoxes(comboboxArray, values: [lastPapChoices, periodFrequencyChoices, periodLengthChoices, zeroToSixChoices, zeroToFiveChoices, zeroToFiveChoices, zeroToSixChoices, zeroToSixChoices, zeroToFourChoices])
 		clearTextFields(textFieldArray)
 		clearCheckboxes(checkboxArray)
 		clearMatrices(familyHxMatrix)
@@ -187,7 +188,7 @@ class WWEViewController: NSView {
 		
 		let pregnancyResults = processIsWWEDataGroups(WWExamDataPregnancies)
 		if !pregnancyResults.isEmpty {
-			let finalPregnancyResults = "If you have been pregnant, please indicate how many:\n\(pregnancyResults.joined(separator: "\n"))"
+			let finalPregnancyResults = "If you have been pregnant, please indicate how many ... :\n\(pregnancyResults.joined(separator: "\n"))"
 			sectionResults.append(finalPregnancyResults)
 		}
 		
