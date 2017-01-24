@@ -57,11 +57,13 @@ class DMViewController: NSView {
 	@IBOutlet weak var monoNormalCheckbox: NSButton!
 	
 	@IBOutlet weak var labsAtTargetCheckbox: NSButton!
+	@IBOutlet weak var labDate: NSTextField!
 	@IBOutlet weak var hba1cView: NSTextField!
 	@IBOutlet weak var threeMonthAveView: NSTextField!
 	@IBOutlet weak var eGFRView: NSTextField!
 	@IBOutlet weak var bunView: NSTextField!
 	@IBOutlet weak var crView: NSTextField!
+	@IBOutlet weak var ldlView: NSTextField!
 	@IBOutlet weak var uMalbView: NSTextField!
 	@IBOutlet weak var umalbStatusPopup: NSPopUpButton!
 	
@@ -110,7 +112,7 @@ class DMViewController: NSView {
 	var hbsArray:HighBloodSugar {return HighBloodSugar(noSymptoms: hbsNoneCheckbox.state, hunger: hbsHungerCheckbox.state, dizziness: hbsDizzinessCheckbox.state, thirst: hbsThirstCheckbox.state, urination: hbsUrinationCheckbox.state, blurryVision: hbsBlurryVisionCheckbox.state)}
 	var equipmentResults:EquipmentIssues {return EquipmentIssues(difficulty: equipmentDifficultyCheckbox.state, glucometerIssues: glucometerIssuesPopup.titleOfSelectedItem!)}
 	var vibrationResults:VibrationTesting {return VibrationTesting(vibrationSense: vibrationSensePopup.titleOfSelectedItem!, monofilament: monoNormalCheckbox.state)}
-	var labResults:LabResults {return LabResults(atTarget: labsAtTargetCheckbox.state, hgba1c: hba1cView.stringValue, threeMonthAve: threeMonthAveView.stringValue, eGFR: eGFRView.stringValue, bun: bunView.stringValue, creatinine: crView.stringValue, uMalb: uMalbView.stringValue, uMalbModifier: umalbStatusPopup.titleOfSelectedItem!)}
+	var labResults:LabResults {return LabResults(atTarget: labsAtTargetCheckbox.state, labDate:labDate.stringValue, hgba1c: hba1cView.stringValue, threeMonthAve: threeMonthAveView.stringValue, eGFR: eGFRView.stringValue, bun: bunView.stringValue, creatinine: crView.stringValue, ldl: ldlView.stringValue, uMalb: uMalbView.stringValue, uMalbModifier: umalbStatusPopup.titleOfSelectedItem!)}
 	var planResults:DMPlan {return DMPlan(fbs: planFBSCombo.stringValue, rxDMShoes: rxShoesCheckbox.state, diet: dietDiscussedCheckbox.state, refEd: refEducationCheckbox.state, refPodiatrist: refPodiatristCheckbox.state, refNutritionist: refNutritionCheckbox.state, refOptho: refOpthoCheckbox.state)}
 	var assessmentResults:DMAssessment {return DMAssessment(dmType: assDMTypePopup.titleOfSelectedItem!, dmModifier: assDMTypeModifierPopup.titleOfSelectedItem!, fluctuatingBS: (assWithFluctuatingBSCheckbox.state, Assessment.FluctuatingBS.rawValue), hypoEpisodes: (assWHypoEpisodesCheckbox.state, Assessment.HypoEpisodes.rawValue), prognosis: assPrognosisPopup.titleOfSelectedItem!.lowercased(), hypoglycemia: (assHypoCheckbox.state, Assessment.Hypoglycemia.rawValue), peripheralNeuro: (assNeuropathyCheckbox.state, Assessment.PeripheralNeuropathy.adaptedPeripheralNeuropathy(numbness: assNumbnessCheckbox.state)), painInFeet: (assNeuroPainFeetCheckbox.state, Assessment.NeuropathicFeet.rawValue), painInLegs: (assNeuroPainLegsCheckbox.state, Assessment.NeuropathicLegs.rawValue), retinopathy: (assRetinopathyCheckbox.state, Assessment.Retinopathy.adaptedRetinopathy(with: assRetinopathyDescriptorPopup.titleOfSelectedItem!.lowercased())), nephropathy: (assNephropathyCheckbox.state, Assessment.Nephropathy.rawValue), amyotrophy: (assAmyotrophyCheckbox.state, Assessment.Amyotrophy.rawValue), poorCirculation: (assPoorCirculationCheckbox.state, Assessment.PoorCirculation.rawValue), diabeticFoot: (assDiabeticFootCheckbox.state, Assessment.DiabeticFoot.rawValue), footUlcer: (assFootUlcerCheckbox.state, Assessment.FootUlcer.rawValue), hxFootUlcer: (assHxFootUlcerCheckbox.state, Assessment.HxFootUlcer.rawValue), callus: (assPreUlcerativeCallusCheckbox.state, Assessment.PreUlcerativeCallus.rawValue), bunion: (assBunionCheckbox.state, Assessment.Bunion.rawValue), hammerToes: (assHammerToesCheckbox.state, Assessment.HammerToes.rawValue), onycomycosis: (assOnycomycosisCheckbox.state, Assessment.Onycomycosis.rawValue))}
 	

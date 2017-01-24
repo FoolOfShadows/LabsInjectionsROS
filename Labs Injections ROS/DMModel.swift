@@ -307,11 +307,13 @@ struct VibrationTesting: IsDMData {
 
 struct LabResults: IsDMData {
 	var atTarget:Int
+	var labDate:String
 	var hgba1c:String
 	var threeMonthAve:String
 	var eGFR:String
 	var bun:String
 	var creatinine:String
+	var ldl:String
 	var uMalb:String
 	var uMalbModifier:String
 	
@@ -321,6 +323,9 @@ struct LabResults: IsDMData {
 		
 		if atTarget == 1 {
 			resultArray.append("All labs are at target values.")
+		}
+		if !labDate.isEmpty {
+			resultArray.append("Lab date \(labDate).")
 		}
 		if !hgba1c.isEmpty {
 			resultArray.append("HgbA1C: \(hgba1c)")
@@ -336,6 +341,9 @@ struct LabResults: IsDMData {
 		}
 		if !creatinine.isEmpty {
 			resultArray.append("Creatinine: \(creatinine)")
+		}
+		if !ldl.isEmpty {
+			resultArray.append("LDL: \(ldl)")
 		}
 		if !uMalb.isEmpty {
 			var uMalbResults = ("U Malb: \(uMalb)")
